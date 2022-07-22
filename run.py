@@ -1,21 +1,29 @@
+import time
 import pyfiglet
+
+A = 3
+B = 0.2
+C = 0.08
+
 word = pyfiglet.figlet_format(" WHERE  EVIL   DWELLS")
 print(word)
 response = input("Would you like to have an encounter with Evil? ")
-if response.lower().strip() == "yes":
+if response.lower().strip() == "yes" or response == "Yes":
     print("welcome to the Game, let's hope you make it")
     start = True
-elif response.lower().strip() == "no":
+elif response.lower().strip() == "no" or response == "No":
     print("understandable, sorry to see you go")
     start = False
 else:
     print("That is not a valid response")
+    start = False
 if start is True:
+    time.sleep(A)
     print("You are invited to a reading of a Will at Harland Manor")
     print("an old house steeped in mystery..")
     print("With a long history of murder and debauchery")
     print("it is in relation to your great uncle Raymon DeCharles")
-    print("It is a frightening prospect, but you really need the money")        
+    print("It is a frightening prospect, but you really need the money")
 rsvp = input("the question is do you accept the invite? yes/no ")
 if rsvp.lower().strip() == "yes":
     print("Great, I see a hottub and Big Screen TV in your future")
