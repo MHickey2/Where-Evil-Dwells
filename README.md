@@ -1,5 +1,104 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+# Where Evil Dwells: Milestone 3 Project
+
+<p align ="center">      
+     <img src=""  alt="" />    
+</p>
+<br/>  
+
+ 
+## Introduction <a name="introduction"></a>
+Where Evil Dwells is a Text Based Adventure for a Command Line Interface. It is utilizing the python language.
+
+<br/>
+
+[Visit the Where Evil Dwells Site]()  
+
+[Visit the Where Evil Dwells Repository]()  
+<br/>    
+
+# Table of Contents <a name="toc"></a>
+
+1. [UX Strategy](#uxstrategy)
+    1. [Business Goals](#businessgoals)
+    2. [Target Customer](#targetcustomer)
+2. [User Stories](#userstories)
+    1. [First Time User](#firsttimeuser)
+    2. [Regular User](#regularuser)
+    3. [Site Owner](#siteowner)
+3.  [Design](#design)
+    1. [Wireframes](#wireframes)
+    2. [Colour Scheme](#colourscheme)
+    3. [Fonts](#fonts)
+    4. [Icons](#icons)
+    5. [Structure](#structure)
+    6. [Final Webpages](#webpages)
+         1. [Intro Screen](#introscreen)
+         2. [Game Screen](#gamescreen)
+         3. [End Screen](#endscreen)
+         4. [404.html](404page)
+4.  [Features](#features)
+    1. [Index Page](#indexpage)    
+5.  [Future](#future)
+6.  [Tools and Technology](#Technology)
+7.  [Testing Information](TEST.md)
+8.  [Bugs and Issues](#bugs)
+    1. [Resolved](#resolved)
+    2. [Unresolved](#unresolved)
+9.  [Deployment](#deployment)
+    1. [Repository](#githubrepository)
+    2. [Deploy the Site](#deployingsite)
+    3. [Run Project locally](#runlocally)
+    4. [Make Local Clone](#clone)
+    5. [Fork GitHub Repository](#fork)
+    6. [Student Template](#studenttemplate)
+    7. [Custom 404 Page](#404page)
+10.  [Credits](#credits)
+11.  [Acknowledgements](#acknowledgements)
+
+----
+
+## UX Strategy <a name="uxstrategy"></a>
+
+<br/> 
+
+### The Business Goals of the Website: <a name="businessgoals"></a>
+- No commercial goals, but the site's goal is to to provide an interactive Text Game Adventure Story.
+  
+  <br/> 
+
+### The Target Customer: <a name="targetcustomer"></a>
+- The audience of the site could encompass a number of age groups and there would generally not be any limitation on who could avail of the quiz.
+- Would probably require some access to digital technology.
+- May be useful for a user who has spare time and enjoys using decision making to solve a mystery.
+
+ <br/>  
+
+ #### [Return to Table of Contents](#toc)
+----
+## User Stories  <a name="userstories"></a>
+### As a first time user to this site, I want to …..<a name="firsttimeuser"></a>
+- Understand how the Game Works
+- Play the Game.
+- 
+
+  <br/>
+
+### As a regular user of the site, I want to …...  <a name="regularuser"></a>  
+- I want to try the various scenarios to navigate through the game.  
+
+ <br/>
+
+### As the site owner, I want to …..    <a name="siteowner"></a>
+
+
+  <br/>  
+
+
+ #### [Return to Table of Contents](#toc)
+----
+
 Welcome Michelle Hickey,
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
