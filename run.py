@@ -10,6 +10,11 @@ from colorama import Fore, Back, Style
 colorama.init()
 
 # variables
+start = False
+rsvp = False
+lounge = "No"
+staircase = "up"
+doorchoice = "1"
 global guest1
 global guest2
 global guest3
@@ -194,3 +199,37 @@ if letter == "no":
         print(contents)
         f.close()
         
+time.sleep(A)
+print("you are in a dangerous dilemma, you need to team up with a buddy")
+print("Do you want to see more about your guests, before choosing? ")
+print("Would you like to read about all your fellow guests? ")
+review = input("Would you like to see details on all guests/all or 1/2/3/4? ")
+if review == "all":
+    print(vars(guest1))
+    print(vars(guest2))
+    print(vars(guest3))
+    print(vars(guest4))
+elif review == 1:
+    print(vars(guest1))
+elif review == 2:
+    print(vars(guest2))
+elif review == 3:
+    print(vars(guest3))
+elif review == 4:
+    print(vars(guest4))
+else:
+    print("not valid answer")
+
+buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4? ")
+if buddy == "1":
+    print("You are teamed up with Luscious, I hope you like social media")
+    print("and watch your back, there's a killer about")
+elif buddy == "2":
+    print("You are teamed up with Brad, keep him away from mirrors")
+    print("Keep your wits about you, there is a killer around")
+elif buddy == "3":
+    print("You are with Tobias, don't take it personal, he's always rude")
+elif buddy == "4":
+    print("You are with Camilla, try to act richer")
+else:
+    print("need to pick someone, it's not safe alone")
