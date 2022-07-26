@@ -1,11 +1,19 @@
-# import classification
-# yes
-# from classification import Person
+import classification
+from classification import Person
+from classification import guest1, guest2, guest3, guest4
+# import sys,time
 import time
+import random
 import pyfiglet
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
+
+# variables
+global guest1
+global guest2
+global guest3
+global guest4
 
 
 A = 2.5
@@ -32,6 +40,13 @@ else:
     print("That is not a valid response")
     start = False
 if start is True:
+    time.sleep(B)
+    '''
+    _function to show intro to user_
+    '''
+
+
+def show_intro():
     time.sleep(A)
     print("You are invited to a reading of a Will at Harland Manor")
     time.sleep(A)
@@ -43,10 +58,13 @@ if start is True:
     time.sleep(A)
     print("It is a frightening prospect, but you really need the money")
     time.sleep(A)
-    rsvp = input("the question is do you accept the invite? yes/no ")
+
+
+show_intro()
+rsvp = input("the question is do you accept the invite? yes/no ")
 if rsvp.lower().strip() == "yes":
     print("Great, I see a hot-tub and Big Screen TV in your future")
-    # Arrival Txt is opened and content is displayed to user   
+    # Arrival Txt is opened and content is displayed to user
     rsvp = "yes"
     time.sleep(A)
     with open('arrival.txt') as f:
@@ -90,7 +108,7 @@ elif lounge.lower().strip() == "D":
     time.sleep(A)
 else:
     print("I guess you're here now anyway, best wait for the other guests")
-time.sleep(A)   
+time.sleep(A)
 staircase = input("You sneak out and get to the staircase, up or down?/n ")
 if staircase.lower().strip() == "down":
     print("you are going down a creepy dark staircase to the cellar")
@@ -135,10 +153,44 @@ elif stranger.lower().strip() == "3":
     print("There's one too maney skulkers in this house for your liking!")
 else:
     print("Is that rancheros I smell, I'm in the mood for a ranchero!")
- 
-# print(guest1)
-# print(guest2)
-# print(guest3)
-# print(guest4)
 
-# show_guest_details()
+print("You are back in the loung and the guests have arrived")
+print("There are four guests, they introuduce themselves, they are:")
+print(guest1.index + guest1.name)
+print(guest2.index + guest2.name)
+print(guest3.index + guest3.name)
+print(guest4.index + guest4.name)
+print("Please add youn input to joing the other guests")
+
+'''
+function to add user as guest
+'''
+
+
+def add_guest():
+    name = input("Enter your name: ")
+    occupation = input("Enter your occupation: ")
+    age = input("Enter your age: ")
+    guest5 = (name, occupation, age)
+    print(guest5)
+
+
+add_guest()
+
+print("The guests are mingling, when Jeeves enters with a letter on a tray")
+letter = input("Do you want to see what is in the letter? yes/no")
+if letter == "yes":
+    time.sleep(A)
+    with open('letter.txt') as f:
+        contents = f.read()
+        print(contents)
+        f.close()
+if letter == "no":
+    print("I guess that might have been important")
+    print("A rock comes through window, with note attached, it reads")
+    time.sleep(A)
+    with open('letter.txt') as f:
+        contents = f.read()
+        print(contents)
+        f.close()
+        
