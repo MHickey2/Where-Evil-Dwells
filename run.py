@@ -1,8 +1,10 @@
 import classification
-from classification import Person, Protection
-from classification import guest1, guest2, guest3, guest4
-from classification import item1, item2, item3, item4, item5
-from classification import safetyitem
+from classification import *
+import art
+from art import *
+# from classification import guest1, guest2, guest3, guest4
+# from classification import item1, item2, item3, item4, item5
+# from classification import safetyitem
 import sys,time
 import time
 import random
@@ -65,6 +67,8 @@ if start is True:
 
 def show_intro():
     time.sleep(A)
+    print(Fore.LIGHTBLUE_EX + art.HOUSE)    
+    print(Fore.RESET)
     print("You are invited to a reading of a Will at Harland Manor")
     time.sleep(A)
     print("an old house steeped in mystery..")
@@ -84,10 +88,12 @@ if rsvp.lower().strip() == "yes":
     # Arrival Txt is opened and content is displayed to user
     rsvp = "yes"
     time.sleep(A)
+    print(Fore.LIGHTGREEN_EX + art.DOOR)    
+    print(Fore.RESET)
     with open('arrival.txt') as f:
         contents = f.read()
     print(contents)
-    f.close()
+    f.close()    
     time.sleep(A)
 elif rsvp.lower().strip() == "no":
     print("Well I guess it is instant noodles for you")
@@ -108,6 +114,8 @@ else:
         sys.exit()
 
 time.sleep(A)
+print(Fore.LIGHTWHITE_EX + art.DRINK)  
+print(Fore.RESET)
 print("You are now in the lounge, you can... ")
 print("A. Make a start on the booze and work your way through the spirits")
 print("B. Fill your pockets with canopies and the smoked salmon entrees")
@@ -129,7 +137,9 @@ elif lounge.lower().strip() == "d":
 else:
     print("I guess you're here now anyway, best wait for the other guests")
 time.sleep(A)
-staircase = input("You sneak out and get to the staircase, up or down?/n ")
+staircase = input("You sneak out and get to the staircase, up or down?: ")
+print(Fore.LIGHTBLUE_EX + art.ARROWS)
+print(Fore.RESET)
 if staircase.lower().strip() == "down":
     print("You are going down a creepy dark staircase to the cellar")
     print("When you reach the bottom, you can see 3 doors...")
