@@ -1,5 +1,7 @@
 import classification
 from classification import *
+import narration
+from narration import *
 import art
 from art import *
 from classification import guest1, guest2, guest3, guest4
@@ -11,6 +13,7 @@ import pyfiglet
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
+
 # variables
 start = "no"
 rsvp = "no"
@@ -24,6 +27,16 @@ B = 2
 C = 1
 C = 0.2
 D = 0.08
+
+
+def add_narration(text_to_print):
+    '''
+    This prints all of the text slowly.
+    # '''
+    for character in text_to_print:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.020)
 
 print(Fore.RED)
 print(Back.BLACK)
@@ -59,20 +72,11 @@ def show_intro():
     time.sleep(A)
     print(Fore.LIGHTBLUE_EX + art.HOUSE)
     print(Fore.RESET)
-    print("You are invited to a reading of a Will at Harland Manor")
+    add_narration(narration.intro)
     time.sleep(A)
-    print("an old house steeped in mystery..")
-    time.sleep(A)
-    print("With a long history of murder and debauchery")
-    time.sleep(A)
-    print("It is in relation to your great uncle Raymon DeCharles")
-    time.sleep(A)
-    print("It is a frightening prospect, but you really need the money")
-    time.sleep(A)
-
 
 show_intro()
-rsvp = input("the question is do you accept the invite? yes/no\n ")
+rsvp = input("the question is do you accept the invite? yes/no?\n ")
 if rsvp.lower().strip() == "yes":
     print("Great, I see a hot-tub and Big Screen TV in your future")
     # Arrival Txt is opened and content is displayed to user
@@ -80,10 +84,7 @@ if rsvp.lower().strip() == "yes":
     time.sleep(A)
     print(Fore.LIGHTGREEN_EX + art.DOOR)
     print(Fore.RESET)
-    with open('arrival.txt') as f:
-        contents = f.read()
-    print(contents)
-    f.close()
+    add_narration(narration.arrival)
     time.sleep(A)
 elif rsvp.lower().strip() == "no":
     print("Well I guess it is instant noodles for you")
@@ -205,16 +206,15 @@ def upstairs():
         print("Is that rancheros I smell, I'm in the mood for a ranchero!")
         print("The lounge is the best place to be right now anyway")
 
-
 '''
 function to add user as guest
 '''
 
 
 def add_guest_details():
-    name = input("Enter your name: ")
-    occupation = input("Enter your occupation: ")
-    age = input("Enter your age: ")
+    name = input("Enter your name:/n ")
+    occupation = input("Enter your occupation:/n ")
+    age = input("Enter your age:/n ")
     guest5 = (name, occupation, age)
     print(guest5)
 
@@ -225,18 +225,12 @@ print("The guests are mingling, when Jeeves enters with a letter on a tray")
 letter = input("Do you want to see what is in the letter? yes/no:\n ")
 if letter == "yes":
     time.sleep(A)
-    with open('letter.txt') as f:
-        contents = f.read()
-        print(contents)
-        f.close()
+    add_narration(narration.letter)
 if letter == "no":
     print("I guess that might have been important")
     print("A rock comes through window, with note attached, it reads")
     time.sleep(A)
-    with open('letter.txt') as f:
-        contents = f.read()
-        print(contents)
-        f.close()
+    add_narration(narration.letter)
 
 time.sleep(A)
 print("you are in a dangerous dilemma, you need to team up with a buddy")

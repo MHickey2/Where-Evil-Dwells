@@ -13,9 +13,9 @@ Where Evil Dwells is a Text Based Adventure for a Command Line Interface. It is 
 
 <br/>
 
-[Visit the Where Evil Dwells Site]()  
+[Visit the Where Evil Dwells Site](https://where-evil-dwells.herokuapp.com/)  
 
-[Visit the Where Evil Dwells Repository]()  
+[Visit the Where Evil Dwells Repository](https://github.com/MHickey2/Where-Evil-Dwells)  
 <br/>    
 
 # Table of Contents <a name="toc"></a>
@@ -72,6 +72,7 @@ Where Evil Dwells is a Text Based Adventure for a Command Line Interface. It is 
 - The audience of the site could encompass a number of age groups and there would generally not be any limitation on who could avail of the quiz.
 - Would probably require some access to digital technology.
 - May be useful for a user who has spare time and enjoys using decision making to solve a mystery.
+- Someone who likes interaction in their gaming.
 
  <br/>  
 
@@ -79,9 +80,9 @@ Where Evil Dwells is a Text Based Adventure for a Command Line Interface. It is 
 ----
 ## User Stories  <a name="userstories"></a>
 ### As a first time user to this site, I want to …..<a name="firsttimeuser"></a>
-- Understand how the Game Works
+- Understand how the Game Works.
 - Play the Game.
-- 
+  
 
   <br/>
 
@@ -91,14 +92,43 @@ Where Evil Dwells is a Text Based Adventure for a Command Line Interface. It is 
  <br/>
 
 ### As the site owner, I want to …..    <a name="siteowner"></a>
-
+- Build more complexity in the game, so it is more challenging to the user.
+- Add more scenarios to give the user a wider range of experiences within the game.
 
   <br/>  
+----
+## Design  
+<br/>
+
+## Colour Scheme    <a name="colourscheme"></a>  
 
 
  #### [Return to Table of Contents](#toc)
 ----
 
+## User Stories  <a name="userstories"></a>
+### As a first time user to this site, I want to …..<a name="firsttimeuser"></a>
+- Understanhow to play the Game.
+- Play the Game.
+- If I want to restart a Game, I want to be able to do this easily.
+
+  <br/>
+
+### As a regular user of the site, I want to …...  <a name="regularuser"></a>  
+- I want to try all the options not selected before, to have different experiences.  
+- I want to have more complexity and a greater range of scenarios. 
+ 
+
+ <br/>
+
+### As the site owner, I want to …..    <a name="siteowner"></a>
+- Add more complexity to enhance the experience of the users.
+- Provide the user with ways that they can encounter greater decision making experience.
+
+  <br/>  
+
+
+ #### [Return to Table of Contents](#toc)
 Welcome Michelle Hickey,
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
