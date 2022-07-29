@@ -45,8 +45,6 @@ def show_guest_details(object):
 
 show_guest_details(object)
 
-
-
 # Returns 1 random element from list
 names = ["Luscious", "Brad", "Tobias", "Camilla"]
 killer = random.choice(names)
@@ -55,6 +53,8 @@ print(killer)
 '''
 I have created a new class for protection
 '''
+
+
 class Protection(object):
     def __init__(self, index, name, description, protectionfrom):
         self.index = index

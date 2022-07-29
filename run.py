@@ -49,6 +49,7 @@ else:
     sys.exit()
 if start is True:
     time.sleep(B)
+
     '''
     _function to show intro to user_
     '''
@@ -101,6 +102,19 @@ else:
     else:
         print("That is not a valid response")
         sys.exit()
+'''
+setting lounge function
+'''
+
+def setting_lounge():
+    print("You are back in the lounge and the other guests have arrived")
+    print("There are four guests, they introuduce themselves, as: ")
+    print(guest1.index + guest1.name)
+    print(guest2.index + guest2.name)
+    print(guest3.index + guest3.name)
+    print(guest4.index + guest4.name)
+    print("Please provide your details to the other guests: ")
+
 
 time.sleep(A)
 print(Fore.LIGHTWHITE_EX + art.DRINK)
@@ -113,23 +127,26 @@ print("D. Wait for the other guests to arrive")
 lounge = input("What is your pick A, B, C or D? ")
 if lounge.lower().strip() == "a":
     print("Remember moderation is key, let's wait for the other guests")
+    setting_lounge()
     time.sleep(A)
 elif lounge.lower().strip() == "b":
-    print("Leave some food for the other guests, let's wait for them")    
+    print("Leave some food for the other guests, let's wait for them")
     time.sleep(A)
 elif lounge.lower().strip() == "c":
     print("Great choice, take a canopy for the road, and start exploring")
+    if lounge.lower().strip() == "c":
+        staircase = input("You sneak out to the staircase, up or down?: ")
+        print(Fore.LIGHTBLUE_EX + art.ARROWS)
+        print(Fore.RESET)
+    else:
+        print("down it is")
     time.sleep(A)
 elif lounge.lower().strip() == "d":
-    print("What no food or drink, let's wait for the other guests")   
+    print("What no food or drink, let's wait for the other guests")
     time.sleep(A)
 else:
     print("I guess you're here now anyway, best wait for the other guests")
     time.sleep(A)
-
-staircase = input("You sneak out and get to the staircase, up or down?: ")
-print(Fore.LIGHTBLUE_EX + art.ARROWS)
-print(Fore.RESET)
 
 
 def downstairs():
@@ -137,19 +154,19 @@ def downstairs():
         print("You are going down a creepy dark staircase to the cellar")
         print("When you reach the bottom, you can see 3 doors...")
         print("1. A battered door, it that maniacal laughter you hear?")
-        print("2. A pristine door in mint codition, with soothing music within")
+        print("2. A pristine door in mint shape, with soothing music inside")
         print("3. A solid oak door, with a stange tapping sound from within")
         doorchoice = input("Which door do you pick to explore, 1, 2 or 3? ")
         time.sleep(B)
         if doorchoice.strip() == "1":
-            print(" you enter, you see a caged bird laughing, well that's weird")
-            print("Feels cold down here and am hungry again, back to the lounge")
+            print(" you enter, you see a caged bird laughing, that's weird")
+            print("Feels cold here and am hungry again, back to the lounge")
         elif doorchoice.strip() == "2":
             print(" oh, no, you'been caught by Jeeves, doing his meditation")
-            print("He is furious and sends you back to the lounge, see you there")
+            print("He is furious and sends you to the lounge, see you there")
         elif doorchoice.strip() == "3":
             print("You enter the room, and are caught by an evil wrongdoer")
-            print("alas the adventure has ended for you, better luck next time")
+            print("alas the adventure has ended, better luck next time")
             # adventure ends
             word = pyfiglet.figlet_format(' Game Over! ')
             print(word)
@@ -165,42 +182,28 @@ def upstairs():
     else:
         print("maybe you should go back to the lounge instead")
 
-
-print("On the landing you see a figure skulking on the landing")
-print("1. You follow him, he looks suspicious, and you are curious")
-print("2. You get scared and decide to return to the lounge")
-print("3. You ignore the skulker and continue your own skulking")
-stranger = input("What do you do next, 1, 2 or 3? ")
-if stranger.lower().strip() == "1":
-    print("You stalk the stalker, like a ninja")
-    print("right until, he turns around and puts you in a headlock")
-    print("Sorry the Stalker caught you, better luck next time")
-    word = pyfiglet.figlet_format(' Game Over! ')
-    print(word)
-    sys.exit()
-elif stranger.lower().strip() == "2":
-    print(" Good chooice, they maybe running out of the food")
-    print("You have a hankering for a pig in a blanket")
-    print("Back to the lounge you go")
-elif stranger.lower().strip() == "3":
-    print("There's too many skulkers in this house for your liking!")
-    print("Time to end the skulking, and get back to the food")
-else:
-    print("Is that rancheros I smell, I'm in the mood for a ranchero!")
-    print("The lounge is the best place to be right now anyway")
-'''
-setting lounge function
-'''
-
-
-def setting_lounge():
-    print("You are back in the lounge and the other guests have arrived")
-    print("There are four guests, they introuduce themselves, as: ")
-    print(guest1.index + guest1.name)
-    print(guest2.index + guest2.name)
-    print(guest3.index + guest3.name)
-    print(guest4.index + guest4.name)
-    print("Please provide your details to the other guests: ")
+    print("On the landing you see a figure skulking on the landing")
+    print("1. You follow him, he looks suspicious, and you are curious")
+    print("2. You get scared and decide to return to the lounge")
+    print("3. You ignore the skulker and continue your own skulking")
+    stranger = input("What do you do next, 1, 2 or 3? ")
+    if stranger.lower().strip() == "1":
+        print("You stalk the stalker, like a ninja")
+        print("right until, he turns around and puts you in a headlock")
+        print("Sorry the Stalker caught you, better luck next time")
+        word = pyfiglet.figlet_format(' Game Over! ')
+        print(word)
+        sys.exit()
+    elif stranger.lower().strip() == "2":
+        print(" Good chooice, they maybe running out of the food")
+        print("You have a hankering for a pig in a blanket")
+        print("Back to the lounge you go")
+    elif stranger.lower().strip() == "3":
+        print("There's too many skulkers in this house for your liking!")
+        print("Time to end the skulking, and get back to the food")
+    else:
+        print("Is that rancheros I smell, I'm in the mood for a ranchero!")
+        print("The lounge is the best place to be right now anyway")
 
 
 '''
@@ -216,7 +219,7 @@ def add_guest_details():
     print(guest5)
 
 
-add_guest()
+add_guest_details()
 
 print("The guests are mingling, when Jeeves enters with a letter on a tray")
 letter = input("Do you want to see what is in the letter? yes/no: ")
