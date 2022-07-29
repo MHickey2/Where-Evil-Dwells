@@ -74,6 +74,12 @@ item4 = Protection("4 ", "Gun", "Can be a good defense against guns",
 item5 = Protection("5 ", "Book on Movie Murders", "Help defend yourself",
                    "Brad Jameson")
 
-itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
-safetyitem = random.choice(itemlist)
-print(safetyitem)
+'''
+used to select safety item for user
+'''
+
+
+def random_safetyitem():
+    itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
+    safetyitem = random.choice(itemlist)
+    print(safetyitem)
