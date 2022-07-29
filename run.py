@@ -30,7 +30,7 @@ print(Back.BLACK)
 print(Style.BRIGHT)
 word = pyfiglet.figlet_format('WHERE  EVIL   DWELLS')
 print(word)
-response = input("Would you like to have an encounter with Evil? ")
+response = input("Would you like to have an encounter with Evil?\n ")
 if response.lower().strip() == "yes":
     print("welcome to the Game, let's hope you make it out alive!")
     time.sleep(C)
@@ -72,7 +72,7 @@ def show_intro():
 
 
 show_intro()
-rsvp = input("the question is do you accept the invite? yes/no ")
+rsvp = input("the question is do you accept the invite? yes/no\n ")
 if rsvp.lower().strip() == "yes":
     print("Great, I see a hot-tub and Big Screen TV in your future")
     # Arrival Txt is opened and content is displayed to user
@@ -93,7 +93,7 @@ elif rsvp.lower().strip() == "no":
     sys.exit()
 else:
     print("let's try that again, shall we")
-    rsvp2 = input("The question is do you accept the invite? yes/no? ")
+    rsvp2 = input("The question is do you accept the invite? yes/no?\n ")
     if rsvp2 == "yes":
         print("Great choice, welcome")
     elif rsvp2 == "no":
@@ -124,7 +124,7 @@ print("A. Make a start on the booze and work your way through the spirits")
 print("B. Fill your pockets with canopies and the smoked salmon entrees")
 print("C. Decide to explore a little, when you will get this change again")
 print("D. Wait for the other guests to arrive")
-lounge = input("What is your pick A, B, C or D? ")
+lounge = input("What is your pick A, B, C or D?\n ")
 if lounge.lower().strip() == "a":
     print("Remember moderation is key, let's wait for the other guests")
     setting_lounge()
@@ -156,7 +156,7 @@ def downstairs():
         print("1. A battered door, it that maniacal laughter you hear?")
         print("2. A pristine door in mint shape, with soothing music inside")
         print("3. A solid oak door, with a stange tapping sound from within")
-        doorchoice = input("Which door do you pick to explore, 1, 2 or 3? ")
+        doorchoice = input("Which door do you pick to explore, 1, 2 or 3?\n ")
         time.sleep(B)
         if doorchoice.strip() == "1":
             print(" you enter, you see a caged bird laughing, that's weird")
@@ -222,7 +222,7 @@ def add_guest_details():
 add_guest_details()
 
 print("The guests are mingling, when Jeeves enters with a letter on a tray")
-letter = input("Do you want to see what is in the letter? yes/no: ")
+letter = input("Do you want to see what is in the letter? yes/no:\n ")
 if letter == "yes":
     time.sleep(A)
     with open('letter.txt') as f:
@@ -240,7 +240,7 @@ if letter == "no":
 
 time.sleep(A)
 print("you are in a dangerous dilemma, you need to team up with a buddy")
-review = input("Would you like to see details on all or 1/2/3/4? ")
+review = input("Would you like to see details on all or 1/2/3/4?\n ")
 if review == "all":
     print(vars(guest1))
     print(vars(guest2))
@@ -257,7 +257,7 @@ elif review == 4:
 else:
     print("not valid answer")
 
-buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4? ")
+buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
 if buddy == "1":
     print("You are teamed up with Luscious, I hope you like social media")
     print("and watch your back, there's a killer about")
@@ -270,7 +270,7 @@ elif buddy == "4":
     print("You are with Camilla, try to act richer")
 else:
     print("need to pick someone, it's not safe alone")
-    buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4? ")
+    buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
     if buddy == "1":
         print("You are teamed up with Luscious, I hope you like social media")
         print("and watch your back, there's a killer about")
@@ -293,7 +293,7 @@ print(item2.index + item2.name)
 print(item3.index + item3.name)
 print(item4.index + item4.name)
 print(item5.index + item5.name)
-safetyitemchoice = input("What is your chosen protection, 1, 2, 3, 4, 5? ")
+safetyitemchoice = input("What is your chosen protection, 1, 2, 3, 4, 5?\n ")
 if safetyitemchoice == "1":
     print("You never know when it will come in handy")
 elif safetyitemchoice == "2":
