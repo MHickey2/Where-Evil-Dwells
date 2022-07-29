@@ -107,8 +107,9 @@ else:
 setting lounge function
 '''
 
+
 def setting_lounge():
-    print("You are back in the lounge and the other guests have arrived")
+    print("You are in the lounge now and the other guests have arrived")
     print("There are four guests, they introuduce themselves, as: ")
     print(guest1.index + guest1.name)
     print(guest2.index + guest2.name)
@@ -132,79 +133,83 @@ if lounge.lower().strip() == "a":
     time.sleep(A)
 elif lounge.lower().strip() == "b":
     print("Leave some food for the other guests, let's wait for them")
+    setting_lounge()
     time.sleep(A)
 elif lounge.lower().strip() == "c":
-    print("Great choice, take a canopy for the road, and start exploring")
-    if lounge.lower().strip() == "c":
-        staircase = input("You sneak out to the staircase, up or down?: ")
-        print(Fore.LIGHTBLUE_EX + art.ARROWS)
-        print(Fore.RESET)
-    else:
-        print("down it is")
+    print("Great choice, take a canopy for the road, and start exploring")    
     time.sleep(A)
 elif lounge.lower().strip() == "d":
     print("What no food or drink, let's wait for the other guests")
+    setting_lounge()
     time.sleep(A)
 else:
     print("I guess you're here now anyway, best wait for the other guests")
+    setting_lounge()
     time.sleep(A)
 
+if lounge.lower().strip() == "c":
+    staircase = input("You sneak out to the staircase, up or down?: ")
+    print(Fore.LIGHTBLUE_EX + art.ARROWS)
+    print(Fore.RESET)
+else:
+    print("down it is")
 
-def downstairs():
-    if staircase.lower().strip() == "down":
-        print("You are going down a creepy dark staircase to the cellar")
-        print("When you reach the bottom, you can see 3 doors...")
-        print("1. A battered door, it that maniacal laughter you hear?")
-        print("2. A pristine door in mint shape, with soothing music inside")
-        print("3. A solid oak door, with a stange tapping sound from within")
-        doorchoice = input("Which door do you pick to explore, 1, 2 or 3?\n ")
-        time.sleep(B)
-        if doorchoice.strip() == "1":
-            print(" you enter, you see a caged bird laughing, that's weird")
-            print("Feels cold here and am hungry again, back to the lounge")
-        elif doorchoice.strip() == "2":
-            print(" oh, no, you'been caught by Jeeves, doing his meditation")
-            print("He is furious and sends you to the lounge, see you there")
-        elif doorchoice.strip() == "3":
-            print("You enter the room, and are caught by an evil wrongdoer")
-            print("alas the adventure has ended, better luck next time")
-            # adventure ends
-            word = pyfiglet.figlet_format(' Game Over! ')
-            print(word)
-            sys.exit()
-        else:
-            print("It's not worth the risk, get back to the lounge")
-            print("I'll help you decide, let's go down, no worries")
-
-
-def upstairs():
-    if staircase.lower().strip() == "up":
-        print("You are going up the stairs to the bedroom area")
-    else:
-        print("maybe you should go back to the lounge instead")
-
-    print("On the landing you see a figure skulking on the landing")
-    print("1. You follow him, he looks suspicious, and you are curious")
-    print("2. You get scared and decide to return to the lounge")
-    print("3. You ignore the skulker and continue your own skulking")
-    stranger = input("What do you do next, 1, 2 or 3? ")
-    if stranger.lower().strip() == "1":
-        print("You stalk the stalker, like a ninja")
-        print("right until, he turns around and puts you in a headlock")
-        print("Sorry the Stalker caught you, better luck next time")
+if staircase.lower().strip() == "down":
+    print("You are going down a creepy dark staircase to the cellar")
+    print("When you reach the bottom, you can see 3 doors...")
+    print("1. A battered door, it that maniacal laughter you hear?")
+    print("2. A pristine door in mint shape, with soothing music inside")
+    print("3. A solid oak door, with a stange tapping sound from within")
+    doorchoice = input("Which door do you pick to explore, 1, 2 or 3?\n ")
+    time.sleep(B)
+    if doorchoice.strip() == "1":
+        print(" you enter, you see a caged bird laughing, that's weird")
+        print("Feels cold here and am hungry again, back to the lounge")
+        setting_lounge()
+    elif doorchoice.strip() == "2":
+        print(" oh, no, you'been caught by Jeeves, doing his meditation")
+        print("He is furious and sends you to the lounge, see you there")
+        setting_lounge()
+    elif doorchoice.strip() == "3":
+        print("You enter the room, and are caught by an evil wrongdoer")
+        print("alas the adventure has ended, better luck next time")
         word = pyfiglet.figlet_format(' Game Over! ')
         print(word)
         sys.exit()
-    elif stranger.lower().strip() == "2":
-        print(" Good chooice, they maybe running out of the food")
-        print("You have a hankering for a pig in a blanket")
-        print("Back to the lounge you go")
-    elif stranger.lower().strip() == "3":
-        print("There's too many skulkers in this house for your liking!")
-        print("Time to end the skulking, and get back to the food")
     else:
-        print("Is that rancheros I smell, I'm in the mood for a ranchero!")
-        print("The lounge is the best place to be right now anyway")
+        print("It's not worth the risk, get back to the lounge")
+        
+
+if staircase.lower().strip() == "up":
+    print("You are going up the stairs to the bedroom area")
+else:
+    print("maybe you should go back to the lounge instead")
+
+print("On the landing you see a figure skulking on the landing")
+print("1. You follow him, he looks suspicious, and you are curious")
+print("2. You get scared and decide to return to the lounge")
+print("3. You ignore the skulker and continue your own skulking")
+stranger = input("What do you do next, 1, 2 or 3? ")
+if stranger.lower().strip() == "1":
+    print("You stalk the stalker, like a ninja")
+    print("right until, he turns around and puts you in a headlock")
+    print("Sorry the Stalker caught you, better luck next time")
+    word = pyfiglet.figlet_format(' Game Over! ')
+    print(word)
+    sys.exit()
+elif stranger.lower().strip() == "2":
+    print(" Good chooice, they maybe running out of the food")
+    print("You have a hankering for a pig in a blanket")
+    print("Back to the lounge you go")
+    setting_lounge()
+elif stranger.lower().strip() == "3":
+    print("There's too many skulkers in this house for your liking!")
+    print("Time to end the skulking, and get back to the food")
+    setting_lounge()
+else:
+    print("Is that rancheros I smell, I'm in the mood for a ranchero!")
+    print("The lounge is the best place to be right now anyway")
+    setting_lounge()
 
 '''
 function to add user as guest
