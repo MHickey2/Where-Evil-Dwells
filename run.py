@@ -23,7 +23,7 @@ rsvp = ""
 rsvp = ""
 staircase = ""
 doorchoice = ""
-
+global buddy
 
 A = 3
 B = 2
@@ -259,6 +259,8 @@ elif review == "4":
 else:
     print("not valid answer")
 
+
+
 buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
 if buddy == "1":
     print("You are teamed up with Luscious, I hope you like social media")
@@ -310,3 +312,61 @@ else:
     print("You will be allocated a random choice of protection")
     random_safetyitem()
     print("you have been allocated a (safetyitem)")
+
+
+def luscious():
+    '''
+    The Luscious Experience
+    '''
+    if buddy == "1":
+        add_narration(narration.LUSCIOUS)
+        time.sleep(B)
+        print("You settle in the bedroom, and your nerves are shot")
+        print("Your partner has brought some brandy from the lounge")
+        brandy = input("She offers you a glass, do you say yes/no?\n")
+        if brandy.lower().strip() == "yes":
+            print("Well, that should fix the nerves ok")
+        elif brandy.lower().strip() == "no":
+            print("wise choice, you may need a clear head")
+        else:
+            print("That is not a valid choice")
+            time.sleep(B)
+
+
+luscious()
+
+
+def brad():
+    '''
+    The Brad Experience
+    '''
+    if buddy == "2":
+        add_narration(narration.BRAD)
+        time.sleep(B)
+
+
+brad()
+
+
+def tobias():
+    '''
+    The Tobias Experience
+    '''
+    if buddy == "3":
+        add_narration(narration.TOBIAS)
+        time.sleep(B)
+
+
+tobias()
+
+
+def camilla():
+    '''
+    The Camilla Experience
+    '''
+    if buddy == "4":
+        add_narration(narration.CAMILLA)
+        time.sleep(B)
+
+
+camilla()

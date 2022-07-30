@@ -13,7 +13,7 @@ class Person(object):
         self.age = age
         self.goodquality = goodquality
         self.badquality = badquality
-        self.killeroves = killermoves
+        self.killermoves = killermoves
         self.ranking = ranking
         self.kryptonite = kryptonite
 
@@ -29,19 +29,35 @@ guest4 = Person("4 ", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
                 "Classist", "Poisoner", 2, "Anctidote")
 guest5 = Person("5 ", "", "", "", "n/a", "n/a", "innocent", "n/a", "n/a")
 
+'''
+def show_information(guest1):
+    print( '\nName of Guest: ' + {name} + '\nOccupation of Guest: '
+    + {occupation} +'\nAge of Guest: ' + self.age
+    + '\nGood Quality: ' + {goodquality} +'\nBad Quality: '
+    + {badquality})
+    
+show_information(guest1)
+show_information(guest2)
+show_information(guest3)
+show_information(guest4)
+show_information(guest5)
+''' 
 
-def show_guest_details(object):
+
+def show_guest_details():
     """
     function to show guest details
     """
-    print(guest1.index + guest1.name)
-    print(guest2.index + guest2.name)
-    print(guest3.index + guest3.name)
-    print(guest4.index + guest4.name)
+    print(guest1.index + 'Name: ' + guest1.name + ", Age " + str(guest1.age)
+        + ", Occupation: " + guest1.occupation + ", Good Quality: " + guest1.goodquality + ", Bad Quality: " +
+        guest1.badquality)
+    
     print(guest5.index + guest5.name)
 
 
-show_guest_details(object)
+print(guest1.name)
+
+show_guest_details()
 
 # Returns 1 random element from list
 names = ["Luscious", "Brad", "Tobias", "Camilla"]

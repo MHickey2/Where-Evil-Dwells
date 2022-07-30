@@ -31,3 +31,32 @@ your inheritance is forfeited. Make the right
 choices and you will survive the night... Choose the
 wrong one and your game is over!
 '''
+
+LUSCIOUS = '''
+You have chosen to buddy up with Luscious, She can be
+a little excitable, but you should be ok. You and your
+partner have decided to isolate yourself in the Bedroom.
+you both go to the bedroom...
+
+'''
+BRAD = '''
+You have chosen to buddy up with Brad, a great Guy but
+he is a bit self obsessed, but nice to look at. You and
+your partner have decided to isolate yourself in the
+Kitchen, you both go to the kitchen...
+
+'''
+TOBIAS = '''
+You have chosen to buddy up with Tobias, he can be a
+little opinianated and downright rude, but deep inside
+I'm sure he has some good qualities. You and your partner
+have decided to isolate yourself in the Study, you both
+go to the Study...
+'''
+
+CAMILLA = '''
+You have chosen to buddy up with Camilla, she can be a
+bit judgemental, but I'm sure you can handle her. You and
+your partner have decided to isolate yourself in the dining
+room, you both go to the Dining Room...
+'''
