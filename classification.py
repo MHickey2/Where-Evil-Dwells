@@ -1,26 +1,24 @@
 import random
-'''
-This is a docstring. I have created a new class for Person
-'''
 
 
 class Person(object):
-    def __init__(self, index, name, occupation, age, goodQuality, badQuality,
-                 killerMoves, ranking, kryptonite):
+    '''
+    This is a docstring. I have created a new class for Person
+    '''
+    def __init__(self, index, name, occupation, age, goodquality, badquality,
+                 killermoves, ranking, kryptonite):
         self.index = index
         self.name = name
         self.occupation = occupation
         self.age = age
-        self.goodQuality = goodQuality
-        self.badQuality = badQuality
-        self.killerMoves = killerMoves
+        self.goodquality = goodquality
+        self.badquality = badquality
+        self.killeroves = killermoves
         self.ranking = ranking
         self.kryptonite = kryptonite
 
 
-'''
-Characters: Guests
-'''
+# Characters: Guests
 guest1 = Person("1 ", "Luscious Campbell", "Blogger", 29, "Happy", "Selfish",
                 "Bludgeoning with Selfie stick", 3, "Safety Helmet")
 guest2 = Person("2 ", "Brad Jameson", "Actor/Model", 32, "Charasmatic", "Vain",
@@ -30,12 +28,12 @@ guest3 = Person("3 ", "Tobias Cooper", "Reality Show Judge", 42, "Smooth",
 guest4 = Person("4 ", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
                 "Classist", "Poisoner", 2, "Anctidote")
 guest5 = Person("5 ", "", "", "", "n/a", "n/a", "innocent", "n/a", "n/a")
-"""
-function to show guest details
-"""
 
 
 def show_guest_details(object):
+    """
+    function to show guest details
+    """
     print(guest1.index + guest1.name)
     print(guest2.index + guest2.name)
     print(guest3.index + guest3.name)
@@ -50,12 +48,11 @@ names = ["Luscious", "Brad", "Tobias", "Camilla"]
 killer = random.choice(names)
 print(killer)
 
-'''
-I have created a new class for protection
-'''
-
 
 class Protection(object):
+    '''
+    I have created a new class for protection items
+    '''
     def __init__(self, index, name, description, protectionfrom):
         self.index = index
         self.name = name
@@ -74,12 +71,11 @@ item4 = Protection("4 ", "Gun", "Can be a good defense against guns",
 item5 = Protection("5 ", "Book on Movie Murders", "Help defend yourself",
                    "Brad Jameson")
 
-'''
-used to select safety item for user
-'''
-
 
 def random_safetyitem():
+    '''
+    user can be assigned random protection item
+    '''
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)
     print(safetyitem)
