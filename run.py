@@ -25,6 +25,7 @@ staircase = ""
 doorchoice = ""
 global buddy
 
+
 A = 3
 B = 2
 C = 1
@@ -259,8 +260,6 @@ elif review == "4":
 else:
     print("not valid answer")
 
-
-
 buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
 if buddy == "1":
     print("You are teamed up with Luscious, I hope you like social media")
@@ -311,7 +310,7 @@ elif safetyitemchoice == "5":
 else:
     print("You will be allocated a random choice of protection")
     random_safetyitem()
-    print("you have been allocated a (safetyitem)")
+    print("you have been allocated a : " + safetyitem)
 
 
 def luscious():
@@ -331,6 +330,51 @@ def luscious():
         else:
             print("That is not a valid choice")
             time.sleep(B)
+
+        print("Luscious has no access to wifi, so is not a happy girl")
+        print("you are settling in for the stay when you hear loud noises")
+        print("It is coming from behind a doorway in the bedroom")
+        print("1. Do you go see what's causing the noise")
+        print("2. Do you ask Luscious to join you in the investigation")
+        print("3. Do you pretend not to hear, and keep listening to Luscious")
+        noise = ""
+        noise = input("What choice do you pick 1 2 or 3 ?")
+        if noise == "1":
+            print("Brave choice, it's better to know and be prepared")
+            add_narration(narration.SECRET_ROOM)
+            time.sleep(B)
+        elif noise == "2":
+            print("The two of you check out the noise")
+            add_narration(narration.SECRET_ROOM)
+            time.sleep(B)
+        elif noise == "3":
+            print("Maybe Luscious ranting will block out that noise")
+            print("With any luck it's not a murderer planning an attack")
+        else:
+            print("Not a valid choice, I guess we'll just wait and see")
+            print("What's the worse that can happen...ahem")
+
+        print("You are in the bedroom and have barricaded yourself in")
+        print("Luscious has got a phone signal, and is trying to get help")
+        print("She calls the police and tell them about the death threat")
+        print("You feel better now, that the police are on their way")
+        
+        print("What do you feel like doing now?")
+        print("1. You are tired, you take a nap while waiting for the police")
+        print("2. You keep alert, clutching your safety item")
+        print("3. You've had enough, you escape from this horror house")
+        escape = input("What is your choice 1 2 or 3: ")
+        if escape == "1":
+            print("you deserve a rest, I'm sure you'll sleep soundly")
+        elif escape == "2":
+            print("Wise choice, no killer is going to get you")
+        elif escape == "3":
+            print("Who could blame you, you may be broke, but will be alive")
+            goodbye = pyfiglet.figlet_format(' Goodbye')
+            print(goodbye)
+            sys.exit()
+        else:
+            print("Not a valid choice")
 
 
 luscious()

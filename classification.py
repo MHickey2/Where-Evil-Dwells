@@ -1,5 +1,7 @@
 import random
 
+global killer
+
 
 class Person(object):
     '''
@@ -60,7 +62,7 @@ print(guest1.name)
 show_guest_details()
 
 # Returns 1 random element from list
-names = ["Luscious", "Brad", "Tobias", "Camilla"]
+names = [guest1.name, guest2.name, guest3.name, guest4.name]
 killer = random.choice(names)
 print(killer)
 
@@ -95,3 +97,22 @@ def random_safetyitem():
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)
     print(safetyitem)
+    
+random_safetyitem()
+
+
+def survival():
+    '''
+    does player survive
+    '''
+    print(guest1.name)
+    print(killer)
+    
+    safetyitem = "Safety Helmet"
+    if "Luscious Campbell" == killer and safetyitem == "Safety Helmet":
+        print("user survives")
+    else:
+        print("user dies")
+
+
+survival()

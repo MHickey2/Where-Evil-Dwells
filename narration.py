@@ -60,3 +60,13 @@ bit judgemental, but I'm sure you can handle her. You and
 your partner have decided to isolate yourself in the dining
 room, you both go to the Dining Room...
 '''
+
+SECRET_ROOM = '''
+You find yourself in a small well lit room, there is no
+one else there right now, but it looks like someone was
+here recently as some of the food from the lounge is on
+a plate on the table, and it's still warm. There is a
+noticeboard, with all the pictures of the benefactors are
+pinned up, there are red crosses across the faces....This
+must be the work of the killer....
+'''
