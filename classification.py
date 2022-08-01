@@ -1,6 +1,7 @@
 import random
 
 global killer
+global safetyitem
 
 
 class Person(object):
@@ -80,9 +81,9 @@ class Protection(object):
 
 item1 = Protection("1 ", "Safety Helmet", "Will stop a selfie Stick",
                    "Luscious Campbell")
-item2 = Protection("2 ", "Bullet Proof vest", "Can protect from gunshot",
+item2 = Protection("2 ", "Bulletproof Vest", "Can protect from gunshot",
                    "Tobias Cooper")
-item3 = Protection("3 ", "antidote", "Can protect against poison",
+item3 = Protection("3 ", "Antidote", "Can protect against poison",
                    "Camilla Royce")
 item4 = Protection("4 ", "Gun", "Can be a good defense against guns",
                    "Brad jameson")
@@ -94,10 +95,12 @@ def random_safetyitem():
     '''
     user can be assigned random protection item
     '''
-    itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
+    itemlist = ["Safety Helmet", "Bulletproof Vest", "Antidote", "Gun",
+                "Book on Movie Murders"]
     safetyitem = random.choice(itemlist)
     print(safetyitem)
-    
+
+
 random_safetyitem()
 
 
@@ -107,8 +110,7 @@ def survival():
     '''
     print(guest1.name)
     print(killer)
-    
-    safetyitem = "Safety Helmet"
+
     if "Luscious Campbell" == killer and safetyitem == "Safety Helmet":
         print("user survives")
     else:
