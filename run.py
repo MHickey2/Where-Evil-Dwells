@@ -1,6 +1,6 @@
-'''
+"""
 Text Based Adventure Game
-'''
+"""
 import sys
 import time
 import random
@@ -18,12 +18,12 @@ from colorama import Fore, Back, Style
 colorama.init()
 
 # variables
-start = ""
-rsvp = ""
-rsvp = ""
+START = False
+RSVP = "no"
 staircase = ""
 doorchoice = ""
 global buddy
+global safetyitem
 
 
 A = 3
@@ -34,89 +34,103 @@ E = 0.08
 
 
 def add_narration(printed_text):
-    '''
+    """
     This prints all of the text from
     narration.py slowly.
-    # '''
+    """
     for character in printed_text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.040)
+        time.sleep(0.060)
 
 
-print(Fore.RED)
-print(Back.BLACK)
-print(Style.BRIGHT)
-word = pyfiglet.figlet_format(' WHERE  EVIL   DWELLS ')
-print(word)
-response = input("Would you like to have an encounter with Evil?\n ")
-if response.lower().strip() == "yes":
-    print("welcome to the Game, let's hope you make it out alive!")
-    time.sleep(C)
-    start = True
-elif response.lower().strip() == "no":
-    print("understandable, sorry to see you go")
-    start = False
-    bye = pyfiglet.figlet_format(' Bye for Now!')
-    print(bye)
-    sys.exit()
-else:
-    print("That is not a valid response")
-    start = False
-    farewell = pyfiglet.figlet_format(' Come back soon! ')
-    print(farewell)
-    sys.exit()
-if start is True:
-    time.sleep(B)
-
-
-def show_intro():
-    '''
-    _function to show intro to the user_
-    '''
-    time.sleep(A)
-    print(Fore.LIGHTBLUE_EX + art.HOUSE)
-    print(Fore.RESET)
-    add_narration(narration.INTRO)
-    time.sleep(B)
-
-
-show_intro()
-rsvp = input("the question is do you accept the invite? yes/no?\n ")
-if rsvp.lower().strip() == "yes":
-    print("Great, I see a hot-tub and Big Screen TV in your future")
-    # Arrival Txt from Narration content is displayed to user
-    rsvp = "yes"
-    time.sleep(A)
-    print(Fore.LIGHTGREEN_EX + art.DOOR)
-    print(Fore.RESET)
-    add_narration(narration.ARRIVAL)
-    time.sleep(A)
-elif rsvp.lower().strip() == "no":
-    print("Well I guess it is instant noodles for you")
-    rsvp = "no"
-    bye = pyfiglet.figlet_format(' Bye for Now!')
-    print(bye)
-    sys.exit()
-else:
-    print("let's try that again, shall we")
-    rsvp2 = input("The question is do you accept the invite? yes/no?\n ")
-    if rsvp2 == "yes":
-        print("Great choice, welcome")
-    elif rsvp2 == "no":
-        print("Sorry to see you go")
+def main():
+    """_main function_
+    """
+    print(Fore.RED)
+    print(Back.BLACK)
+    print(Style.BRIGHT)
+    word = pyfiglet.figlet_format(' WHERE  EVIL   DWELLS ')
+    print(word)
+    response = input("Would you like to have an encounter with Evil?\n ")
+    if response.lower().strip() == "yes":
+        print("welcome to the Game, let's hope you make it out alive!")
+        time.sleep(C)
+        START = True
+    elif response.lower().strip() == "no":
+        print("understandable, sorry to see you go")
+        START = False
+        BYE = pyfiglet.figlet_format(' Bye for Now!')
+        print(BYE)
         sys.exit()
     else:
         print("That is not a valid response")
+        START = False
+        farewell = pyfiglet.figlet_format(' Come back soon! ')
+        print(farewell)
         sys.exit()
+    if START is True:
+        time.sleep(C)
+
+
+main()
+
+
+def show_intro():
+    """
+    _function to show intro to the user_
+    """
+    time.sleep(C)
+    print(Fore.LIGHTBLUE_EX + art.HOUSE)
+    print(Fore.RESET)
+    add_narration(narration.INTRO)
+    time.sleep(C)
+
+
+show_intro()
+
+
+def accept_invite():
+    """_user accepts or declines invite_
+    """
+    RSVP = input("the question is do you accept the invite? yes/no?\n ")
+    if RSVP.lower().strip() == "yes":
+        print("Great, I see a hot-tub and Big Screen TV in your future")
+        # Arrival Txt from Narration content is displayed to user
+        RSVP = "yes"
+        time.sleep(A)
+        print(Fore.LIGHTGREEN_EX + art.DOOR)
+        print(Fore.RESET)
+        add_narration(narration.ARRIVAL)
+        time.sleep(A)
+    elif RSVP.lower().strip() == "no":
+        print("Well I guess it is instant noodles for you")
+        RSVP = "no"
+        bye = pyfiglet.figlet_format(' Bye for Now!')
+        print(bye)
+        sys.exit()
+    else:
+        print("let's try that again, shall we")
+        rsvp2 = input("The question is do you accept the invite? yes/no?\n ")
+        if rsvp2 == "yes":
+            print("Great choice, welcome")
+        elif rsvp2 == "no":
+            print("Sorry to see you go")
+            sys.exit()
+        else:
+            print("That is not a valid response")
+            sys.exit()
+
+
+accept_invite()
 
 
 def setting_lounge():
-    '''
+    """
     setting lounge function
-    '''
+    """
     print("You are in the lounge now and the other guests have arrived")
-    print("There are four guests, they introuduce themselves, as: ")
+    print("There are four guests, they introuduce themselves, as:\n ")
     print(guest1.index + guest1.name)
     print(guest2.index + guest2.name)
     print(guest3.index + guest3.name)
@@ -124,7 +138,6 @@ def setting_lounge():
     print("Please provide your details to the other guests: ")
 
 
-time.sleep(A)
 print(Fore.LIGHTWHITE_EX + art.DRINK)
 print(Fore.RESET)
 print("You are now in the lounge, you can... ")
@@ -156,7 +169,7 @@ else:
     time.sleep(A)
 
 if lounge.lower().strip() == "c":
-    staircase = input("You sneak out to the staircase, up or down?: ")
+    staircase = input("You sneak out to the staircase, up or down?:\n ")
     print(Fore.LIGHTBLUE_EX + art.ARROWS)
     print(Fore.RESET)
 else:
@@ -194,7 +207,7 @@ if staircase.lower().strip() == "up":
     print("1. You follow him, he looks suspicious, and you are curious")
     print("2. You get scared and decide to return to the lounge")
     print("3. You ignore the skulker and continue your own skulking")
-    stranger = input("What do you do next, 1, 2 or 3? ")
+    stranger = input("What do you do next, 1, 2 or 3?\n ")
     if stranger.lower().strip() == "1":
         print("You stalk the stalker, like a ninja")
         print("right until, he turns around and puts you in a headlock")
@@ -218,30 +231,39 @@ if staircase.lower().strip() == "up":
 
 
 def add_guest_details():
-    '''
+    """
     function to add user as guest
-    '''
-    name = input("Enter your name:/n ")
-    occupation = input("Enter your occupation:/n ")
-    age = input("Enter your age:/n ")
+    """
+    name = input("Enter your name:\n ")
+    occupation = input("Enter your occupation:\n ")
+    age = input("Enter your age:\n ")
     guest5 = (name, occupation, age)
     print(guest5)
 
 
 add_guest_details()
 
+
+
+
 print("The guests are mingling, when Jeeves enters with a letter on a tray")
 letter = input("Do you want to see what is in the letter? yes/no:\n ")
 if letter == "yes":
-    time.sleep(A)
+    time.sleep(B)
+    print(Fore.BLACK)
+    print(Back.WHITE)
     add_narration(narration.LETTER)
 if letter == "no":
     print("I guess that might have been important")
     print("A rock comes through window, with note attached, it reads")
-    time.sleep(A)
+    time.sleep(B)
+    print(Fore.BLACK)
+    print(Back.WHITE)
     add_narration(narration.LETTER)
 
 time.sleep(A)
+print(Fore.WHITE)
+print(Back.BLACK)
 print("you are in a dangerous dilemma, you need to team up with a buddy")
 review = input("Would you like to see details on all or 1 2 3 or 4?\n ")
 if review == "all":
@@ -309,14 +331,13 @@ elif safetyitemchoice == "5":
     print("Read up well, it may just save your life")
 else:
     print("You will be allocated a random choice of protection")
-    random_safetyitem()
-    print("you have been allocated a : " + safetyitem)
+    
 
 
 def luscious():
-    '''
+    """
     The Luscious Experience
-    '''
+    """
     if buddy == "1":
         add_narration(narration.LUSCIOUS)
         time.sleep(B)
@@ -338,7 +359,7 @@ def luscious():
         print("2. Do you ask Luscious to join you in the investigation")
         print("3. Do you pretend not to hear, and keep listening to Luscious")
         noise = ""
-        noise = input("What choice do you pick 1 2 or 3 ?")
+        noise = input("What choice do you pick 1 2 or 3 ?\n ")
         if noise == "1":
             print("Brave choice, it's better to know and be prepared")
             add_narration(narration.SECRET_ROOM)
@@ -358,8 +379,8 @@ def luscious():
         print("Luscious has got a phone signal, and is trying to get help")
         print("She calls the police and tell them about the death threat")
         print("You feel better now, that the police are on their way")
-        
-        print("What do you feel like doing now?")
+      
+        print("What do you feel like doing now?\n")
         print("1. You are tired, you take a nap while waiting for the police")
         print("2. You keep alert, clutching your safety item")
         print("3. You've had enough, you escape from this horror house")
@@ -375,15 +396,17 @@ def luscious():
             sys.exit()
         else:
             print("Not a valid choice")
+            
 
 
 luscious()
+random_safetyitem_and_survival()
 
 
 def brad():
-    '''
+    """
     The Brad Experience
-    '''
+    """
     if buddy == "2":
         add_narration(narration.BRAD)
         time.sleep(B)
@@ -393,9 +416,9 @@ brad()
 
 
 def tobias():
-    '''
+    """
     The Tobias Experience
-    '''
+    """
     if buddy == "3":
         add_narration(narration.TOBIAS)
         time.sleep(B)
@@ -405,12 +428,13 @@ tobias()
 
 
 def camilla():
-    '''
+    """
     The Camilla Experience
-    '''
+    """
     if buddy == "4":
         add_narration(narration.CAMILLA)
         time.sleep(B)
 
 
 camilla()
+

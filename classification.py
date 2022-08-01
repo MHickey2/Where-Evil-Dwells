@@ -1,21 +1,21 @@
 import random
 
-global killer
+global killer 
 global safetyitem
 
 
 class Person(object):
-    '''
+    """
     This is a docstring. I have created a new class for Person
-    '''
-    def __init__(self, index, name, occupation, age, goodquality, badquality,
+    """
+    def __init__(self, index, name, occupation, age, good_quality, bad_quality,
                  killermoves, ranking, kryptonite):
         self.index = index
         self.name = name
         self.occupation = occupation
         self.age = age
-        self.goodquality = goodquality
-        self.badquality = badquality
+        self.good_quality = good_quality
+        self.bad_quality = bad_quality
         self.killermoves = killermoves
         self.ranking = ranking
         self.kryptonite = kryptonite
@@ -36,9 +36,9 @@ guest5 = Person("5 ", "", "", "", "n/a", "n/a", "innocent", "n/a", "n/a")
 def show_information(guest1):
     print( '\nName of Guest: ' + {name} + '\nOccupation of Guest: '
     + {occupation} +'\nAge of Guest: ' + self.age
-    + '\nGood Quality: ' + {goodquality} +'\nBad Quality: '
-    + {badquality})
-    
+    + '\nGood Quality: ' + {good_quality} +'\nBad Quality: '
+    + {bad_quality})
+
 show_information(guest1)
 show_information(guest2)
 show_information(guest3)
@@ -52,9 +52,9 @@ def show_guest_details():
     function to show guest details
     """
     print(guest1.index + 'Name: ' + guest1.name + ", Age " + str(guest1.age)
-        + ", Occupation: " + guest1.occupation + ", Good Quality: " + guest1.goodquality + ", Bad Quality: " +
-        guest1.badquality)
-    
+          + ", Occupation: " + guest1.occupation + ", Good Quality: " +
+          guest1.good_quality + ", Bad Quality: " + guest1.bad_quality)
+
     print(guest5.index + guest5.name)
 
 
@@ -69,9 +69,9 @@ print(killer)
 
 
 class Protection(object):
-    '''
+    """
     I have created a new class for protection items
-    '''
+    """
     def __init__(self, index, name, description, protectionfrom):
         self.index = index
         self.name = name
@@ -91,28 +91,44 @@ item5 = Protection("5 ", "Book on Movie Murders", "Help defend yourself",
                    "Brad Jameson")
 
 
-def random_safetyitem():
-    '''
-    user can be assigned random protection item
-    '''
-    itemlist = ["Safety Helmet", "Bulletproof Vest", "Antidote", "Gun",
-                "Book on Movie Murders"]
+def random_item():
+    """
+    def random_safetyitem_and_survival():
+    """
+    global safetyitem
+    itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)
     print(safetyitem)
 
 
-random_safetyitem()
+random_item()
+
+
+"""
+    if "Luscious Campbell" == killer and "Safety Helmet" == safetyitem:
+        print("User lives")
+    elif "Brad Jameson" == killer and "Book on Movie Murders" == safetyitem:
+        print("User lives")
+    elif "Tobias Cooper" == killer and "Bulletproof Vest" == safetyitem:
+        print("User lives")
+    elif "Camilla Royce" == killer and "Antidote" == safetyitem:
+        print("user lives")
+    else:
+        print("user dies")
+"""
+
 
 
 def survival():
-    '''
-    does player survive
-    '''
-    print(guest1.name)
-    print(killer)
+    """
+    user can be assigned random protection item
+    """
+    # Returns 1 random element from list
+    global killer
+    global safetyitem      
 
-    if "Luscious Campbell" == killer and safetyitem == "Safety Helmet":
-        print("user survives")
+    if "Luscious Campbell" == killer and "Safety Helmet" == safetyitem:
+        print("User lives")
     else:
         print("user dies")
 
