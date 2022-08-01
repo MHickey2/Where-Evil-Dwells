@@ -49,7 +49,7 @@ def main():
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    print(Back.BLACK)    
+    print(Back.BLACK)
     word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
     print(word)
     response = input("Would you like to have an encounter with Evil?\n ")
@@ -81,6 +81,7 @@ def show_intro():
     _function to show intro to the user_
     """
     time.sleep(C)
+    print(Back.BLACK)
     print(Fore.LIGHTBLUE_EX + art.HOUSE)
     print(Fore.RESET)
     add_narration(narration.INTRO)
@@ -116,11 +117,11 @@ def accept_invite():
             print("Great choice, welcome!")          
         elif rsvp2 == "no":
             print("Sorry to see you go")
-            sys.exit()           
+            sys.exit()
         else:
             print("That is not a valid response")
             sys.exit()
-            
+
 
 accept_invite()
 
@@ -244,6 +245,17 @@ def add_guest_details():
 add_guest_details()
 
 
+def show_information(guest1):
+    print('Name of Guest: ' + guest1.name + '\nOccupation of Guest: '
+          + guest1.occupation + '\nAge of Guest: ' + str(guest1.age)
+          + '\nGood Quality: ' + guest1.good_quality + '\nBad Quality: '
+          + guest1.bad_quality)
+
+
+show_information(guest1)
+show_information(guest2)
+show_information(guest3)
+show_information(guest4)
 
 
 print("The guests are mingling, when Jeeves enters with a letter on a tray")
@@ -267,22 +279,27 @@ print(Back.BLACK)
 print("you are in a dangerous dilemma, you need to team up with a buddy")
 review = input("Would you like to see details on all or 1 2 3 or 4?\n ")
 if review == "all":
-    print(vars(guest1))
-    print(vars(guest2))
-    print(vars(guest3))
-    print(vars(guest4))
-elif review == "1":
-    print(vars(guest1))
-elif review == "2":
-    print(vars(guest2))
-elif review == "3":
-    print(vars(guest3))
-elif review == "4":
-    print(vars(guest4))
-else:
-    print("not valid answer")
+    print("\n")
+    show_information(guest1)
+    print("---------------")
+    show_information(guest2)
+    print("---------------")
+    show_information(guest3)
+    print("---------------")
+    show_information(guest4)
 
-buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
+elif review == "1":
+    show_information(guest1)
+elif review == "2":
+    show_information(guest2)
+elif review == "3":
+    show_information(guest3)
+elif review == "4":
+    show_information(guest4)
+else:
+    print("not valid answer, but you can choose a Buddy anyway")
+
+buddy = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ")
 if buddy == "1":
     print("You are teamed up with Luscious, I hope you like social media")
     print("and watch your back, there's a killer about")
@@ -331,8 +348,9 @@ elif safetyitemchoice == "5":
     print("Read up well, it may just save your life")
 else:
     print("You will be allocated a random choice of protection")
-    
+    random_item()
 
+print(safetyitem)
 
 def luscious():
     """
@@ -379,7 +397,7 @@ def luscious():
         print("Luscious has got a phone signal, and is trying to get help")
         print("She calls the police and tell them about the death threat")
         print("You feel better now, that the police are on their way")
-      
+        print("/n")
         print("What do you feel like doing now?\n")
         print("1. You are tired, you take a nap while waiting for the police")
         print("2. You keep alert, clutching your safety item")
@@ -396,11 +414,23 @@ def luscious():
             sys.exit()
         else:
             print("Not a valid choice")
-            
+
+        def survival():
+            """
+            user can be assigned random protection item
+            """
+            # Returns 1 random element from list
+            global killer
+            global safetyitem      
+
+    if "Luscious Campbell" == killer and "Safety Helmet" == safetyitem:
+        print("User lives")
+    else:
+        print("user dies")
 
 
 luscious()
-random_safetyitem_and_survival()
+survival()
 
 
 def brad():

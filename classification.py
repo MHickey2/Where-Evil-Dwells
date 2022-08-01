@@ -31,20 +31,25 @@ guest3 = Person("3 ", "Tobias Cooper", "Reality Show Judge", 42, "Smooth",
 guest4 = Person("4 ", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
                 "Classist", "Poisoner", 2, "Anctidote")
 guest5 = Person("5 ", "", "", "", "n/a", "n/a", "innocent", "n/a", "n/a")
+x = [guest1, guest2, guest3, guest4]
 
-'''
+
 def show_information(guest1):
-    print( '\nName of Guest: ' + {name} + '\nOccupation of Guest: '
-    + {occupation} +'\nAge of Guest: ' + self.age
-    + '\nGood Quality: ' + {good_quality} +'\nBad Quality: '
-    + {bad_quality})
+    print('Name of Guest: ' + guest1.name + '\nOccupation of Guest: '
+          + guest1.occupation + '\nAge of Guest: ' + str(guest1.age)
+          + '\nGood Quality: ' + guest1.good_quality + '\nBad Quality: '
+          + guest1.bad_quality)
+
 
 show_information(guest1)
 show_information(guest2)
 show_information(guest3)
 show_information(guest4)
-show_information(guest5)
-''' 
+
+
+
+
+
 
 
 def show_guest_details():
