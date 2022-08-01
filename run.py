@@ -48,9 +48,9 @@ def main():
     """_main function_
     """
     print(Fore.RED)
-    print(Back.BLACK)
     print(Style.BRIGHT)
-    word = pyfiglet.figlet_format(' WHERE  EVIL   DWELLS ')
+    print(Back.BLACK)    
+    word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
     print(word)
     response = input("Would you like to have an encounter with Evil?\n ")
     if response.lower().strip() == "yes":
@@ -60,8 +60,8 @@ def main():
     elif response.lower().strip() == "no":
         print("understandable, sorry to see you go")
         START = False
-        BYE = pyfiglet.figlet_format(' Bye for Now!')
-        print(BYE)
+        bye = pyfiglet.figlet_format(' Bye for Now!')
+        print(bye)
         sys.exit()
     else:
         print("That is not a valid response")
@@ -95,7 +95,7 @@ def accept_invite():
     """
     RSVP = input("the question is do you accept the invite? yes/no?\n ")
     if RSVP.lower().strip() == "yes":
-        print("Great, I see a hot-tub and Big Screen TV in your future")
+        print("Great, I see a Hot-Tub and Big Screen TV in your future")
         # Arrival Txt from Narration content is displayed to user
         RSVP = "yes"
         time.sleep(A)
@@ -110,17 +110,17 @@ def accept_invite():
         print(bye)
         sys.exit()
     else:
-        print("let's try that again, shall we")
+        print("Let's try that again, shall we")
         rsvp2 = input("The question is do you accept the invite? yes/no?\n ")
         if rsvp2 == "yes":
-            print("Great choice, welcome")
+            print("Great choice, welcome!")          
         elif rsvp2 == "no":
             print("Sorry to see you go")
-            sys.exit()
+            sys.exit()           
         else:
             print("That is not a valid response")
             sys.exit()
-
+            
 
 accept_invite()
 
