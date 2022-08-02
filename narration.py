@@ -43,7 +43,7 @@ BRAD = '''
 You have chosen to buddy up with Brad, a great Guy but
 he is a bit self obsessed, but nice to look at. You and
 your partner have decided to isolate yourself in the
-Kitchen, you both go to the kitchen...
+Kitchen, you both make your way to the kitchen...
 
 '''
 TOBIAS = '''

@@ -259,11 +259,18 @@ if staircase.lower().strip() == "up":
         print("The lounge is the best place to be right now anyway")
         setting_lounge()
 
+def add_guest_details():
+    '''
+    function to add user as guest
+    '''
+    name = input("Enter your name:/n ")
+    occupation = input("Enter your occupation:/n ")
+    age = input("Enter your age:/n ")
+    guest5 = (name, occupation, age)
+    print(guest5)
 
 
-    
-
-
+add_guest_details()
 
 
 print("\n")
@@ -397,7 +404,7 @@ def luscious():
     """
     The Luscious Experience
     """
-    if buddy == "1":
+    if buddychoice == "1":
         add_narration(narration.LUSCIOUS)
         time.sleep(B)
         print("You settle in the bedroom, and your nerves are shot")
@@ -471,9 +478,8 @@ def luscious():
 
 def survival():
     """
-    user can be assigned random protection item
+    will user survice, is your partner a killer
     """
-    # Returns 1 random element from list
     global killer
     global safetyitem      
 
@@ -489,16 +495,46 @@ def survival():
 
 
 luscious()
-
+survival()
 
 
 def brad():
     """
     The Brad Experience
     """
-    if buddy == "2":
+    if buddychoice == "2":
         add_narration(narration.BRAD)
         time.sleep(B)
+        print("You both look around the kitchen, to make sure it's safe")
+        print("You make sure the doors are locked securely just in case")
+        print("You are looking out the window, its dark outside...")
+        print("Suddenly you see a figure crouching in the garden")
+        print("You both are frantic, is the killer about to strike!")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        print("What is your next step, will you:\n")
+        print(Fore.RESET)
+        print("1. Find a weapon and confront the crouching man together")
+        print("2. Do you volunteer Brad to confront the man")
+        print("3. Do you step up and deal with the guy yourself")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        confrontation = input("What is your choice 1 2 or 3? ")
+        print(Fore.RESET)
+        if confrontation.lower().strip() == "1":
+            print("you load up with pots and pans and go after the man")
+            print("The mystery man disappears into bushes")
+            print("You decide it's too dangergous, so you return to kitchen")
+        elif confrontation.lower().strip() == "2":
+            print("Brad wimps out and hides under the table")
+            print("You join him under the table, twos company")
+        elif confrontation.lower().strip() == "3":
+            print("You chase after the man, full of bravado")
+            print("He gives you the slip, so you return to the kitchen")
+            print("Brad tells you he has your back, but you doubt it")
+        else:
+            print("That is not a valid choice")
+            time.sleep(B)
 
 
 brad()
@@ -508,7 +544,7 @@ def tobias():
     """
     The Tobias Experience
     """
-    if buddy == "3":
+    if buddychoice == "3":
         add_narration(narration.TOBIAS)
         time.sleep(B)
 
@@ -520,7 +556,7 @@ def camilla():
     """
     The Camilla Experience
     """
-    if buddy == "4":
+    if buddychoice == "4":
         add_narration(narration.CAMILLA)
         time.sleep(B)
 

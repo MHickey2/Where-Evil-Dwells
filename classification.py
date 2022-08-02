@@ -117,11 +117,11 @@ random_item()
 
 
 
-
+"""
 def survival():
     """
-    user can be assigned random protection item
-    """
+    # user can be assigned random protection item
+"""
     # Returns 1 random element from list
     global killer
     global safetyitem      
@@ -139,3 +139,5 @@ def survival():
 
 
 survival()
+
+"""
