@@ -34,24 +34,6 @@ guest5 = Person("5 ", "", "", "", "n/a", "n/a", "innocent", "n/a", "n/a")
 x = [guest1, guest2, guest3, guest4]
 
 
-def show_information(guest1):
-    print('Name of Guest: ' + guest1.name + '\nOccupation of Guest: '
-          + guest1.occupation + '\nAge of Guest: ' + str(guest1.age)
-          + '\nGood Quality: ' + guest1.good_quality + '\nBad Quality: '
-          + guest1.bad_quality)
-
-
-show_information(guest1)
-show_information(guest2)
-show_information(guest3)
-show_information(guest4)
-
-
-
-
-
-
-
 def show_guest_details():
     """
     function to show guest details
@@ -104,23 +86,11 @@ def random_item():
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)
     print(safetyitem)
+    return safetyitem
 
 
 random_item()
 
-
-"""
-    if "Luscious Campbell" == killer and "Safety Helmet" == safetyitem:
-        print("User lives")
-    elif "Brad Jameson" == killer and "Book on Movie Murders" == safetyitem:
-        print("User lives")
-    elif "Tobias Cooper" == killer and "Bulletproof Vest" == safetyitem:
-        print("User lives")
-    elif "Camilla Royce" == killer and "Antidote" == safetyitem:
-        print("user lives")
-    else:
-        print("user dies")
-"""
 
 
 
@@ -133,6 +103,12 @@ def survival():
     global safetyitem      
 
     if "Luscious Campbell" == killer and "Safety Helmet" == safetyitem:
+        print("User lives")
+    elif "Brad Jameson" == killer and "Book on Movie Murders" == safetyitem:
+        print("User lives")
+    elif "Tobias Cooper" == killer and "Bulletproof Vest" == safetyitem:
+        print("User lives")
+    elif "Camilla Royce" == killer and "Antidote" == safetyitem:
         print("User lives")
     else:
         print("user dies")
