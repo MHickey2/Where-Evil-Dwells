@@ -30,8 +30,32 @@ guest3 = Person("3 ", "Tobias Cooper", "Reality Show Judge", 42, "Smooth",
                 "Rude and Harsh", "Crack Shot", 4, "Bulletproof Vest")
 guest4 = Person("4 ", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
                 "Classist", "Poisoner", 2, "Anctidote")
-guest5 = Person("5 ", "", "", "", "n/a", "n/a", "innocent", "n/a", "n/a")
+
 x = [guest1, guest2, guest3, guest4]
+
+
+class Player(object):
+    """
+    This is a docstring. I have created a new class for Game Player
+    """
+    def __init__(self, name, occupation, age):
+        self.name = name
+        self.occupation = occupation
+        self.age = age
+
+
+player = Player("", "", "")
+
+
+def show_player_details():
+    """
+    function to show guest details
+    """
+    print('Name: ' + player.name + "Occupation: " + player.occupation
+          + "Age: " + str(player.age))
+
+
+show_player_details()
 
 
 def show_guest_details():
@@ -42,7 +66,7 @@ def show_guest_details():
           + ", Occupation: " + guest1.occupation + ", Good Quality: " +
           guest1.good_quality + ", Bad Quality: " + guest1.bad_quality)
 
-    print(guest5.index + guest5.name)
+    print(guest1.index + guest1.name)
 
 
 print(guest1.name)

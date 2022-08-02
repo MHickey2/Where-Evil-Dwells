@@ -24,6 +24,7 @@ staircase = ""
 doorchoice = ""
 global buddy
 global safetyitem
+global player
 
 
 A = 3
@@ -47,7 +48,7 @@ def add_narration(printed_text):
 def main():
     """_main function_
     """
-    print(Fore.RED)   
+    print(Fore.RED)
     print(Back.BLACK)
     word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
     print(word)
@@ -131,6 +132,16 @@ def accept_invite():
 accept_invite()
 
 
+def add_player_details():
+    """
+    function to add user as guest
+    """
+    name = input("Enter your name:\n ")
+    occupation = input("Enter your occupation:\n ")
+    age = input("Enter your age:\n ")
+    player = (name, occupation, str(age))
+
+
 def setting_lounge():
     """
     setting lounge function
@@ -142,6 +153,7 @@ def setting_lounge():
     print(guest3.index + guest3.name)
     print(guest4.index + guest4.name)
     print("Please provide your details to the other guests:")
+    add_player_details()
 
 
 print(Fore.LIGHTWHITE_EX + art.DRINK)
@@ -248,18 +260,11 @@ if staircase.lower().strip() == "up":
         setting_lounge()
 
 
-def add_guest_details():
-    """
-    function to add user as guest
-    """
-    name = input("Enter your name:\n ")
-    occupation = input("Enter your occupation:\n ")
-    age = input("Enter your age:\n ")
-    guest5 = (name, occupation, age)
-    print(guest5)
+
+    
 
 
-add_guest_details()
+
 
 print("\n")
 print("The guests are mingling, when Jeeves enters with a letter on a tray")
@@ -339,7 +344,7 @@ else:
     buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
     if buddy == "1":
         print("You are teamed up with Luscious, I hope you like social media")
-        print("and watch your back, there's a killer about")
+        print("and watch your back, there's a killer about")       
     elif buddy == "2":
         print("You are teamed up with Brad, keep him away from mirrors")
         print("Keep your wits about you, there is a killer around")
@@ -483,9 +488,8 @@ def survival():
         print("User lives")
 
 
-
 luscious()
-survival()
+
 
 
 def brad():
