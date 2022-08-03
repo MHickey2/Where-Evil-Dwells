@@ -45,14 +45,27 @@ def add_narration(printed_text):
         time.sleep(0.060)
 
 
+def options_for_player():
+    options = input("S to start again, or L to leave s/l:\n")
+    if options.lower().strip() == "s":
+        main()
+    if options.lower().strip() == "l":
+        print("OK no problem\n")
+        bye = pyfiglet.figlet_format(' Bye for \n Now!')
+        print(bye)
+        sys.exit()
+
+
 def main():
     """_main function_
     """
     print(Fore.RED)
+    print(Style.BRIGHT)
     print(Back.BLACK)
     word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
     print(word)
     response = input("Would you like to have an encounter with Evil?\n ")
+    print(Fore.RESET)
     if response.lower().strip() == "yes":
         print("welcome to the Game, let's hope you make it out alive!")
         time.sleep(C)
@@ -60,9 +73,8 @@ def main():
     elif response.lower().strip() == "no":
         print("understandable, sorry to see you go")
         START = False
-        bye = pyfiglet.figlet_format(' Bye for Now!')
-        print(bye)
-        sys.exit()
+        print("Are you sure I can't tempt you")
+        options_for_player()
     else:
         print("That is not a valid response")
         START = False
@@ -100,7 +112,6 @@ def accept_invite():
     print(Fore.RESET)
     if RSVP.lower().strip() == "yes":
         print("Great, I see a Hot-Tub and Big Screen TV in your future")
-        # Arrival Txt from Narration content is displayed to user
         RSVP = "yes"
         time.sleep(A)
         print(Fore.LIGHTGREEN_EX + art.DOOR)
@@ -117,10 +128,15 @@ def accept_invite():
         print("Let's try that again, shall we")
         print(Fore.RED)
         print(Style.BRIGHT)
-        rsvp2 = input("The question is do you accept the invite? yes/no?\n ")
+        rsvp2 = input("Do you accept the invite? yes/no?\n ")
         print(Fore.RESET)
         if rsvp2 == "yes":
             print("Great choice, welcome!")
+            time.sleep(A)
+            print(Fore.LIGHTGREEN_EX + art.DOOR)
+            print(Fore.RESET)
+            add_narration(narration.ARRIVAL)
+            time.sleep(A)
         elif rsvp2 == "no":
             print("Sorry to see you go")
             sys.exit()
@@ -140,6 +156,7 @@ def add_player_details():
     occupation = input("Enter your occupation:\n ")
     age = input("Enter your age:\n ")
     player = (name, occupation, str(age))
+    print("Welcome to Harland Manor, " + name + "!")
 
 
 def setting_lounge():
@@ -259,22 +276,9 @@ if staircase.lower().strip() == "up":
         print("The lounge is the best place to be right now anyway")
         setting_lounge()
 
-def add_guest_details():
-    '''
-    function to add user as guest
-    '''
-    name = input("Enter your name:/n ")
-    occupation = input("Enter your occupation:/n ")
-    age = input("Enter your age:/n ")
-    guest5 = (name, occupation, age)
-    print(guest5)
 
 
-add_guest_details()
-
-
-print("\n")
-print("The guests are mingling, when Jeeves enters with a letter on a tray")
+print("You are mingling, when Jeeves enters with a letter on a tray")
 print(Fore.RED)
 print(Style.BRIGHT)
 letter = input("Do you want to see what is in the letter? yes/no:\n ")
@@ -535,6 +539,8 @@ def brad():
         else:
             print("That is not a valid choice")
             time.sleep(B)
+
+        print("You are both spooked by the experience")
 
 
 brad()

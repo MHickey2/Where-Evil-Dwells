@@ -44,19 +44,6 @@ class Player(object):
         self.age = age
 
 
-player = Player("", "", "")
-
-
-def show_player_details():
-    """
-    function to show guest details
-    """
-    print('Name: ' + player.name + "Occupation: " + player.occupation
-          + "Age: " + str(player.age))
-
-
-show_player_details()
-
 
 def show_guest_details():
     """
