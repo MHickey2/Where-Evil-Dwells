@@ -44,7 +44,6 @@ class Player(object):
         self.age = age
 
 
-
 def show_guest_details():
     """
     function to show guest details
@@ -101,30 +100,3 @@ def random_item():
 
 
 random_item()
-
-
-
-"""
-def survival():
-    """
-    # user can be assigned random protection item
-"""
-    # Returns 1 random element from list
-    global killer
-    global safetyitem      
-
-    if "Luscious Campbell" == killer and "Safety Helmet" == safetyitem:
-        print("User lives")
-    elif "Brad Jameson" == killer and "Book on Movie Murders" == safetyitem:
-        print("User lives")
-    elif "Tobias Cooper" == killer and "Bulletproof Vest" == safetyitem:
-        print("User lives")
-    elif "Camilla Royce" == killer and "Antidote" == safetyitem:
-        print("User lives")
-    else:
-        print("user dies")
-
-
-survival()
-
-"""

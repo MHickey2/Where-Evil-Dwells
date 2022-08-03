@@ -153,9 +153,7 @@ def add_player_details():
     function to add user as guest
     """
     name = input("Enter your name:\n ")
-    occupation = input("Enter your occupation:\n ")
-    age = input("Enter your age:\n ")
-    player = (name, occupation, str(age))
+    player = (name)
     print("Welcome to Harland Manor, " + name + "!")
 
 
@@ -242,6 +240,7 @@ if staircase.lower().strip() == "down":
         print(word)
         sys.exit()
     else:
+        print("Not a valid choice, but I suggest...")
         print("It's not worth the risk, get back to the lounge")
 
 
@@ -277,7 +276,6 @@ if staircase.lower().strip() == "up":
         setting_lounge()
 
 
-
 print("You are mingling, when Jeeves enters with a letter on a tray")
 print(Fore.RED)
 print(Style.BRIGHT)
@@ -288,10 +286,16 @@ if letter == "yes":
     print(Fore.BLACK)
     print(Back.WHITE)
     add_narration(narration.LETTER)
-if letter == "no":
+elif letter == "no":
     print("I guess that might have been important")
     print("A rock comes through window, with note attached, it reads")
     time.sleep(C)
+    print(Fore.BLACK)
+    print(Back.WHITE)
+    add_narration(narration.LETTER)
+else:
+    print("Not a valid answer, but I\'ll help you out")
+    print("You need to know this...")
     print(Fore.BLACK)
     print(Back.WHITE)
     add_narration(narration.LETTER)
@@ -299,9 +303,9 @@ if letter == "no":
 
 def show_information(guest1):
     print('Name of Guest: ' + guest1.name + '\nOccupation: '
-          + guest1.occupation + '\nAge: ' + str(guest1.age)
-          + '\nGood Quality: ' + guest1.good_quality + '\nBad Quality: '
-          + guest1.bad_quality)
+          + guest1.occupation + '\nAge: ' + str(guest1.age) +
+          '\nGood Quality: ' + guest1.good_quality +
+          '\nBad Quality: ' + guest1.bad_quality)
 
 
 time.sleep(A)
@@ -355,7 +359,7 @@ else:
     buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
     if buddy == "1":
         print("You are teamed up with Luscious, I hope you like social media")
-        print("and watch your back, there's a killer about")       
+        print("and watch your back, there's a killer about")      
     elif buddy == "2":
         print("You are teamed up with Brad, keep him away from mirrors")
         print("Keep your wits about you, there is a killer around")
@@ -404,6 +408,27 @@ else:
     safetyitem = random_item()
 
 
+def survival():
+    """
+    will user survice, is your partner a killer
+    """
+    global killer
+    global safetyitem
+
+    if guest1.name == killer:
+        print("There is an attempt on your life\n")
+        if safetyitem != "Safety Helmet":
+            print("Luscious was the killer along\n")
+            print("Bad Luck, you die")
+        else:
+            print("Luscious tried to kill you by hitting you... ")
+            print("with a selfie stick, lucky you were wearing....")
+            print("your safety Helmet, you survive")
+    else:
+        print("You are safe, Luscious is not the killer")
+        print("You will survive the night")
+
+
 def luscious():
     """
     The Luscious Experience
@@ -422,7 +447,7 @@ def luscious():
         elif brandy.lower().strip() == "no":
             print("wise choice, you may need a clear head")
         else:
-            print("That is not a valid choice")
+            print("That is not a valid choice, let's skip the drink")
             time.sleep(B)
 
         print("Luscious has no access to wifi, so is not a happy girl")
@@ -451,11 +476,13 @@ def luscious():
             print("Not a valid choice, I guess we'll just wait and see")
             print("What's the worse that can happen...ahem")
 
+        time.sleep(B)
+        print("\n")
         print("You are in the bedroom and have barricaded yourself in")
         print("Luscious has got a phone signal, and is trying to get help")
         print("She calls the police and tell them about the death threat")
         print("You feel better now, that the police are on their way")
-        print("/n")
+        print("\n")
         print(Fore.RED)
         print(Style.BRIGHT)
         print("What do you feel like doing now?\n")
@@ -469,6 +496,7 @@ def luscious():
         print(Fore.RESET)
         if escape == "1":
             print("you deserve a rest, I'm sure you'll sleep soundly")
+            print("Then again, I would keep one eye open, you never know")
         elif escape == "2":
             print("Wise choice, no killer is going to get you")
         elif escape == "3":
@@ -477,29 +505,40 @@ def luscious():
             print(goodbye)
             sys.exit()
         else:
-            print("Not a valid choice")
+            print("Not a valid choice, but its ok, you should wait here")
 
-
-def survival():
-    """
-    will user survice, is your partner a killer
-    """
-    global killer
-    global safetyitem      
-
-    if guest1.name == killer:
-        print("There is an attempt on your life")
-        if safetyitem != "Safety Helmet":
-            print("you die")
-        else:
-            print("you survive")
-    else:
-        print("You are safe, your buddy is not a killer")
-        print("User lives")
+        time.sleep(B)
+        print("\n")
+        print("About 20 minutes later you hear a loud bang, somewhere close")
+        print("You look around, but you cannot see Luscious, where is she")
+        print("The light goes out, you start freaking out")
+        print("You can sense someone is close to you...Are you in danger?")
+        time.sleep(B)
+        survival()
 
 
 luscious()
-survival()
+
+
+def survival2():
+    """
+    will user survice, is your partner a killer
+     """
+    global killer
+    global safetyitem
+
+    if guest2.name == killer:
+        print("There is an attempt on your life\n")
+        if safetyitem != "Book on Movie Murders":
+            print("Brad was the killer along\n")
+            print("Bad Luck, you die")
+        else:
+            print("Brad tried to kill you by stabbing you... ")
+            print("lucky you were wearing whatever")
+            print(", you survive")
+    else:
+        print("You are safe, Brad is not the killer")
+        print("You will survive the night")
 
 
 def brad():
@@ -538,9 +577,44 @@ def brad():
             print("Brad tells you he has your back, but you doubt it")
         else:
             print("That is not a valid choice")
+            print("I guess you could wait here and hope he goes away")
             time.sleep(B)
 
         print("You are both spooked by the experience")
+        print("You hear a door opening, it souds like it\'s coming from below")
+        print("There is a door leading to the cellar")
+        print("There seems to be someone rummaging in the cellar")
+        print("The sound seems to be getting closer")
+        print("You and Brad decide to: ")
+        print("A. Ensure the cellar door is locked and and block it off")
+        print("B. Leave by the backdoor and escape this House of Doom")
+        print("C. Risk it all and go investigate the noise")
+        cellar = input("What is your choice, A, B or C: ")
+        if cellar == "a":
+            print("Good choice, but he may find another way to get in")
+        elif cellar == "b":
+            print("You run away, you and Brad are never seen again")
+            bye = pyfiglet.figlet_format(' Best of Luck!')
+            print(bye)
+            options_for_player()
+        elif cellar == "c":
+            print("Is that the wisest decision, well you only live once")
+            print("\n")
+            time.sleep(B)
+            print("You and Brad sneak down the stairs, pots and pans in hand")
+            print("When you reach the bottom, the outside door is wide open")
+            print("The killer has fled again, they have a charmed life")
+            print("You head back to the kitchen, shutting the cellar door")
+        else:
+            print("Not a valid answer")
+            print("I guess you could just sit here, and hope he wont find you\n")
+
+        time.sleep(B)
+
+        print("You are back in the kitchen, contemplating your next move")
+        print("When suddenly, you hear a loud noise, you turn your head and")
+        time.sleep(B)
+        survival2()
 
 
 brad()
@@ -568,4 +642,3 @@ def camilla():
 
 
 camilla()
-
