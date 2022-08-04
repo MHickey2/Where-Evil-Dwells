@@ -539,7 +539,6 @@ def survival2():
             print(Back.BLACK)
             print(Fore.LIGHTBLUE_EX + art.DEATH)
             print(Fore.RESET)
-         
         else:
             print("Brad tried to kill you by stabbing you... ")
             print("lucky you were wearing whatever")
@@ -618,7 +617,7 @@ def brad():
         time.sleep(B)
 
         print("You are back in the kitchen, contemplating your next move")
-        print("When suddenly, you hear a loud noise, you turn your head and")
+        print("When suddenly, you hear a loud noise, you turn your head and..")
         time.sleep(B)
         survival2()
 
@@ -697,9 +696,9 @@ def tobias():
         print("C. Use this opportunity to run down the stairs and escape")
         print(Fore.RED)
         print(Style.BRIGHT)
-        ATTACK = input(":What is your course of action: a,b or C: \n")
+        ATTIC = input(":What is your course of action: a,b or C: \n")
         print(Fore.RESET)
-        if ATTACK.lower().strip() == "a":
+        if ATTIC.lower().strip() == "a":
             print("You make your way up the ladder really quitely")
             print("You and Tobias start searching the attack")
             print("You both split up to cover more ground")
@@ -707,7 +706,7 @@ def tobias():
             print("You call out for Tobias, but he doesn\'t come")
             print("you hear a new noise and you brace yourself....")
             survival3()
-        elif ATTACK.lower().strip() == "b":
+        elif ATTIC.lower().strip() == "b":
             print("You decide to go back to the study and hide")
             print("You barricade the door with furniture")
             print("You decide to have a drink from the drinks cabinet")
@@ -716,7 +715,7 @@ def tobias():
             print("You hear a noise behind you but are too petrified to move")
             print("Overwhelmed you close your eyes and...")
             survival3()
-        elif ATTACK.lower().strip() == "c":
+        elif ATTIC.lower().strip() == "c":
             print("So close, but I guess you get to live another day")
             options_for_player()
         else:
@@ -725,6 +724,31 @@ def tobias():
 
 
 tobias()
+
+
+def survival4():
+    """
+    will user survice, is your partner a killer
+     """
+    global killer
+    global safetyitem
+
+    if guest4.name == killer:
+        print("There is an attempt on your life\n")
+        if safetyitem != "Antidote":
+            print("Camilla was the killer all along\n")
+            print("Bad Luck, you die")
+            print(Back.BLACK)
+            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.RESET)
+        else:
+            print("Camilla tried to kill you by shooting you... ")
+            print("lucky you had the antidote")
+            print("You survive")
+    else:
+        print("You are safe, Camilla is not the killer")
+        print("You will survive the night")
+
 
 
 def camilla():
@@ -737,6 +761,72 @@ def camilla():
         print(Fore.RESET)
         add_narration(narration.CAMILLA)
         time.sleep(B)
+        print("You and Camilla make yourself comfortable in the Dining area")
+        print("Camilla has come well prepared, she has a tray of food")
+        print("Despite the fear, your appetite has not been affected")
+        print("You eagerly tuck in to a variety of treats")
+        print("Camilla is a great host and makes sure you clean your plate")
+        print("\n")
+        print("Your room is near the front door and you hear it being opened")
+        print("You both here raised voices and then hear a scream")
+        print("You and Camilla discuss your options, will you:")
+        print("A. Escape through the window with Camilla by your side")
+        print("B. You chance it and open the door to investigate the scream")
+        print("C. You leave the room by a backdoor and check it out")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        DOOR = input("What is your choice, A, B or C: \n")
+        print(Fore.RESET)
+        if DOOR.lower().strip() == "a":
+            print("Well at least you are well fed and alive, that\'s good")
+            options_for_player()
+        elif DOOR.lower().strip() == "b":
+            print("You both walk to the front door, you can\'t see anyone")
+            print("You can\'t hear voices anymore, you decice to look around")
+        elif DOOR.lower().strip() == "c":
+            print("You are in the back foyer and have left the voices behind")
+        else:
+            print("Not a valid answer, you should check out the library")
+            print("I think that scream came from there")
+
+        print("\n")
+        print("You and Camilla have reached the Library room and you enter")
+        print("The room is in disarray, there has been an altercation")
+        print("Books are scattered everywhere and the furniture is overturned")
+        print("You see a message written in red on the mirror")
+        print("The message says 'Leave Before you Both Die")
+        print("You both are alarmed, do you: ")
+        print("A. Retreat back to the dining room, maybe it will be safer")
+        print("B. Try to find a phone and call for help, this is scary")
+        print("C. You need a bathroom, you\'re feeling sick")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        LIBRARY = input("What is your choice a, b or c: \n")
+        print(Fore.RESET)
+        if LIBRARY.lower().strip() == "a":
+            print("You return to the Dining Room and lock the door")
+            print("You hope this nightmare ends soon, you eat some more food")
+        elif LIBRARY.lower().strip() == "b":
+            print("You search for a phone and find one in the hall")
+            print("The line is dead, I guess you both have to tough it out")
+        elif LIBRARY.lower().strip() == "c":
+            print("You find the bathroom and you feel much better")
+            print("You return to the Dining Room")
+            print("You and Camilla settle in for the duration")
+        else:
+            print("That is not a valid answer, better stay in the Dining Room")
+
+        time.sleep(B)
+
+        print("You have gorged yourself with the rest of the food")
+        print("You are really spooked and you both need to unwind")
+        print("You are not feeling well, you must have ate too much")
+        print("Camilla is smoking out the window and you begin to nap")
+        print("You don't know how long you have nodded off when...")
+        print("You wake with a sense of foreboding, you are in danger")
+        print("You try to shake the feeling, but it\'s useless")
+        print("You know the killer may have you in their sight...")
+        survival4()
 
 
 camilla()
