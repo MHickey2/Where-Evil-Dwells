@@ -420,6 +420,9 @@ def survival():
         if safetyitem != "Safety Helmet":
             print("Luscious was the killer along\n")
             print("Bad Luck, you die")
+            print(Back.BLACK)
+            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.RESET)
         else:
             print("Luscious tried to kill you by hitting you... ")
             print("with a selfie stick, lucky you were wearing....")
@@ -434,6 +437,9 @@ def luscious():
     The Luscious Experience
     """
     if buddychoice == "1":
+        print(Back.BLACK)
+        print(Fore.LIGHTGREEN_EX + art.BEDROOM)
+        print(Fore.RESET)
         add_narration(narration.LUSCIOUS)
         time.sleep(B)
         print("You settle in the bedroom, and your nerves are shot")
@@ -501,9 +507,7 @@ def luscious():
             print("Wise choice, no killer is going to get you")
         elif escape == "3":
             print("Who could blame you, you may be broke, but will be alive")
-            goodbye = pyfiglet.figlet_format(' Goodbye')
-            print(goodbye)
-            sys.exit()
+            options()            
         else:
             print("Not a valid choice, but its ok, you should wait here")
 
@@ -532,6 +536,10 @@ def survival2():
         if safetyitem != "Book on Movie Murders":
             print("Brad was the killer along\n")
             print("Bad Luck, you die")
+            print(Back.BLACK)
+            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.RESET)
+         
         else:
             print("Brad tried to kill you by stabbing you... ")
             print("lucky you were wearing whatever")
@@ -594,8 +602,6 @@ def brad():
             print("Good choice, but he may find another way to get in")
         elif cellar == "b":
             print("You run away, you and Brad are never seen again")
-            bye = pyfiglet.figlet_format(' Best of Luck!')
-            print(bye)
             options_for_player()
         elif cellar == "c":
             print("Is that the wisest decision, well you only live once")
@@ -607,7 +613,7 @@ def brad():
             print("You head back to the kitchen, shutting the cellar door")
         else:
             print("Not a valid answer")
-            print("I guess you could just sit here, and hope he wont find you\n")
+            print("You could just sit here, and hope he wont find you\n")
 
         time.sleep(B)
 
@@ -620,6 +626,30 @@ def brad():
 brad()
 
 
+def survival3():
+    """
+    will user survice, is your partner a killer
+     """
+    global killer
+    global safetyitem
+
+    if guest3.name == killer:
+        print("There is an attempt on your life\n")
+        if safetyitem != "Bulletproof Vest":
+            print("Tobias was the killer along\n")
+            print("Bad Luck, you die")
+            print(Back.BLACK)
+            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.RESET)
+        else:
+            print("Tobias tried to kill you by shooting you... ")
+            print("lucky you were wearing your bulletproof vest")
+            print("You survive")
+    else:
+        print("You are safe, Tobias is not the killer")
+        print("You will survive the night")
+
+
 def tobias():
     """
     The Tobias Experience
@@ -627,6 +657,71 @@ def tobias():
     if buddychoice == "3":
         add_narration(narration.TOBIAS)
         time.sleep(B)
+        print("You are situated in the Study now, Tobias is hard work")
+        print("He is all fired up about the situation and is disgruntled")
+        print("You try to distract yourself from the ranting")
+        print("\n")
+        print("Your are looking around the study and try the landline")
+        print("It looks\'s like the phone line has been cut")
+        print("Tobias is not a happy and vows to sue for emotinal damage")
+        print("You are trying to calm him, when you hear a loud noise outside")
+        print("It is coming from the corridor, it may be the killer")
+        print("You and Tobias decide to:")
+        print("A. Shimmy down the drainpipe and escape, broke but alive")
+        print("B. The wait and see approach, no rush")
+        print("C. Grab improvised weapons and confront whoever it is")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        CORRIDOR = input(":What is your course of action: a,b or C: \n")
+        print(Fore.RESET)
+        if CORRIDOR.lower().strip() == "a":
+            print("But that big Screen TV is history")
+            options_for_player()
+        elif CORRIDOR.lower().strip() == "b":
+            print("You listen for a while but don't hear anything further")
+            print("You decide to venture outside and check it out")
+        elif CORRIDOR.lower().strip() == "c":
+            print("You and Tobias, tooled with a letter opener and Stapler")
+            print("Leave the room and move down the corridor with stealth")
+        else:
+            print("Not a valid answer, you should leave the study anyway")
+            print("Maybe you can find somewher safer to hide")
+
+        time.sleep(B)
+
+        print("You are now in the corridor, the person has long gone")
+        print("You see a ladder leading up to the Attack")
+        print("You figure the killer may be up there do you:")
+        print("A. Go up the ladder and catch him before he get's you")
+        print("B. Close the door of the attack and get rid of the ladder")
+        print("C. Use this opportunity to run down the stairs and escape")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        ATTACK = input(":What is your course of action: a,b or C: \n")
+        print(Fore.RESET)
+        if ATTACK.lower().strip() == "a":
+            print("You make your way up the ladder really quitely")
+            print("You and Tobias start searching the attack")
+            print("You both split up to cover more ground")
+            print("Afer a few minutes you hear footsteps behine you")
+            print("You call out for Tobias, but he doesn\'t come")
+            print("you hear a new noise and you brace yourself....")
+            survival3()
+        elif ATTACK.lower().strip() == "b":
+            print("You decide to go back to the study and hide")
+            print("You barricade the door with furniture")
+            print("You decide to have a drink from the drinks cabinet")
+            print("After a short time you feel tired and rest your eyes")
+            print("You wake suddenly, startled by a noise inside the room")
+            print("You hear a noise behind you but are too petrified to move")
+            print("Overwhelmed you close your eyes and...")
+            survival3()
+        elif ATTACK.lower().strip() == "c":
+            print("So close, but I guess you get to live another day")
+            options_for_player()
+        else:
+            print("Not a valid answer, but let\'s check if you survive anyway")
+            survival3()
 
 
 tobias()
@@ -637,6 +732,9 @@ def camilla():
     The Camilla Experience
     """
     if buddychoice == "4":
+        print(Back.BLACK)
+        print(Fore.LIGHTBLUE_EX + art.KITCHEN)
+        print(Fore.RESET)
         add_narration(narration.CAMILLA)
         time.sleep(B)
 
