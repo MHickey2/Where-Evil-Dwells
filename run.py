@@ -52,7 +52,7 @@ def clear():
     """
     command = 'clear'
     os.system(command)
-    
+
 
 def options_for_player():
     options = input("S to start again, or L to leave s/l:\n")
@@ -69,9 +69,12 @@ def main():
     """_main function_
     """
     print(Fore.RED)
-    print(Style.BRIGHT)   
+    print(Style.BRIGHT)
+    print(Back.BLACK)
     word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
     print(word)
+    print(Fore.RED)
+    print(Style.BRIGHT)
     response = input("Would you like to have an encounter with Evil?\n ")
     print(Fore.RESET)
     if response.lower().strip() == "yes":
@@ -446,7 +449,7 @@ def survival():
             print("Luscious was the killer along\n")
             print("Bad Luck, you die")
             print(Back.BLACK)
-            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.LIGHTRED_EX + art.DEATH)
             print(Fore.RESET)
         else:
             print("Luscious tried to kill you by hitting you... ")
@@ -562,7 +565,7 @@ def survival2():
             print("Brad was the killer along\n")
             print("Bad Luck, you die")
             print(Back.BLACK)
-            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.LIGHTRED_EX + art.DEATH)
             print(Fore.RESET)
         else:
             print("Brad tried to kill you by stabbing you... ")
@@ -663,7 +666,7 @@ def survival3():
             print("Tobias was the killer along\n")
             print("Bad Luck, you die")
             print(Back.BLACK)
-            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.LIGHTRED_EX + art.DEATH)
             print(Fore.RESET)
         else:
             print("Tobias tried to kill you by shooting you... ")
@@ -764,7 +767,7 @@ def survival4():
             print("Camilla was the killer all along\n")
             print("Bad Luck, you die")
             print(Back.BLACK)
-            print(Fore.LIGHTBLUE_EX + art.DEATH)
+            print(Fore.LIGHTRED_EX + art.DEATH)
             print(Fore.RESET)
         else:
             print("Camilla tried to kill you by shooting you... ")
