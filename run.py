@@ -1,6 +1,8 @@
 """
 Text Based Adventure Game
 """
+import os
+import re
 import sys
 import time
 import random
@@ -45,6 +47,13 @@ def add_narration(printed_text):
         time.sleep(0.060)
 
 
+def clear():
+    """_This clears the screen_
+    """
+    command = 'clear'
+    os.system(command)
+    
+
 def options_for_player():
     options = input("S to start again, or L to leave s/l:\n")
     if options.lower().strip() == "s":
@@ -60,8 +69,7 @@ def main():
     """_main function_
     """
     print(Fore.RED)
-    print(Style.BRIGHT)
-    print(Back.BLACK)
+    print(Style.BRIGHT)   
     word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
     print(word)
     response = input("Would you like to have an encounter with Evil?\n ")
@@ -150,12 +158,29 @@ accept_invite()
 
 def add_player_details():
     """
-    function to add user as guest
+    function to add player to the game
     """
     name = input("Enter your name:\n ")
-    player = (name)
-    print("Welcome to Harland Manor, " + name + "!")
+    PLAYER = (name)
+    # validating_name(name)
+    if name == "":
+        name = "Stranger"
 
+    print("Welcome to Harland Manor " + name + "!")
+
+"""
+def validating_name(name):
+   
+    regex_name = re.compile(/^[A-Za-z]+$/, re.IGNORECASE)
+    res = regex_name.search(name)
+    # If match is found, the string is valid
+    if res: 
+        print("Valid")          
+    # If match is not found, string is invalid
+    else:
+        print("Invalid")
+        add_player_details()
+"""
 
 def setting_lounge():
     """
@@ -169,7 +194,7 @@ def setting_lounge():
     print(guest4.index + guest4.name)
     print("Please provide your details to the other guests:")
     add_player_details()
-
+    
 
 print(Fore.LIGHTWHITE_EX + art.DRINK)
 print(Fore.RESET)
