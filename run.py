@@ -5,8 +5,6 @@ import os
 import re
 import sys
 import time
-import random
-import classification
 from classification import *
 import narration
 from narration import *
@@ -73,8 +71,6 @@ def main():
     print(Back.BLACK)
     word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
     print(word)
-    print(Fore.RED)
-    print(Style.BRIGHT)
     response = input("Would you like to have an encounter with Evil?\n ")
     print(Fore.RESET)
     if response.lower().strip() == "yes":
@@ -171,19 +167,20 @@ def add_player_details():
 
     print("Welcome to Harland Manor " + name + "!")
 
+
 """
 def validating_name(name):
-   
     regex_name = re.compile(/^[A-Za-z]+$/, re.IGNORECASE)
     res = regex_name.search(name)
     # If match is found, the string is valid
-    if res: 
-        print("Valid")          
-    # If match is not found, string is invalid
-    else:
-        print("Invalid")
+    if res:
+        print("Valid")
+        # If match is not found, string is invalid
+        # else:
+        # # print("Invalid")
         add_player_details()
 """
+
 
 def setting_lounge():
     """
@@ -197,7 +194,7 @@ def setting_lounge():
     print(guest4.index + guest4.name)
     print("Please provide your details to the other guests:")
     add_player_details()
-    
+
 
 print(Fore.LIGHTWHITE_EX + art.DRINK)
 print(Fore.RESET)
@@ -270,6 +267,8 @@ if staircase.lower().strip() == "down":
     else:
         print("Not a valid choice, but I suggest...")
         print("It's not worth the risk, get back to the lounge")
+else:
+    print("Not a valid answer, but I hear the Lounge is a cool place to be")      
 
 
 if staircase.lower().strip() == "up":
@@ -330,8 +329,8 @@ else:
 
 
 def show_information(guest1):
-    print('Name of Guest: ' + guest1.name + '\nOccupation: '
-          + guest1.occupation + '\nAge: ' + str(guest1.age) +
+    print('Name of Guest: ' + guest1.name + '\nOccupation: ' +
+          guest1.occupation + '\nAge: ' + str(guest1.age) +
           '\nGood Quality: ' + guest1.good_quality +
           '\nBad Quality: ' + guest1.bad_quality)
 
@@ -387,7 +386,7 @@ else:
     buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
     if buddy == "1":
         print("You are teamed up with Luscious, I hope you like social media")
-        print("and watch your back, there's a killer about")      
+        print("and watch your back, there's a killer about")
     elif buddy == "2":
         print("You are teamed up with Brad, keep him away from mirrors")
         print("Keep your wits about you, there is a killer around")
@@ -455,9 +454,15 @@ def survival():
             print("Luscious tried to kill you by hitting you... ")
             print("with a selfie stick, lucky you were wearing....")
             print("your safety Helmet, you survive")
+            time.sleep(B)
+            add_narration(narration.SURVIVAL_MESSAGE)
+            options_for_player()
     else:
         print("You are safe, Luscious is not the killer")
         print("You will survive the night")
+        time.sleep(B)
+        add_narration(narration.SURVIVAL_MESSAGE)
+        options_for_player()
 
 
 def luscious():
@@ -490,7 +495,6 @@ def luscious():
         print("1. Do you go see what's causing the noise")
         print("2. Do you ask Luscious to join you in the investigation")
         print("3. Do you pretend not to hear, and keep listening to Luscious")
-        noise = ""
         print(Fore.RED)
         print(Style.BRIGHT)
         noise = input("What choice do you pick 1 2 or 3 ?\n ")
@@ -526,16 +530,16 @@ def luscious():
         print("3. You've had enough, you escape from this horror house")
         print(Fore.RED)
         print(Style.BRIGHT)
-        escape = input("What is your choice 1 2 or 3: ")
+        waiting = input("What is your choice 1 2 or 3: ")
         print(Fore.RESET)
-        if escape == "1":
+        if waiting == "1":
             print("you deserve a rest, I'm sure you'll sleep soundly")
             print("Then again, I would keep one eye open, you never know")
-        elif escape == "2":
+        elif waiting == "2":
             print("Wise choice, no killer is going to get you")
-        elif escape == "3":
+        elif waiting == "3":
             print("Who could blame you, you may be broke, but will be alive")
-            options()            
+            options_for_player()
         else:
             print("Not a valid choice, but its ok, you should wait here")
 
@@ -571,9 +575,15 @@ def survival2():
             print("Brad tried to kill you by stabbing you... ")
             print("lucky you were wearing whatever")
             print(", you survive")
+            time.sleep(B)
+            add_narration(narration.SURVIVAL_MESSAGE)
+            options_for_player()
     else:
         print("You are safe, Brad is not the killer")
         print("You will survive the night")
+        time.sleep(B)
+        add_narration(narration.SURVIVAL_MESSAGE)
+        options_for_player()
 
 
 def brad():
@@ -672,9 +682,15 @@ def survival3():
             print("Tobias tried to kill you by shooting you... ")
             print("lucky you were wearing your bulletproof vest")
             print("You survive")
+            time.sleep(B)
+            add_narration(narration.SURVIVAL_MESSAGE)
+            options_for_player()
     else:
         print("You are safe, Tobias is not the killer")
         print("You will survive the night")
+        time.sleep(B)
+        add_narration(narration.SURVIVAL_MESSAGE)
+        options_for_player()
 
 
 def tobias():
@@ -773,10 +789,15 @@ def survival4():
             print("Camilla tried to kill you by shooting you... ")
             print("lucky you had the antidote")
             print("You survive")
+            time.sleep(B)
+            add_narration(narration.SURVIVAL_MESSAGE)
+            options_for_player()
     else:
         print("You are safe, Camilla is not the killer")
         print("You will survive the night")
-
+        time.sleep(B)
+        add_narration(narration.SURVIVAL_MESSAGE)
+        options_for_player()
 
 
 def camilla():

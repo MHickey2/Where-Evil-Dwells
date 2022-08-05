@@ -71,3 +71,10 @@ pinned up, there are red crosses across the faces....This
 must be the work of the killer....
 
 '''
+SURVIVAL_MESSAGE = '''
+Congratulations you have survived, The killer has been
+caught and you will receive your inheritance, remember
+who helped you through the game, and I would like my
+reward in cash(lol). If you want to replay the game,
+please try your luck again!
+'''
