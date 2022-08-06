@@ -6,7 +6,7 @@ global safetyitem
 
 class Person(object):
     """
-    This is a docstring. I have created a new class for Person
+    I have created a new class for Person
     """
     def __init__(self, index, name, occupation, age, good_quality, bad_quality,
                  killermoves, ranking, kryptonite):
@@ -33,15 +33,9 @@ guest4 = Person("4 ", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
 
 x = [guest1, guest2, guest3, guest4]
 
-
-class Player(object):
-    """
-    This is a docstring. I have created a new class for Game Player
-    """
-    def __init__(self, name, occupation, age):
-        self.name = name
-        self.occupation = occupation
-        self.age = age
+names = [guest1.name, guest2.name, guest3.name, guest4.name]
+killer = random.choice(names)
+print(killer)
 
 
 def show_guest_details():
@@ -51,18 +45,6 @@ def show_guest_details():
     print(guest1.index + 'Name: ' + guest1.name + ", Age " + str(guest1.age)
           + ", Occupation: " + guest1.occupation + ", Good Quality: " +
           guest1.good_quality + ", Bad Quality: " + guest1.bad_quality)
-
-    print(guest1.index + guest1.name)
-
-
-print(guest1.name)
-
-show_guest_details()
-
-# Returns 1 random element from list
-names = [guest1.name, guest2.name, guest3.name, guest4.name]
-killer = random.choice(names)
-print(killer)
 
 
 class Protection(object):
@@ -76,6 +58,7 @@ class Protection(object):
         self.protectionfrom = protectionfrom
 
 
+# Items of protection
 item1 = Protection("1 ", "Safety Helmet", "Will stop a selfie Stick",
                    "Luscious Campbell")
 item2 = Protection("2 ", "Bulletproof Vest", "Can protect from gunshot",
@@ -90,9 +73,8 @@ item5 = Protection("5 ", "Book on Movie Murders", "Help defend yourself",
 
 def random_item():
     """
-    def random_safetyitem_and_survival():
+    random safetyitem selection:
     """
-    global safetyitem
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)
     print(safetyitem)

@@ -133,6 +133,15 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 ----
  ## Tools and Technology  <a name="technology"></a>
 
+### Language Used:
+
+-   [Python 3.8.10](https://www.python.org/)
+
+### Technology Used:
+
+-   [Git:](https://git-scm.com/) used for version control, updated changes and commited changes and this in turn updated in Heroku 
+-   [GitHub:](https://github.com/) is the respository for all the git pushes.
+-   [Heroku:](https://heroku.com) used to deploy the application.
  #### [Return to Table of Contents](#toc)
 ----
 ## Testing  <a name="testing"></a>
@@ -149,14 +158,49 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 ----
  ## Deployment <a name="deployment"></a>
 
- ### Cloning <a name="clone"></a>
+ ### How to make a local Clone <a name="clone"></a>
+1. Navigate to the main page of the repository.
+2. Click the green Code Button at top right of the repository.
+3. Copy the url for the repository.
+4. Open Git Bash and Change the current working directory to where you want the cloned directory.
+5. Type git clone, and then paste the URL you previously copied using $ git clone. 
+6. Pressing enter will then create your clone.  
+<br/>  
 
- ### Student Temlate <a name="studenttemplate"></a>
- ### Deploying to Heroku <a name="heroku"></a>
+ ### Student Template <a name="studenttemplate"></a>
+ This Template has been provided by the Code Institute and includes a number of tools to make life easier and has been used within this present site.    
+<br/>
 
+### Deploying to Heroku <a name="heroku"></a>
+- After registering on the Heroku site, you can see the dashboard. You can select 'New' and then click 'Create new app'. You need to pick a unique name for your app, it will let you know if it is free to use.
+- Select your region and create your app.
+- Go to the settings tab and scroll until you find the config vars section and pick 'Reveal config vars',
+in this case I added 'PORT' into the key field and added '8000' into the value field and click 'add'.
+- If you have credentials, for your project, you must create another config vars called 'CREDS' and 
+you would paste the JSON into the value field.
+- You have to to the builldpacks section and click 'add buildpack'.
+- In this case I added 'Python' and 'saved changes, and did the same with 'Node'.
+- Next you go to the Deploy tab and you select 'github' and confirm connection to your GitHub Account.
+- You search for your project repository and click to 'connect'.
+- Under the deploy options, you can chose automatic deploys, this allow you to automatically deploy each
+time you push to your Repository.
+- To deploy, you would choose what branch you want to deploy and click on 'Deploy Branch'.
+- It takes a little time to build your app but when it is ready you can open your app by using the link
+provided
+  
+<br> 
+
+ 
 #### [Return to Table of Contents](#toc)
 ----
  ## Credits <a name="credits"></a>
+ Choose Your Own Adventure Game in Python (Beginners) [Tutorial](https://www.youtube.com/watch?v=DEcFCn2ubSg)
+
+ Python Text Based Adventure Game Tutorial [Tutorial](https://www.youtube.com/watch?v=u8X6TiJA8as&t=186s)
+ 
+ Simple Python Project | Text-Based Adventure Game: Time Unraveled [Tutorial](https://www.youtube.com/watch?v=ypNFNr72Xe8&t=2173s)
+
+ Let's Make a Text Adventure Game In Python  [Tutorial](https://www.youtube.com/watch?v=HzDcKq2NDwM&t=1603s)
 #### [Return to Table of Contents](#toc)
 ----
  ## Acknowledgements <a name="acknowledgements"></a>
@@ -166,28 +210,3 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 
 
  
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!

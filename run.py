@@ -2,9 +2,10 @@
 Text Based Adventure Game
 """
 import os
-import re
+# import re
 import sys
 import time
+
 
 import colorama
 import pyfiglet
@@ -13,7 +14,8 @@ from colorama import Back, Fore, Style
 import art
 import narration
 from art import *
-from classification import *
+from classification import random_item
+from classification import killer
 from classification import (guest1, guest2, guest3, guest4, item1, item2,
                             item3, item4, item5)
 from narration import *
@@ -31,6 +33,7 @@ global safetyitem
 global player
 
 
+
 A = 3
 B = 2
 C = 1
@@ -46,7 +49,7 @@ def add_narration(printed_text):
     for character in printed_text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.060)
+        time.sleep(0.030)
 
 
 def clear():
@@ -57,6 +60,8 @@ def clear():
 
 
 def options_for_player():
+    """_allows user to leave or start the game again_
+    """
     options = input("S to start again, or L to leave s/l:\n")
     if options.lower().strip() == "s":
         main()
@@ -65,6 +70,8 @@ def options_for_player():
         bye = pyfiglet.figlet_format(' Bye for \n Now!')
         print(bye)
         sys.exit()
+
+
 
 
 def main():
@@ -119,7 +126,7 @@ def accept_invite():
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    rsvp_accepted = input("the question is do you accept the invite? yes/no?\n ")
+    rsvp_accepted = input("Do you accept the invite? yes/no?\n ")
     print(Fore.RESET)
     if rsvp_accepted.lower().strip() == "yes":
         print("Great, I see a Hot-Tub and Big Screen TV in your future")
@@ -150,9 +157,13 @@ def accept_invite():
             time.sleep(A)
         elif rsvp_accepted2 == "no":
             print("Sorry to see you go")
+            bye = pyfiglet.figlet_format(' Bye for Now!')
+            print(bye)
             sys.exit()
         else:
             print("That is not a valid response")
+            bye = pyfiglet.figlet_format(' Bye for Now!')
+            print(bye)
             sys.exit()
 
 
@@ -188,7 +199,7 @@ def validating_name(name):
 
 def setting_lounge():
     """
-    setting lounge function
+    lounge setting function
     """
     time.sleep(B)
     print("\n")
@@ -282,19 +293,19 @@ if lounge_action.lower().strip() == "c":
         print(Style.BRIGHT)
         stranger = input("What do you do next, 1, 2 or 3?\n ")
         print(Fore.RESET)
-        if stranger.lower().strip() == "1":
+        if stranger.strip() == "1":
             print("You stalk the stalker, like a ninja")
             print("right until, he turns around and puts you in a headlock")
             print("Sorry the Stalker caught you, better luck next time")
             word = pyfiglet.figlet_format(' Game Over! ')
             print(word)
             sys.exit()
-        elif stranger.lower().strip() == "2":
+        elif stranger.strip() == "2":
             print(" Good chooice, they maybe running out of the food")
             print("You have a hankering for a pig in a blanket")
             print("Back to the lounge you go")
             setting_lounge()
-        elif stranger.lower().strip() == "3":
+        elif stranger.strip() == "3":
             print("There's too many skulkers in this house for your liking!")
             print("Time to end the skulking, and get back to the food")
             setting_lounge()
@@ -325,7 +336,7 @@ elif letter == "no":
     add_narration(narration.LETTER)
 else:
     print("Not a valid answer, but I\'ll help you out")
-    print("You need to know this...")
+    print("You really need to know this...")
     print(Fore.BLACK)
     print(Back.WHITE)
     add_narration(narration.LETTER)
@@ -351,7 +362,7 @@ print(Fore.RED)
 print(Style.BRIGHT)
 review = input("Would you like to see details on all or 1 2 3 or 4?\n ")
 print(Fore.RESET)
-if review == "all":
+if review.lower().strip() == "all":
     print("\n")
     show_information(guest1)
     print("---------------")
@@ -361,46 +372,46 @@ if review == "all":
     print("---------------")
     show_information(guest4)
 
-elif review == "1":
+elif review.strip() == "1":
     show_information(guest1)
-elif review == "2":
+elif review.strip() == "2":
     show_information(guest2)
-elif review == "3":
+elif review.strip() == "3":
     show_information(guest3)
-elif review == "4":
+elif review.strip() == "4":
     show_information(guest4)
 else:
-    print("not valid answer, but you can choose a Buddy anyway")
+    print("not a valid answer, but you can choose a Buddy anyway")
 print(Fore.RED)
 print(Style.BRIGHT)
 buddy_choice = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ")
 print(Fore.RESET)
-if buddy_choice == "1":
+if buddy_choice.strip() == "1":
     buddy = "Luscious Campbell"
     print("You are teamed up with Luscious, I hope you like social media")
     print("and watch your back, there's a killer about")
-elif buddy_choice == "2":
+elif buddy_choice.strip() == "2":
     buddy = "Brad Jameson"
     print("You are teamed up with Brad, keep him away from mirrors")
     print("Keep your wits about you, there is a killer around")
-elif buddy_choice == "3":
+elif buddy_choice.strip() == "3":
     buddy = "Tobias Cooper"
     print("You are with Tobias, don't take it personal, he's always rude")
-elif buddy_choice == "4":
+elif buddy_choice.strip() == "4":
     buddy = "Camilla Royce"
     print("You are with Camilla, try to act richer")
 else:
     print("need to pick someone, it's not safe alone")
     buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
-    if buddy == "1":
+    if buddy_choice.strip() == "1":
         print("You are teamed up with Luscious, I hope you like social media")
         print("and watch your back, there's a killer about")
-    elif buddy == "2":
+    elif buddy_choice.strip() == "2":
         print("You are teamed up with Brad, keep him away from mirrors")
         print("Keep your wits about you, there is a killer around")
-    elif buddy == "3":
+    elif buddy_choice.strip() == "3":
         print("You are with Tobias, don't take it personal, he's always rude")
-    elif buddy == "4":
+    elif buddy_choice.strip() == "4":
         print("You are with Camilla, try to act richer")
     else:
         print("Sorry, it's too dangerous alone, i think it's safer to leave")
@@ -409,6 +420,7 @@ else:
         sys.exit()
 print("Before you leave with your Buddy there is one more thing...")
 print("For your own safety, you get to choose an item of protection...")
+print("\n")
 print(item1.index + item1.name)
 print(item2.index + item2.name)
 print(item3.index + item3.name)
@@ -418,23 +430,23 @@ print(Fore.RED)
 print(Style.BRIGHT)
 safetyitemchoice = input("What is your chosen protection, 1, 2, 3, 4, 5?\n ")
 print(Fore.RESET)
-if safetyitemchoice == "1":
+if safetyitemchoice.strip() == "1":
     safetyitem = "Safety Helmet"
     print("You have selected a Safety Helmet")
     print("You never know when it will come in handy")
-elif safetyitemchoice == "2":
+elif safetyitemchoice.strip() == "2":
     safetytem = "Bulletproof Vest"
     print("You have selected a Bulletproof Vest")
     print("The best offence is a good defense")
-elif safetyitemchoice == "3":
+elif safetyitemchoice.strip() == "3":
     safetyitem = "Antidote"
     print("You have selected some Antidote")
     print("It will make sense at some point")
-elif safetyitemchoice == "4":
+elif safetyitemchoice.strip() == "4":
     safetyitem = "Gun"
     print("You have selected a Gun")
     print("Have gun will travel, you can never be too sure")
-elif safetyitemchoice == "5":
+elif safetyitemchoice.strip() == "5":
     safetyitem = "Book on Movie Murders"
     print("You have selected a Book on movie Murders")
     print("Read up well, it may just save your life")
@@ -507,15 +519,15 @@ def luscious():
         print(Style.BRIGHT)
         noise = input("What choice do you pick 1 2 or 3 ?\n ")
         print(Fore.RESET)
-        if noise == "1":
+        if noise.strip() == "1":
             print("Brave choice, it's better to know and be prepared")
             add_narration(narration.SECRET_ROOM)
             time.sleep(B)
-        elif noise == "2":
+        elif noise.strip() == "2":
             print("The two of you check out the noise")
             add_narration(narration.SECRET_ROOM)
             time.sleep(B)
-        elif noise == "3":
+        elif noise.strip() == "3":
             print("Maybe Luscious ranting will block out that noise")
             print("With any luck it's not a murderer planning an attack")
         else:
@@ -540,12 +552,12 @@ def luscious():
         print(Style.BRIGHT)
         waiting = input("What is your choice 1 2 or 3: ")
         print(Fore.RESET)
-        if waiting == "1":
+        if waiting.strip() == "1":
             print("you deserve a rest, I'm sure you'll sleep soundly")
             print("Then again, I would keep one eye open, you never know")
-        elif waiting == "2":
+        elif waiting.strip() == "2":
             print("Wise choice, no killer is going to get you")
-        elif waiting == "3":
+        elif waiting.strip() == "3":
             print("Who could blame you, you may be broke, but will be alive")
             options_for_player()
         else:
@@ -598,12 +610,13 @@ def brad():
     """
     The Brad Experience
     """
-    if buddy_choice == "2":
+    if buddy_choice.strip() == "2":
         add_narration(narration.BRAD)
         time.sleep(B)
         print("You both look around the kitchen, to make sure it's safe")
         print("You make sure the doors are locked securely just in case")
         print("You are looking out the window, its dark outside...")
+        print("\n")
         print("Suddenly you see a figure crouching in the garden")
         print("You both are frantic, is the killer about to strike!")
         print(Fore.RED)
@@ -617,14 +630,14 @@ def brad():
         print(Style.BRIGHT)
         confrontation = input("What is your choice 1 2 or 3? ")
         print(Fore.RESET)
-        if confrontation.lower().strip() == "1":
+        if confrontation.strip() == "1":
             print("you load up with pots and pans and go after the man")
             print("The mystery man disappears into bushes")
             print("You decide it's too dangergous, so you return to kitchen")
-        elif confrontation.lower().strip() == "2":
+        elif confrontation.strip() == "2":
             print("Brad wimps out and hides under the table")
             print("You join him under the table, twos company")
-        elif confrontation.lower().strip() == "3":
+        elif confrontation.strip() == "3":
             print("You chase after the man, full of bravado")
             print("He gives you the slip, so you return to the kitchen")
             print("Brad tells you he has your back, but you doubt it")
@@ -633,22 +646,25 @@ def brad():
             print("I guess you could wait here and hope he goes away")
             time.sleep(B)
 
+        print("\n")
         print("You are both spooked by the experience")
-        print("You hear a door opening, it souds like it\'s coming from below")
+        print("You hear a door opening, it sounds like it\'s below you")
         print("There is a door leading to the cellar")
         print("There seems to be someone rummaging in the cellar")
         print("The sound seems to be getting closer")
+        print("\n")
         print("You and Brad decide to: ")
+        print("\n")
         print("A. Ensure the cellar door is locked and and block it off")
         print("B. Leave by the backdoor and escape this House of Doom")
         print("C. Risk it all and go investigate the noise")
         cellar = input("What is your choice, A, B or C: ")
-        if cellar == "a":
+        if cellar.lower().strip() == "a":
             print("Good choice, but he may find another way to get in")
-        elif cellar == "b":
+        elif cellar.lower().strip() == "b":
             print("You run away, you and Brad are never seen again")
             options_for_player()
-        elif cellar == "c":
+        elif cellar.lower().strip() == "c":
             print("Is that the wisest decision, well you only live once")
             print("\n")
             time.sleep(B)
@@ -812,7 +828,7 @@ def camilla():
     """
     The Camilla Experience
     """
-    if buddy_choice == "4":
+    if buddy_choice.strip() == "4":
         print(Back.BLACK)
         print(Fore.LIGHTBLUE_EX + art.KITCHEN)
         print(Fore.RESET)
