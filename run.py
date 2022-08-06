@@ -5,23 +5,27 @@ import os
 import re
 import sys
 import time
-from classification import *
-import narration
-from narration import *
-import art
-from art import *
-from classification import guest1, guest2, guest3, guest4
-from classification import item1, item2, item3, item4, item5
-import pyfiglet
+
 import colorama
-from colorama import Fore, Back, Style
+import pyfiglet
+from colorama import Back, Fore, Style
+
+import art
+import narration
+from art import *
+from classification import *
+from classification import (guest1, guest2, guest3, guest4, item1, item2,
+                            item3, item4, item5)
+from narration import *
+
 colorama.init()
 
 # variables
-START = False
-RSVP = "no"
-staircase = ""
-doorchoice = ""
+start_game = False
+rsvp_accepted = "no"
+rsvp_accepted2 = "no"
+staircase_taken = ""
+door_choice = ""
 global buddy
 global safetyitem
 global player
@@ -76,19 +80,19 @@ def main():
     if response.lower().strip() == "yes":
         print("welcome to the Game, let's hope you make it out alive!")
         time.sleep(C)
-        START = True
+        start_game = True
     elif response.lower().strip() == "no":
         print("understandable, sorry to see you go")
-        START = False
+        start_game = False
         print("Are you sure I can't tempt you")
         options_for_player()
     else:
         print("That is not a valid response")
-        START = False
+        start_game = False
         farewell = pyfiglet.figlet_format(' Come back soon! ')
         print(farewell)
         sys.exit()
-    if START is True:
+    if start_game is True:
         time.sleep(C)
 
 
@@ -115,19 +119,19 @@ def accept_invite():
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    RSVP = input("the question is do you accept the invite? yes/no?\n ")
+    rsvp_accepted = input("the question is do you accept the invite? yes/no?\n ")
     print(Fore.RESET)
-    if RSVP.lower().strip() == "yes":
+    if rsvp_accepted.lower().strip() == "yes":
         print("Great, I see a Hot-Tub and Big Screen TV in your future")
-        RSVP = "yes"
+        rsvp_accepted = "yes"
         time.sleep(A)
         print(Fore.LIGHTGREEN_EX + art.DOOR)
         print(Fore.RESET)
         add_narration(narration.ARRIVAL)
         time.sleep(A)
-    elif RSVP.lower().strip() == "no":
+    elif rsvp_accepted.lower().strip() == "no":
         print("Well I guess it is instant noodles for you")
-        RSVP = "no"
+        rsvp_accepted = "no"
         bye = pyfiglet.figlet_format(' Bye for Now!')
         print(bye)
         sys.exit()
@@ -135,16 +139,16 @@ def accept_invite():
         print("Let's try that again, shall we")
         print(Fore.RED)
         print(Style.BRIGHT)
-        rsvp2 = input("Do you accept the invite? yes/no?\n ")
+        rsvp_accepted2 = input("Do you accept the invite? yes/no?\n ")
         print(Fore.RESET)
-        if rsvp2 == "yes":
+        if rsvp_accepted2 == "yes":
             print("Great choice, welcome!")
             time.sleep(A)
             print(Fore.LIGHTGREEN_EX + art.DOOR)
             print(Fore.RESET)
             add_narration(narration.ARRIVAL)
             time.sleep(A)
-        elif rsvp2 == "no":
+        elif rsvp_accepted2 == "no":
             print("Sorry to see you go")
             sys.exit()
         else:
@@ -160,7 +164,7 @@ def add_player_details():
     function to add player to the game
     """
     name = input("Enter your name:\n ")
-    PLAYER = (name)
+    # player_name = (name)
     # validating_name(name)
     if name == "":
         name = "Stranger"
@@ -186,6 +190,8 @@ def setting_lounge():
     """
     setting lounge function
     """
+    time.sleep(B)
+    print("\n")
     print("You are in the lounge now and the other guests have arrived")
     print("There are four guests, they introuduce themselves, as:\n ")
     print(guest1.index + guest1.name)
@@ -205,20 +211,20 @@ print("C. Decide to explore a little, when you will get this change again")
 print("D. Wait for the other guests to arrive")
 print(Fore.RED)
 print(Style.BRIGHT)
-lounge = input("What is your pick A, B, C or D?\n ")
+lounge_action = input("What is your pick A, B, C or D?\n ")
 print(Fore.RESET)
-if lounge.lower().strip() == "a":
+if lounge_action.lower().strip() == "a":
     print("Remember moderation is key, let's wait for the other guests")
     setting_lounge()
     time.sleep(A)
-elif lounge.lower().strip() == "b":
+elif lounge_action.lower().strip() == "b":
     print("Leave some food for the other guests, let's wait for them")
     setting_lounge()
     time.sleep(A)
-elif lounge.lower().strip() == "c":
+elif lounge_action.lower().strip() == "c":
     print("Great choice, take a canopy for the road, and start exploring")
     time.sleep(A)
-elif lounge.lower().strip() == "d":
+elif lounge_action.lower().strip() == "d":
     print("What no food or drink, let's wait for the other guests")
     print()
     setting_lounge()
@@ -229,80 +235,77 @@ else:
     setting_lounge()
     time.sleep(A)
 
-if lounge.lower().strip() == "c":
+if lounge_action.lower().strip() == "c":
     print(Fore.RED)
     print(Style.BRIGHT)
     staircase = input("You sneak out to the staircase, up or down?:\n ")
     print(Fore.RESET)
     print(Fore.LIGHTBLUE_EX + art.ARROWS)
     print(Fore.RESET)
-else:
-    print()
 
-if staircase.lower().strip() == "down":
-    print("You are going down a creepy dark staircase to the cellar")
-    print("When you reach the bottom, you can see 3 doors...")
-    print("1. A battered door, it that maniacal laughter you hear?")
-    print("2. A pristine door in mint shape, with soothing music inside")
-    print("3. A solid oak door, with a stange tapping sound from within")
-    print(Fore.RED)
-    print(Style.BRIGHT)
-    doorchoice = input("Which door do you pick to explore, 1, 2 or 3?\n ")
-    print(Fore.RESET)
-    time.sleep(B)
-    if doorchoice.strip() == "1":
-        print(" you enter, you see a caged bird laughing, that's weird")
-        print("Feels cold here and am hungry again, back to the lounge")
-        setting_lounge()
-    elif doorchoice.strip() == "2":
-        print(" oh, no, you'been caught by Jeeves, doing his meditation")
-        print("He is furious and sends you to the lounge, see you there")
-        setting_lounge()
-    elif doorchoice.strip() == "3":
-        print("You enter the room, and are caught by an evil wrongdoer")
-        print("alas the adventure has ended, better luck next time")
-        word = pyfiglet.figlet_format(' Game Over! ')
-        print(word)
-        sys.exit()
+    if staircase.lower().strip() == "down":
+        print("You are going down a creepy dark staircase to the cellar")
+        print("When you reach the bottom, you can see 3 doors...")
+        print("1. A battered door, it that maniacal laughter you hear?")
+        print("2. A pristine door in mint shape, with soothing music inside")
+        print("3. A solid oak door, with a stange tapping sound from within")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        doorchoice = input("Which door do you pick to explore, 1, 2 or 3?\n ")
+        print(Fore.RESET)
+        time.sleep(B)
+        if doorchoice.strip() == "1":
+            print(" you enter, you see a caged bird laughing, that's weird")
+            print("Feels cold here and am hungry again, back to the lounge")
+            setting_lounge()
+        elif doorchoice.strip() == "2":
+            print(" oh, no, you'been caught by Jeeves, doing his meditation")
+            print("He is furious and sends you to the lounge, see you there")
+            setting_lounge()
+        elif doorchoice.strip() == "3":
+            print("You enter the room, and are caught by an evil wrongdoer")
+            print("alas the adventure has ended, better luck next time")
+            word = pyfiglet.figlet_format(' Game Over! ')
+            print(word)
+            sys.exit()
+        else:
+            print("Not a valid choice, but I suggest...")
+            print("It's not worth the risk, get back to the lounge")
+
+    elif staircase.lower().strip() == "up":
+        print("You are going up the stairs to the bedroom area")
+        print("On the landing you see a figure skulking on the landing")
+        print("1. You follow him, he looks suspicious, and you are curious")
+        print("2. You get scared and decide to return to the lounge")
+        print("3. You ignore the skulker and continue your own skulking")
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        stranger = input("What do you do next, 1, 2 or 3?\n ")
+        print(Fore.RESET)
+        if stranger.lower().strip() == "1":
+            print("You stalk the stalker, like a ninja")
+            print("right until, he turns around and puts you in a headlock")
+            print("Sorry the Stalker caught you, better luck next time")
+            word = pyfiglet.figlet_format(' Game Over! ')
+            print(word)
+            sys.exit()
+        elif stranger.lower().strip() == "2":
+            print(" Good chooice, they maybe running out of the food")
+            print("You have a hankering for a pig in a blanket")
+            print("Back to the lounge you go")
+            setting_lounge()
+        elif stranger.lower().strip() == "3":
+            print("There's too many skulkers in this house for your liking!")
+            print("Time to end the skulking, and get back to the food")
+            setting_lounge()
+        else:
+            print("Is that rancheros I smell, I'm in the mood for a ranchero!")
+            print("The lounge is the best place to be right now anyway")
+            setting_lounge()
     else:
-        print("Not a valid choice, but I suggest...")
-        print("It's not worth the risk, get back to the lounge")
-else:
-    print("Not a valid answer, but I hear the Lounge is a cool place to be")      
+        print("Not a valid answer, you better get back to the Lounge anyway")
 
-
-if staircase.lower().strip() == "up":
-    print("You are going up the stairs to the bedroom area")
-    print("On the landing you see a figure skulking on the landing")
-    print("1. You follow him, he looks suspicious, and you are curious")
-    print("2. You get scared and decide to return to the lounge")
-    print("3. You ignore the skulker and continue your own skulking")
-    print(Fore.RED)
-    print(Style.BRIGHT)
-    stranger = input("What do you do next, 1, 2 or 3?\n ")
-    print(Fore.RESET)
-    if stranger.lower().strip() == "1":
-        print("You stalk the stalker, like a ninja")
-        print("right until, he turns around and puts you in a headlock")
-        print("Sorry the Stalker caught you, better luck next time")
-        word = pyfiglet.figlet_format(' Game Over! ')
-        print(word)
-        sys.exit()
-    elif stranger.lower().strip() == "2":
-        print(" Good chooice, they maybe running out of the food")
-        print("You have a hankering for a pig in a blanket")
-        print("Back to the lounge you go")
-        setting_lounge()
-    elif stranger.lower().strip() == "3":
-        print("There's too many skulkers in this house for your liking!")
-        print("Time to end the skulking, and get back to the food")
-        setting_lounge()
-    else:
-        print("Is that rancheros I smell, I'm in the mood for a ranchero!")
-        print("The lounge is the best place to be right now anyway")
-        setting_lounge()
-
-
+print("\n")
 print("You are mingling, when Jeeves enters with a letter on a tray")
 print(Fore.RED)
 print(Style.BRIGHT)
@@ -329,6 +332,11 @@ else:
 
 
 def show_information(guest1):
+    """_show details on guests_
+
+    Args:
+        guest1 (_type_): _description_
+    """
     print('Name of Guest: ' + guest1.name + '\nOccupation: ' +
           guest1.occupation + '\nAge: ' + str(guest1.age) +
           '\nGood Quality: ' + guest1.good_quality +
@@ -365,20 +373,20 @@ else:
     print("not valid answer, but you can choose a Buddy anyway")
 print(Fore.RED)
 print(Style.BRIGHT)
-buddychoice = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ")
+buddy_choice = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ")
 print(Fore.RESET)
-if buddychoice == "1":
+if buddy_choice == "1":
     buddy = "Luscious Campbell"
     print("You are teamed up with Luscious, I hope you like social media")
     print("and watch your back, there's a killer about")
-elif buddychoice == "2":
+elif buddy_choice == "2":
     buddy = "Brad Jameson"
     print("You are teamed up with Brad, keep him away from mirrors")
     print("Keep your wits about you, there is a killer around")
-elif buddychoice == "3":
+elif buddy_choice == "3":
     buddy = "Tobias Cooper"
     print("You are with Tobias, don't take it personal, he's always rude")
-elif buddychoice == "4":
+elif buddy_choice == "4":
     buddy = "Camilla Royce"
     print("You are with Camilla, try to act richer")
 else:
@@ -437,7 +445,7 @@ else:
 
 def survival():
     """
-    will user survice, is your partner a killer
+    will user survive, is your partner a killer
     """
     global killer
     global safetyitem
@@ -469,7 +477,7 @@ def luscious():
     """
     The Luscious Experience
     """
-    if buddychoice == "1":
+    if buddy_choice == "1":
         print(Back.BLACK)
         print(Fore.LIGHTGREEN_EX + art.BEDROOM)
         print(Fore.RESET)
@@ -558,7 +566,7 @@ luscious()
 
 def survival2():
     """
-    will user survice, is your partner a killer
+    will user survive, is your partner a killer
      """
     global killer
     global safetyitem
@@ -590,7 +598,7 @@ def brad():
     """
     The Brad Experience
     """
-    if buddychoice == "2":
+    if buddy_choice == "2":
         add_narration(narration.BRAD)
         time.sleep(B)
         print("You both look around the kitchen, to make sure it's safe")
@@ -665,7 +673,7 @@ brad()
 
 def survival3():
     """
-    will user survice, is your partner a killer
+    will user survive, is your partner a killer
      """
     global killer
     global safetyitem
@@ -697,7 +705,7 @@ def tobias():
     """
     The Tobias Experience
     """
-    if buddychoice == "3":
+    if buddy_choice == "3":
         add_narration(narration.TOBIAS)
         time.sleep(B)
         print("You are situated in the Study now, Tobias is hard work")
@@ -772,7 +780,7 @@ tobias()
 
 def survival4():
     """
-    will user survice, is your partner a killer
+    will user survive, is your partner a killer
      """
     global killer
     global safetyitem
@@ -804,7 +812,7 @@ def camilla():
     """
     The Camilla Experience
     """
-    if buddychoice == "4":
+    if buddy_choice == "4":
         print(Back.BLACK)
         print(Fore.LIGHTBLUE_EX + art.KITCHEN)
         print(Fore.RESET)

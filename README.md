@@ -122,35 +122,31 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 
 
  #### [Return to Table of Contents](#toc)
-
+----
 ## Features  <a name="features"></a>
 
-  
-
-
  #### [Return to Table of Contents](#toc)
-
+----
  ## Future Implementation  <a name="future"></a>
 
  #### [Return to Table of Contents](#toc)
-
+----
  ## Tools and Technology  <a name="technology"></a>
 
  #### [Return to Table of Contents](#toc)
-
+----
 ## Testing  <a name="testing"></a>
 
  #### [Return to Table of Contents](#toc)
-
+----
  ## Bugs and Issues  <a name="bugs"></a>
 
  ### Resolved <a name="resolved"></a>
 
  ### Unresolved <a name="unresolved"></a>
 
-
  #### [Return to Table of Contents](#toc)
-
+----
  ## Deployment <a name="deployment"></a>
 
  ### Cloning <a name="clone"></a>
@@ -158,8 +154,11 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
  ### Student Temlate <a name="studenttemplate"></a>
  ### Deploying to Heroku <a name="heroku"></a>
 
+#### [Return to Table of Contents](#toc)
+----
  ## Credits <a name="credits"></a>
-
+#### [Return to Table of Contents](#toc)
+----
  ## Acknowledgements <a name="acknowledgements"></a>
 
 
