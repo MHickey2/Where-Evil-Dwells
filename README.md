@@ -136,11 +136,13 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 ### Language Used:
 
 -   [Python 3.8.10](https://www.python.org/)
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)	&nbsp; [CSS3](https://en.wikipedia.org/wiki/CSS)
 
 ### Technology Used:
 
 -   [Git:](https://git-scm.com/) used for version control, updated changes and commited changes and this in turn updated in Heroku 
 -   [GitHub:](https://github.com/) is the respository for all the git pushes.
+-   [Gitpod](https://gitpod.io/) was the IDE Editor
 -   [Heroku:](https://heroku.com) used to deploy the application.
  #### [Return to Table of Contents](#toc)
 ----
@@ -172,7 +174,7 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 <br/>
 
 ### Deploying to Heroku <a name="heroku"></a>
-- After registering on the Heroku site, you can see the dashboard. You can select 'New' and then click 'Create new app'. You need to pick a unique name for your app, it will let you know if it is free to use.
+- After registering on the Heroku site, you can see the dashboard. You can select 'New' and then click 'Create new app'. You need to pick a unique name for your app, it will let you know if it is  to available to use.
 - Select your region and create your app.
 - Go to the settings tab and scroll until you find the config vars section and pick 'Reveal config vars',
 in this case I added 'PORT' into the key field and added '8000' into the value field and click 'add'.
@@ -205,6 +207,7 @@ provided
 ----
  ## Acknowledgements <a name="acknowledgements"></a>
 
+ Thank you to my mentor Brian Macharia for his guidance and support.
 
  #### [Return to Table of Contents](#toc) 
 

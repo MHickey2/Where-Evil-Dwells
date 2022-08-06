@@ -72,16 +72,15 @@ def options_for_player():
         sys.exit()
 
 
-
-
 def main():
     """_main function_
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    print(Back.BLACK)
-    word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
-    print(word)
+    print(Fore.RED + art.BANNER)
+    print(Fore.RESET)
+    # word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
+    # print(word)
     response = input("Would you like to have an encounter with Evil?\n ")
     print(Fore.RESET)
     if response.lower().strip() == "yes":
