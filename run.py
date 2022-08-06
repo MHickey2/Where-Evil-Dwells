@@ -32,8 +32,6 @@ global buddy
 global safetyitem
 global player
 
-
-
 A = 3
 B = 2
 C = 1
@@ -77,10 +75,7 @@ def main():
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    print(Fore.RED + art.BANNER)
-    print(Fore.RESET)
-    # word = pyfiglet.figlet_format(' WHERE  EVIL  DWELLS ')
-    # print(word)
+    print(Fore.RED + art.BANNER)   
     response = input("Would you like to have an encounter with Evil?\n ")
     print(Fore.RESET)
     if response.lower().strip() == "yes":
@@ -178,8 +173,10 @@ def add_player_details():
     # validating_name(name)
     if name == "":
         name = "Stranger"
-
+    print(Fore.BLUE)
+    print(Style.BRIGHT)
     print("Welcome to Harland Manor " + name + "!")
+    print(Fore.RESET)
 
 
 """
@@ -208,7 +205,9 @@ def setting_lounge():
     print(guest2.index + guest2.name)
     print(guest3.index + guest3.name)
     print(guest4.index + guest4.name)
-    print("Please provide your details to the other guests:")
+    print("\n")
+    print("Please provide your details to the other guests:/n")
+    
     add_player_details()
 
 
@@ -511,6 +510,7 @@ def luscious():
         print("Luscious has no access to wifi, so is not a happy girl")
         print("you are settling in for the stay when you hear loud noises")
         print("It is coming from behind a doorway in the bedroom")
+        print("\n")
         print("1. Do you go see what's causing the noise")
         print("2. Do you ask Luscious to join you in the investigation")
         print("3. Do you pretend not to hear, and keep listening to Luscious")
