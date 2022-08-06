@@ -31,25 +31,22 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 3.  [Layout and Logic](#layout)
     1. [Colour Scheme](#colourscheme)
     2. [UX experience](#UX)
-    3. [Logic](#logic)         
-4.  [Features](#features)
-    1. [Index Page](#indexpage)    
-5.  [Future Implementation](#future)
-6.  [Tools and Technology](#Technology)
-7.  [Testing Information](TEST.md)
-8.  [Bugs and Issues](#bugs)
+    3. [Graphics](#graphics)
+4.  [Flow Chart for Game](#flowchart)        
+5.  [Features](#features)
+    1. [Index Page](#intropage)    
+6.  [Future Implementation](#future)
+7.  [Tools and Technology](#technology)
+8.  [Testing](#testing)
+9.  [Bugs and Issues](#bugs)
     1. [Resolved](#resolved)
     2. [Unresolved](#unresolved)
-9.  [Deployment](#deployment)
-    1. [Repository](#githubrepository)
-    2. [Deploy the Site](#deployingsite)
-    3. [Run Project locally](#runlocally)
-    4. [Make Local Clone](#clone)
-    5. [Fork GitHub Repository](#fork)
-    6. [Student Template](#studenttemplate)
-    7. [Custom 404 Page](#404page)
-10.  [Credits](#credits)
-11.  [Acknowledgements](#acknowledgements)
+10. [Deployment](#deployment)
+    1. [Make Local Clone](#clone)
+    2. [Student Template](#studenttemplate)
+    3. [Deploying to Heroku](#heroku)
+11.  [Credits](#credits)
+12.  [Acknowledgements](#acknowledgements)
 
 ----
 
@@ -76,12 +73,16 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 ### As a first time user to this site, I want to …..<a name="firsttimeuser"></a>
 - Understand how the Game Works.
 - Play the Game.
+- If I want to restart a Game, I want to be able to do this easily.
   
 
   <br/>
 
 ### As a regular user of the site, I want to …...  <a name="regularuser"></a>  
-- I want to try the various scenarios to navigate through the game.  
+- I want to try the various scenarios to navigate through the game.
+- I want to try all the options not selected before, to have different experiences.  
+- I want to have more complexity and a greater range of scenarios. 
+   
 
  <br/>
 
@@ -92,6 +93,8 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 - In the present game, the killer is picked at random, so clues would be unhelpful, 
  but in future games, clues and red herrings could be added to create more of an 
  investigative  experience, where the killer can be identified by the player.
+- Add more complexity to enhance the experience of the users.
+- Provide the user with ways that they can encounter greater decision making experience.
   
 
   <br/>  
@@ -109,37 +112,61 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 - The prompts are designed to stand out from the rest of the text.
 -  
 
-## Logic    <a name="logic"></a>
+## Graphics    <a name="graphics"></a>
  #### [Return to Table of Contents](#toc)
 ----
 
-## User Stories  <a name="userstories"></a>
-### As a first time user to this site, I want to …..<a name="firsttimeuser"></a>
-- Understanhow to play the Game.
-- Play the Game.
-- If I want to restart a Game, I want to be able to do this easily.
+## Flow Chart for the Game  <a name="flowchart"></a>
 
-  <br/>
-
-### As a regular user of the site, I want to …...  <a name="regularuser"></a>  
-- I want to try all the options not selected before, to have different experiences.  
-- I want to have more complexity and a greater range of scenarios. 
- 
-
- <br/>
-
-### As the site owner, I want to …..    <a name="siteowner"></a>
-- Add more complexity to enhance the experience of the users.
-- Provide the user with ways that they can encounter greater decision making experience.
-
-  <br/>  
+  
 
 
  #### [Return to Table of Contents](#toc)
-Welcome Michelle Hickey,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Features  <a name="features"></a>
 
+  
+
+
+ #### [Return to Table of Contents](#toc)
+
+ ## Future Implementation  <a name="future"></a>
+
+ #### [Return to Table of Contents](#toc)
+
+ ## Tools and Technology  <a name="technology"></a>
+
+ #### [Return to Table of Contents](#toc)
+
+## Testing  <a name="testing"></a>
+
+ #### [Return to Table of Contents](#toc)
+
+ ## Bugs and Issues  <a name="bugs"></a>
+
+ ### Resolved <a name="resolved"></a>
+
+ ### Unresolved <a name="unresolved"></a>
+
+
+ #### [Return to Table of Contents](#toc)
+
+ ## Deployment <a name="deployment"></a>
+
+ ### Cloning <a name="clone"></a>
+
+ ### Student Temlate <a name="studenttemplate"></a>
+ ### Deploying to Heroku <a name="heroku"></a>
+
+ ## Credits <a name="credits"></a>
+
+ ## Acknowledgements <a name="acknowledgements"></a>
+
+
+ #### [Return to Table of Contents](#toc) 
+
+
+ 
 ## Reminders
 
 * Your code must be placed in the `run.py` file
