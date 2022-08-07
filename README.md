@@ -79,9 +79,9 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
   <br/>
 
 ### As a regular user of the site, I want to …...  <a name="regularuser"></a>  
-- I want to try the various scenarios to navigate through the game.
-- I want to try all the options not selected before, to have different experiences.  
-- I want to have more complexity and a greater range of scenarios. 
+- I want to try the various scenarios to navigate through the game.  
+- I want to try all the options not selected before, to have different experiences.    
+- I want to have more complexity and a greater range of scenarios.   
    
 
  <br/>
@@ -163,6 +163,11 @@ too much.
  so that the user could detect the culprit and stop him from the final attack. You could chose
  to solve tasks and be rewarded with various clues to the identity of the killer, in this way
  you could add more comlexity to the game and increase the engagement of the player.
+
+ In the present game there are only 6 characters(including the player) and there are 4 character paths, you could also include further characters and more character paths to give
+ the player more routes through the game. THe different character paths could also be longer
+ and this would allow the player to experience a broader experience of the game.
+
 
  #### [Return to Table of Contents](#toc)
 ----
