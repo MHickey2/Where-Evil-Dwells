@@ -35,7 +35,7 @@ x = [guest1, guest2, guest3, guest4]
 
 names = [guest1.name, guest2.name, guest3.name, guest4.name]
 killer = random.choice(names)
-print(killer)
+# print(killer)
 
 
 def show_guest_details():
@@ -77,7 +77,7 @@ def random_item():
     """
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)
-    print(safetyitem)
+    # print(safetyitem)
     return safetyitem
 
 

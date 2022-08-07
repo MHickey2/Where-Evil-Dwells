@@ -51,7 +51,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            height: 60px;
+            height: 32px;
             background-color: red;
             color: white;
             text-align: center;           
@@ -82,7 +82,7 @@
                 rows: 24
             });
             term.open(document.getElementById('terminal'));
-            term.writeln('Running startup command: python3 run.py');
+            //term.writeln('Running startup command: python3 run.py');
             term.writeln('');
 
             var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ?
@@ -103,10 +103,7 @@
         <footer>
             <ul class = "list">
                 <!-- site copyright -->
-                <li>Where Evil Dwells &copy;</li>
-                <!-- Information on site -->
-                <li>Python Project, Project 3 with the Code Institute.</li>
-                <!-- site creator social media links -->
+                <li>Where Evil Dwells &copy;</li>                
             </ul>
         </footer>
     </body>

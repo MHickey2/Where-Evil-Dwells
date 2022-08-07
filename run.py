@@ -1,6 +1,11 @@
 """
-Text Based Adventure Game
+Text Based Adventure Game based on the old horror movie genre, set in a creepy
+house and the player is coming as a benefactor, and then there is the matter
+of a warning, whereby someone in the house means to kill them and they have
+to survive by choosing a safe route throughout the game and there fate will
+be determined by their game play
 """
+
 import os
 # import re
 import sys
