@@ -3,7 +3,7 @@
 # Where Evil Dwells: Milestone 3 Project
 
 <p align ="center">      
-     <img src=""  alt="" />    
+     <img src="assets/images/readme/images/interface.jpg"  alt="intro to game" />    
 </p>
 <br/>  
 
@@ -113,6 +113,32 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 -  
 
 ## Graphics    <a name="graphics"></a>
+
+<br>
+
+[![Horror fonts](https://see.fontimg.com/api/renderfont4/eZKDm/eyJyIjoiZnMiLCJoIjo3NywidyI6MTAwMCwiZnMiOjc3LCJmZ2MiOiIjRjExMDEwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/V0hFUkUgRVZJTCBEV0VMTFM/bloody-camp-free-trial.png)](https://www.fontspace.com/category/horror)
+
+### ABOUT BLOODY CAMP TRIAL FONT: 
+Bloody Camp is a horror blood font, which creates a horror tone and felt it supplemented the
+horror theme of the game. I tried to accentuate the horror mode by selecting a nice rich font
+that is a true type font, and I used it as an image one the site. The site allowed you to set
+the color and scale of the image, so found this to be convenient.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/hauntedhouse.jpg"  alt="background to the game" />    
+</p>
+<br/> 
+
+The background image was sourced again to supplement the horror theme and the setting of the
+game is in a house so I thought it was fitting that the user can visualize the type of setting that the game is imaging.
+
+
+There rest of the images consist of aasci art sourced from an online generator and a free
+resource that contains different categories of images, I choose images that set the scene for various settings within the game. I did not overdo this as I didn't want to distract the player
+too much.
+
  #### [Return to Table of Contents](#toc)
 ----
 
@@ -128,6 +154,15 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
  #### [Return to Table of Contents](#toc)
 ----
  ## Future Implementation  <a name="future"></a>
+
+ The game is set within a house, so there are limitation in regards to location, but there is
+ scope to encompass more settings witin future iterations. The player could choose to travel
+ to far off locations and explore different terrains and mix with a greater range of people.
+ Within the present game the killer is randomly chosen so in regards to clues, these were not
+ practical. In future work a killer could be chosen deliberately and clues could be provided 
+ so that the user could detect the culprit and stop him from the final attack. You could chose
+ to solve tasks and be rewarded with various clues to the identity of the killer, in this way
+ you could add more comlexity to the game and increase the engagement of the player.
 
  #### [Return to Table of Contents](#toc)
 ----
@@ -145,6 +180,7 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 -   [Gitpod](https://gitpod.io/) was the IDE Editor
 -   [Heroku:](https://heroku.com) used to deploy the application.
 -   [Aasci Art Generator](https://www.developmenttools.com/) used to create Banner Heading.
+-   [Desktop wallpaper](https://www.desktopnexus.com/)
  #### [Return to Table of Contents](#toc)
 ----
 ## Testing  <a name="testing"></a>
