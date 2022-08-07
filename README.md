@@ -151,6 +151,16 @@ too much.
 ----
 ## Features  <a name="features"></a>
 
+### Start Page
+
+<p align ="center">      
+     <img src="assets/images/readme/images/interface.jpg"  alt="Starting Page" />    
+</p>
+<br/> 
+
+The Introduction to the Game shows the Banner for the game and an invite to start the game, initially asking
+whether the user wants to play the game.
+
  #### [Return to Table of Contents](#toc)
 ----
  ## Future Implementation  <a name="future"></a>

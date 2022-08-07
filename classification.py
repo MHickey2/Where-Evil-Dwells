@@ -1,7 +1,9 @@
-import random
+"""
+Create Class objects and functions for random safety item and
+choosing a random killer each time the game starts.
+"""
 
-global killer 
-global safetyitem
+import random
 
 
 class Person(object):
@@ -30,21 +32,11 @@ guest3 = Person("3 ", "Tobias Cooper", "Reality Show Judge", 42, "Smooth",
                 "Rude and Harsh", "Crack Shot", 4, "Bulletproof Vest")
 guest4 = Person("4 ", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
                 "Classist", "Poisoner", 2, "Anctidote")
-
-x = [guest1, guest2, guest3, guest4]
-
+# Killer is chosen at random each time the game starts
+guests = [guest1, guest2, guest3, guest4]
 names = [guest1.name, guest2.name, guest3.name, guest4.name]
 killer = random.choice(names)
-# print(killer)
-
-
-def show_guest_details():
-    """
-    function to show guest details
-    """
-    print(guest1.index + 'Name: ' + guest1.name + ", Age " + str(guest1.age)
-          + ", Occupation: " + guest1.occupation + ", Good Quality: " +
-          guest1.good_quality + ", Bad Quality: " + guest1.bad_quality)
+print(killer)
 
 
 class Protection(object):
@@ -73,11 +65,11 @@ item5 = Protection("5 ", "Book on Movie Murders", "Help defend yourself",
 
 def random_item():
     """
-    random safetyitem selection:
+    random safetyitem selection, in case player does not select themselves.
     """
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)
-    # print(safetyitem)
+    print(safetyitem)
     return safetyitem
 
 

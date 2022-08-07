@@ -7,10 +7,9 @@ be determined by their game play
 """
 
 import os
-# import re
+import re
 import sys
 import time
-
 
 import colorama
 import pyfiglet
@@ -19,23 +18,11 @@ from colorama import Back, Fore, Style
 import art
 import narration
 from art import *
-from classification import random_item
-from classification import killer
 from classification import (guest1, guest2, guest3, guest4, item1, item2,
-                            item3, item4, item5)
+                            item3, item4, item5, killer, random_item)
 from narration import *
 
 colorama.init()
-
-# variables
-start_game = False
-rsvp_accepted = "no"
-rsvp_accepted2 = "no"
-staircase_taken = ""
-door_choice = ""
-global buddy
-global safetyitem
-global player
 
 A = 3
 B = 2
@@ -80,7 +67,7 @@ def main():
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    print(Fore.RED + art.BANNER)   
+    print(Fore.RED + art.BANNER)
     response = input("Would you like to have an encounter with Evil?\n ")
     print(Fore.RESET)
     if response.lower().strip() == "yes":
@@ -95,7 +82,7 @@ def main():
     else:
         print("That is not a valid response")
         start_game = False
-        farewell = pyfiglet.figlet_format(' Come back soon! ')
+        farewell = pyfiglet.figlet_format(' Come back \n soon! ')
         print(farewell)
         sys.exit()
     if start_game is True:
@@ -168,34 +155,42 @@ def accept_invite():
 
 accept_invite()
 
+"""
+def validating_name(name, minlen):
+    
+# Checks if the name is acceptable.
+   
+if not isinstance(name, str) is str:
+        raise TypeError("Only letters are allowed")
+    if name.isnumeric is True:
+        raise TypeError("Name must be a string")
+    if minlen < 3:
+        raise ValueError("minimum length must be at least 3")
+
+    # name can't be shorter than minlen
+    minlen = 3
+    if len(name) < minlen:
+        return False
+    # name can only use letters
+    if not re.match('^[a-z]*$', name):
+        return False
+    # name can't be a number
+    if name.isnumeric():
+        return False
+"""
+
 
 def add_player_details():
     """
     function to add player to the game
     """
+    # minlen = 3
     name = input("Enter your name:\n ")
-    # player_name = (name)
-    # validating_name(name)
-    if name == "":
-        name = "Stranger"
     print(Fore.BLUE)
     print(Style.BRIGHT)
     print("Welcome to Harland Manor " + name + "!")
     print(Fore.RESET)
-
-
-"""
-def validating_name(name):
-    regex_name = re.compile(/^[A-Za-z]+$/, re.IGNORECASE)
-    res = regex_name.search(name)
-    # If match is found, the string is valid
-    if res:
-        print("Valid")
-        # If match is not found, string is invalid
-        # else:
-        # # print("Invalid")
-        add_player_details()
-"""
+    # validating_name(name, minlen)
 
 
 def setting_lounge():
@@ -212,7 +207,6 @@ def setting_lounge():
     print(guest4.index + guest4.name)
     print("\n")
     print("Please provide your details to the other guests:/n")
-    
     add_player_details()
 
 
@@ -269,11 +263,11 @@ if lounge_action.lower().strip() == "c":
         print(Fore.RESET)
         time.sleep(B)
         if doorchoice.strip() == "1":
-            print(" you enter, you see a caged bird laughing, that's weird")
+            print("you enter, you see a caged bird laughing, that's weird")
             print("Feels cold here and am hungry again, back to the lounge")
             setting_lounge()
         elif doorchoice.strip() == "2":
-            print(" oh, no, you'been caught by Jeeves, doing his meditation")
+            print("oh, no, you'been caught by Jeeves, doing his meditation")
             print("He is furious and sends you to the lounge, see you there")
             setting_lounge()
         elif doorchoice.strip() == "3":
@@ -304,7 +298,7 @@ if lounge_action.lower().strip() == "c":
             print(word)
             sys.exit()
         elif stranger.strip() == "2":
-            print(" Good chooice, they maybe running out of the food")
+            print("Good chooice, they maybe running out of the food")
             print("You have a hankering for a pig in a blanket")
             print("Back to the lounge you go")
             setting_lounge()
@@ -368,13 +362,13 @@ print(Fore.RESET)
 if review.lower().strip() == "all":
     print("\n")
     show_information(guest1)
-    print("---------------")
+    print("-------------------")
     show_information(guest2)
-    print("---------------")
+    print("-------------------")
     show_information(guest3)
-    print("---------------")
+    print("-------------------")
     show_information(guest4)
-
+    print("-------------------")
 elif review.strip() == "1":
     show_information(guest1)
 elif review.strip() == "2":
@@ -417,13 +411,12 @@ else:
     elif buddy_choice.strip() == "4":
         print("You are with Camilla, try to act richer")
     else:
-        print("Sorry, it's too dangerous alone, i think it's safer to leave")
+        print("Sorry, it's too dangerous alone, I think it's safer to leave")
         word = pyfiglet.figlet_format(' Game Over! ')
         print(word)
         sys.exit()
 print("Before you leave with your Buddy there is one more thing...")
-print("For your own safety, you get to choose an item of protection...")
-print("\n")
+print("For your own safety, you get to choose an item of protection...\n")
 print(item1.index + item1.name)
 print(item2.index + item2.name)
 print(item3.index + item3.name)
@@ -433,6 +426,7 @@ print(Fore.RED)
 print(Style.BRIGHT)
 safetyitemchoice = input("What is your chosen protection, 1, 2, 3, 4, 5?\n ")
 print(Fore.RESET)
+time.sleep(B)
 if safetyitemchoice.strip() == "1":
     safetyitem = "Safety Helmet"
     print("You have selected a Safety Helmet")
@@ -456,6 +450,7 @@ elif safetyitemchoice.strip() == "5":
 else:
     print("You will be allocated a random choice of protection")
     safetyitem = random_item()
+    time.sleep(B)
 
 
 def survival():
@@ -490,7 +485,7 @@ def survival():
 
 def luscious():
     """
-    The Luscious Experience
+    The Luscious Experience: if selected Path
     """
     if buddy_choice == "1":
         print(Back.BLACK)
@@ -514,8 +509,7 @@ def luscious():
 
         print("Luscious has no access to wifi, so is not a happy girl")
         print("you are settling in for the stay when you hear loud noises")
-        print("It is coming from behind a doorway in the bedroom")
-        print("\n")
+        print("It is coming from behind a doorway in the bedroom\n")
         print("1. Do you go see what's causing the noise")
         print("2. Do you ask Luscious to join you in the investigation")
         print("3. Do you pretend not to hear, and keep listening to Luscious")
@@ -612,7 +606,7 @@ def survival2():
 
 def brad():
     """
-    The Brad Experience
+    The Brad Experience: if Selected Path
     """
     if buddy_choice.strip() == "2":
         add_narration(narration.BRAD)
@@ -647,10 +641,9 @@ def brad():
             print("Brad tells you he has your back, but you doubt it")
         else:
             print("That is not a valid choice")
-            print("I guess you could wait here and hope he goes away")
+            print("I guess you could wait here and hope he goes away\n")
             time.sleep(B)
 
-        print("\n")
         print("You are both spooked by the experience")
         print("You hear a door opening, it sounds like it\'s below you")
         print("There is a door leading to the cellar")
@@ -723,15 +716,14 @@ def survival3():
 
 def tobias():
     """
-    The Tobias Experience
+    The Tobias Experience: if path selected
     """
     if buddy_choice == "3":
         add_narration(narration.TOBIAS)
         time.sleep(B)
         print("You are situated in the Study now, Tobias is hard work")
         print("He is all fired up about the situation and is disgruntled")
-        print("You try to distract yourself from the ranting")
-        print("\n")
+        print("You try to distract yourself from the ranting\n")       
         print("Your are looking around the study and try the landline")
         print("It looks\'s like the phone line has been cut")
         print("Tobias is not a happy and vows to sue for emotinal damage")
@@ -842,8 +834,7 @@ def camilla():
         print("Camilla has come well prepared, she has a tray of food")
         print("Despite the fear, your appetite has not been affected")
         print("You eagerly tuck in to a variety of treats")
-        print("Camilla is a great host and makes sure you clean your plate")
-        print("\n")
+        print("Camilla is a great host and makes sure you clean your plate\n")        
         print("Your room is near the front door and you hear it being opened")
         print("You both here raised voices and then hear a scream")
         print("You and Camilla discuss your options, will you:")
@@ -894,7 +885,6 @@ def camilla():
             print("That is not a valid answer, better stay in the Dining Room")
 
         time.sleep(B)
-
         print("You have gorged yourself with the rest of the food")
         print("You are really spooked and you both need to unwind")
         print("You are not feeling well, you must have ate too much")
