@@ -174,7 +174,8 @@ whether the user wants to play the game.
  to solve tasks and be rewarded with various clues to the identity of the killer, in this way
  you could add more comlexity to the game and increase the engagement of the player.
 
- In the present game there are only 6 characters(including the player) and there are 4 character paths, you could also include further characters and more character paths to give
+ In the present game there are only 6 characters(including the player) and there are 4 character 
+ paths, you could also include further characters and more character paths to give
  the player more routes through the game. THe different character paths could also be longer
  and this would allow the player to experience a broader experience of the game.
 
@@ -196,6 +197,7 @@ whether the user wants to play the game.
 -   [Heroku:](https://heroku.com) used to deploy the application.
 -   [Aasci Art Generator](https://www.developmenttools.com/) used to create Banner Heading.
 -   [Desktop wallpaper](https://www.desktopnexus.com/)
+-   [Free Fonts](https://www.fontspace.com/) used forFont Image for Start Screen
  #### [Return to Table of Contents](#toc)
 ----
 ## Testing  <a name="testing"></a>

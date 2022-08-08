@@ -52,11 +52,14 @@ def clear():
 def options_for_player():
     """_allows user to leave or start the game again_
     """
-    options = input("S to start again, or L to leave s/l:\n")
-    if options.lower().strip() == "s":
-        main()
+    options = input("print L to leave the game")
     if options.lower().strip() == "l":
         print("OK no problem\n")
+        bye = pyfiglet.figlet_format(' Bye for \n Now!')
+        print(bye)
+        sys.exit()
+    else:
+        print("Please use the button above to start the game over")
         bye = pyfiglet.figlet_format(' Bye for \n Now!')
         print(bye)
         sys.exit()
@@ -68,7 +71,7 @@ def main():
     print(Fore.RED)
     print(Style.BRIGHT)
     print(Fore.RED + art.BANNER)
-    response = input("Would you like to have an encounter with Evil?\n ")
+    response = input("Would you like an encounter with Evil? yes/no\n ")
     print(Fore.RESET)
     if response.lower().strip() == "yes":
         print("welcome to the Game, let's hope you make it out alive!")
@@ -77,10 +80,12 @@ def main():
     elif response.lower().strip() == "no":
         print("understandable, sorry to see you go")
         start_game = False
-        print("Are you sure I can't tempt you")
-        options_for_player()
+        farewell = pyfiglet.figlet_format(' Come back \n soon! ')
+        print(farewell)
+        sys.exit()
     else:
         print("That is not a valid response")
+        print("Let's try that again, shall we")
         start_game = False
         farewell = pyfiglet.figlet_format(' Come back \n soon! ')
         print(farewell)
@@ -134,23 +139,20 @@ def accept_invite():
         print(Style.BRIGHT)
         rsvp_accepted2 = input("Do you accept the invite? yes/no?\n ")
         print(Fore.RESET)
-        if rsvp_accepted2 == "yes":
-            print("Great choice, welcome!")
-            time.sleep(A)
-            print(Fore.LIGHTGREEN_EX + art.DOOR)
-            print(Fore.RESET)
-            add_narration(narration.ARRIVAL)
-            time.sleep(A)
-        elif rsvp_accepted2 == "no":
-            print("Sorry to see you go")
-            bye = pyfiglet.figlet_format(' Bye for Now!')
-            print(bye)
-            sys.exit()
-        else:
-            print("That is not a valid response")
-            bye = pyfiglet.figlet_format(' Bye for Now!')
-            print(bye)
-            sys.exit()
+        while rsvp_accepted2 or rsvp_accepted != "yes" or "no":
+            rsvp_accepted2 = input("Do you accept the invite? yes/no?\n ")
+            if rsvp_accepted2.lower().strip() == "yes":
+                print("Great choice, welcome!")
+                time.sleep(A)
+                print(Fore.LIGHTGREEN_EX + art.DOOR)
+                print(Fore.RESET)
+                add_narration(narration.ARRIVAL)
+                time.sleep(A)
+            elif rsvp_accepted2.lower().strip() == "no":
+                print("Sorry to see you go")
+                bye = pyfiglet.figlet_format(' Bye for Now!')
+                print(bye)
+                sys.exit()
 
 
 accept_invite()
@@ -383,23 +385,23 @@ print(Fore.RED)
 print(Style.BRIGHT)
 buddy_choice = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ")
 print(Fore.RESET)
-if buddy_choice.strip() == "1":
-    buddy = "Luscious Campbell"
-    print("You are teamed up with Luscious, I hope you like social media")
-    print("and watch your back, there's a killer about")
-elif buddy_choice.strip() == "2":
-    buddy = "Brad Jameson"
-    print("You are teamed up with Brad, keep him away from mirrors")
-    print("Keep your wits about you, there is a killer around")
-elif buddy_choice.strip() == "3":
-    buddy = "Tobias Cooper"
-    print("You are with Tobias, don't take it personal, he's always rude")
-elif buddy_choice.strip() == "4":
-    buddy = "Camilla Royce"
-    print("You are with Camilla, try to act richer")
-else:
-    print("need to pick someone, it's not safe alone")
-    buddy = input("Now you can choose who is your buddy? 1, 2, 3 or 4?\n ")
+while buddy_choice != "1" and buddy_choice != "2" and buddy_choice != "3" and buddy_choice != "4":
+    buddy_choice = input("You really need a buddy? 1, 2, 3 or 4?\n ")
+    if buddy_choice.strip() == "1":
+        buddy = "Luscious Campbell"
+        print("You are teamed up with Luscious, I hope you like social media")
+        print("and watch your back, there's a killer about")
+    elif buddy_choice.strip() == "2":
+        buddy = "Brad Jameson"
+        print("You are teamed up with Brad, keep him away from mirrors")
+        print("Keep your wits about you, there is a killer around")
+    elif buddy_choice.strip() == "3":
+        buddy = "Tobias Cooper"
+        print("You are with Tobias, don't take it personal, he's always rude")
+    elif buddy_choice.strip() == "4":
+        buddy = "Camilla Royce"
+        print("You are with Camilla, try to act richer")
+
     if buddy_choice.strip() == "1":
         print("You are teamed up with Luscious, I hope you like social media")
         print("and watch your back, there's a killer about")
@@ -410,11 +412,13 @@ else:
         print("You are with Tobias, don't take it personal, he's always rude")
     elif buddy_choice.strip() == "4":
         print("You are with Camilla, try to act richer")
+        """
     else:
         print("Sorry, it's too dangerous alone, I think it's safer to leave")
         word = pyfiglet.figlet_format(' Game Over! ')
         print(word)
         sys.exit()
+        """
 print("Before you leave with your Buddy there is one more thing...")
 print("For your own safety, you get to choose an item of protection...\n")
 print(item1.index + item1.name)
