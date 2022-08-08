@@ -38,13 +38,15 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 6.  [Future Implementation](#future)
 7.  [Tools and Technology](#technology)
 8.  [Testing](#testing)
-9.  [Bugs and Issues](#bugs)
+    1. [Manual Tesing](#manual)
+9. [Bugs and Issues](#bugs)
     1. [Resolved](#resolved)
     2. [Unresolved](#unresolved)
 10. [Deployment](#deployment)
     1. [Make Local Clone](#clone)
-    2. [Student Template](#studenttemplate)
-    3. [Deploying to Heroku](#heroku)
+    2. [Forking](#fork)
+    3. [Student Template](#studenttemplate)
+    4. [Deploying to Heroku](#heroku)
 11.  [Credits](#credits)
 12.  [Acknowledgements](#acknowledgements)
 
@@ -202,6 +204,37 @@ whether the user wants to play the game.
 ----
 ## Testing  <a name="testing"></a>
 
+### Manual Testing
+
+Start Screen displays when Heroku link is used.
+The Title displays
+Would you like an encounter with Evil? input fields - inputs work correctly
+House Image displays correctly
+Intro to Game displays
+Do you accept the invite? yes/no? - inputs work correctly
+repeat invite - inputs work correctly
+Door Image displays correctly
+Arrival Details display
+Drink Image display correctly
+lounge(What do you choose to do in Lounge)  - inputs work correctly
+You sneak out to the staircase, up or down? - inputs work correctly
+up = stranger(What do you do next, 1, 2 or 3?) - inputs work correctly
+down = doorchoice(Which door do you pick to explore, 1, 2 or 3?) - input works correctly
+Guest names display correctly
+Enter your name   ???
+Welcome Message displays correctly
+letter(Do you want to see what is in the letter? yes/no) - input works correctly
+letter displays correctly
+Review(Would you like to see details on all or 1 2 3 or 4?) - input works correctly
+Details are displayed according to user choice
+buddy_c(Now you can choose your buddy? 1, 2, 3 or 4?) - input works correctly
+If correct choice not made a buddy is assigned randomly - working correctly
+safetyitemchoice(What is your chosen protection, 1, 2, 3, 4, 5?) input works correctly
+Random Protection assignment working correctly
+corridor(What is your course of action: A,B or C) - input works correctly
+attic(What is your course of action: A,B or C?) - input works correctly
+
+
  #### [Return to Table of Contents](#toc)
 ----
  ## Bugs and Issues  <a name="bugs"></a>
@@ -222,6 +255,14 @@ whether the user wants to play the game.
 5. Type git clone, and then paste the URL you previously copied using $ git clone. 
 6. Pressing enter will then create your clone.  
 <br/>  
+
+
+### How to fork a GitHub Repository <a name="fork"></a>
+1. Log into GitHub and go to the required Repository.
+2. The Fork button is found at the top right corner of the page.
+3. When you click this button you will have a copy of the repository in your own GitHub account.  
+<br/>  
+
 
  ### Student Template <a name="studenttemplate"></a>
  This Template has been provided by the Code Institute and includes a number of tools to make life easier and has been used within this present site.    

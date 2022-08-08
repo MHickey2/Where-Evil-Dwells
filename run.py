@@ -88,8 +88,7 @@ def main():
     elif response.lower().strip() == "no":
         print("understandable, sorry to see you go")
         start_game = False
-        goodbye()
-        sys.exit()
+        goodbye()       
     else:
         print("That is not a valid response")
         start_game = False
@@ -138,23 +137,23 @@ def accept_invite():
         sys.exit()
     else:
         print("Let's try that again, shall we")
+
         print(Fore.RED)
         print(Style.BRIGHT)
         rsvp_accepted2 = input("Do you accept the invite? yes/no?\n ")
         print(Fore.RESET)
-        while rsvp_accepted2 or rsvp_accepted != "yes" or "no":
-            rsvp_accepted2 = input("Do you accept the invite? yes/no?\n ")
-            if rsvp_accepted2.lower().strip() == "yes":
-                print("Great choice, welcome!")
-                time.sleep(A)
-                print(Fore.LIGHTGREEN_EX + art.DOOR)
-                print(Fore.RESET)
-                add_narration(narration.ARRIVAL)
-                time.sleep(A)
-            elif rsvp_accepted2.lower().strip() == "no":
-                print("Sorry to see you go")
-                goodbye()
-                sys.exit()
+        if rsvp_accepted2.lower().strip() == "yes":
+            print("Great choice, welcome!")
+            time.sleep(A)
+            print(Fore.LIGHTGREEN_EX + art.DOOR)
+            print(Fore.RESET)
+            add_narration(narration.ARRIVAL)
+            time.sleep(A)
+        elif rsvp_accepted2.lower().strip() == "no":
+            print("Sorry to see you go")
+            goodbye()
+        else:
+            print("Invalid answer")
 
 
 accept_invite()
@@ -167,6 +166,7 @@ def you_die():
     print(Back.BLACK)
     print(Fore.LIGHTRED_EX + art.DEATH)
     print(Fore.RESET)
+    sys.exit()
 
 
 """
@@ -216,7 +216,7 @@ def setting_lounge():
     print(guest3.index + guest3.name)
     print(guest4.index + guest4.name)
     print("\n")
-    print("Please provide your details to the other guests:/n")
+    print("Please provide your details to the other guests:\n")
     add_player_details()
 
 
@@ -229,7 +229,7 @@ print("C. Decide to explore a little, when you will get this change again")
 print("D. Wait for the other guests to arrive")
 print(Fore.RED)
 print(Style.BRIGHT)
-lounge_action = input("What is your pick A, B, C or D?\n ")
+lounge_action = input("What do you choose to do in Lounge  A, B, C or D?\n ")
 print(Fore.RESET)
 if lounge_action.lower().strip() == "a":
     print("Remember moderation is key, let's wait for the other guests")
@@ -274,7 +274,7 @@ if lounge_action.lower().strip() == "c":
         time.sleep(B)
         if doorchoice.strip() == "1":
             print("you enter, you see a caged bird laughing, that's weird")
-            print("Feels cold here and am hungry again, back to the lounge")
+            print("You feel cold and hungry again, back to the lounge")
             setting_lounge()
         elif doorchoice.strip() == "2":
             print("oh, no, you'been caught by Jeeves, doing his meditation")
@@ -283,11 +283,10 @@ if lounge_action.lower().strip() == "c":
         elif doorchoice.strip() == "3":
             print("You enter the room, and are caught by an evil wrongdoer")
             print("alas the adventure has ended, better luck next time")
-            you_die()
-            sys.exit()
+            you_die()         
         else:
             print("Not a valid choice, but I suggest...")
-            print("It's not worth the risk, get back to the lounge")
+            print("It's not worth the risk, let/'s get back to the lounge")
 
     elif staircase.lower().strip() == "up":
         print("You are going up the stairs to the bedroom area")
@@ -724,25 +723,25 @@ def tobias():
         print("He is all fired up about the situation and is disgruntled")
         print("You try to distract yourself from the ranting\n")
         print("Your are looking around the study and try the landline")
-        print("It looks\'s like the phone line has been cut")
+        print("It looks\'s like the phone line has been cut\n")
         print("Tobias is not a happy and vows to sue for emotinal damage")
         print("You are trying to calm him, when you hear a loud noise outside")
         print("It is coming from the corridor, it may be the killer")
-        print("You and Tobias decide to:")
+        print("You and Tobias decide to:\n")
         print("A. Shimmy down the drainpipe and escape, broke but alive")
         print("B. The wait and see approach, no rush")
         print("C. Grab improvised weapons and confront whoever it is")
         print(Fore.RED)
         print(Style.BRIGHT)
-        CORRIDOR = input(":What is your course of action: a,b or C: \n")
+        corridor = input("What is your course of action: A,B or C: \n")
         print(Fore.RESET)
-        if CORRIDOR.lower().strip() == "a":
+        if corridor.lower().strip() == "a":
             print("But that big Screen TV is history")
             goodbye()
-        elif CORRIDOR.lower().strip() == "b":
+        elif corridor.lower().strip() == "b":
             print("You listen for a while but don't hear anything further")
             print("You decide to venture outside and check it out")
-        elif CORRIDOR.lower().strip() == "c":
+        elif corridor.lower().strip() == "c":
             print("You and Tobias, tooled with a letter opener and Stapler")
             print("Leave the room and move down the corridor with stealth")
         else:
@@ -753,15 +752,15 @@ def tobias():
 
         print("You are now in the corridor, the person has long gone")
         print("You see a ladder leading up to the Attack")
-        print("You figure the killer may be up there do you:")
+        print("You figure the killer may be up there do you:\n")
         print("A. Go up the ladder and catch him before he get's you")
         print("B. Close the door of the attack and get rid of the ladder")
         print("C. Use this opportunity to run down the stairs and escape")
         print(Fore.RED)
         print(Style.BRIGHT)
-        ATTIC = input(":What is your course of action: a,b or C: \n")
+        attic = input("What is your course of action: A,B or C? \n")
         print(Fore.RESET)
-        if ATTIC.lower().strip() == "a":
+        if attic.lower().strip() == "a":
             print("You make your way up the ladder really quitely")
             print("You and Tobias start searching the attack")
             print("You both split up to cover more ground")
@@ -769,21 +768,21 @@ def tobias():
             print("You call out for Tobias, but he doesn\'t come")
             print("you hear a new noise and you brace yourself....")
             survival3()
-        elif ATTIC.lower().strip() == "b":
+        elif attic.lower().strip() == "b":
             print("You decide to go back to the study and hide")
-            print("You barricade the door with furniture")
+            print("You barricade the door with furniture/n")
             print("You decide to have a drink from the drinks cabinet")
             print("After a short time you feel tired and rest your eyes")
-            print("You wake suddenly, startled by a noise inside the room")
+            print("You wake suddenly, startled by a noise inside the room\n")
             print("You hear a noise behind you but are too petrified to move")
-            print("Overwhelmed you close your eyes and...")
+            print("Overwhelmed you close your eyes and...\n")
+            time.sleep(B)
             survival3()
-        elif ATTIC.lower().strip() == "c":
-            print("So close, but I guess you get to live another day")
+        elif attic.lower().strip() == "c":
+            print("So close, but I guess you get to live another day/n")
             goodbye()
-            options_for_player()
         else:
-            print("Not a valid answer, but let\'s check if you survive anyway")
+            print("Not a valid answer, but let\'s check if you survived \n")
             survival3()
 
 
