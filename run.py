@@ -49,24 +49,31 @@ def clear():
     os.system(command)
 
 
+def goodbye():
+    """_This displays leaving message_
+    """
+    print(Fore.RED)
+    bye = pyfiglet.figlet_format(' Bye for Now!')
+    print(bye)
+    print(Fore.RESET)
+    sys.exit()
+
+
 def options_for_player():
-    """_allows user to leave or start the game again_
+    """_allows user to leave or instructions on
+         how to start the game again_
     """
     options = input("print L to leave the game")
     if options.lower().strip() == "l":
         print("OK no problem\n")
-        bye = pyfiglet.figlet_format(' Bye for \n Now!')
-        print(bye)
-        sys.exit()
+        goodbye()
     else:
-        print("Please use the button above to start the game over")
-        bye = pyfiglet.figlet_format(' Bye for \n Now!')
-        print(bye)
-        sys.exit()
+        print("Use button to restart Game")
+        goodbye()
 
 
 def main():
-    """_main function_
+    """_main function, the players intro screen for game_
     """
     print(Fore.RED)
     print(Style.BRIGHT)
@@ -80,16 +87,12 @@ def main():
     elif response.lower().strip() == "no":
         print("understandable, sorry to see you go")
         start_game = False
-        farewell = pyfiglet.figlet_format(' Come back \n soon! ')
-        print(farewell)
+        goodbye()
         sys.exit()
     else:
         print("That is not a valid response")
-        print("Let's try that again, shall we")
         start_game = False
-        farewell = pyfiglet.figlet_format(' Come back \n soon! ')
-        print(farewell)
-        sys.exit()
+        goodbye()
     if start_game is True:
         time.sleep(C)
 
@@ -113,7 +116,7 @@ show_intro()
 
 
 def accept_invite():
-    """_user accepts or declines invite_
+    """_user accepts or declines invite to House in Game_
     """
     print(Fore.RED)
     print(Style.BRIGHT)
@@ -130,8 +133,7 @@ def accept_invite():
     elif rsvp_accepted.lower().strip() == "no":
         print("Well I guess it is instant noodles for you")
         rsvp_accepted = "no"
-        bye = pyfiglet.figlet_format(' Bye for Now!')
-        print(bye)
+        goodbye()
         sys.exit()
     else:
         print("Let's try that again, shall we")
@@ -150,12 +152,21 @@ def accept_invite():
                 time.sleep(A)
             elif rsvp_accepted2.lower().strip() == "no":
                 print("Sorry to see you go")
-                bye = pyfiglet.figlet_format(' Bye for Now!')
-                print(bye)
+                goodbye()
                 sys.exit()
 
 
 accept_invite()
+
+
+def you_die():
+    """_Final Message if you die in game_
+    """
+    print("Bad Luck, you die")
+    print(Back.BLACK)
+    print(Fore.LIGHTRED_EX + art.DEATH)
+    print(Fore.RESET)
+
 
 """
 def validating_name(name, minlen):
@@ -183,8 +194,7 @@ if not isinstance(name, str) is str:
 
 
 def add_player_details():
-    """
-    function to add player to the game
+    """_Function to add player to the game_
     """
     # minlen = 3
     name = input("Enter your name:\n ")
@@ -196,8 +206,7 @@ def add_player_details():
 
 
 def setting_lounge():
-    """
-    lounge setting function
+    """_lounge setting function, entry to gameplay_
     """
     time.sleep(B)
     print("\n")
@@ -275,8 +284,7 @@ if lounge_action.lower().strip() == "c":
         elif doorchoice.strip() == "3":
             print("You enter the room, and are caught by an evil wrongdoer")
             print("alas the adventure has ended, better luck next time")
-            word = pyfiglet.figlet_format(' Game Over! ')
-            print(word)
+            you_die()
             sys.exit()
         else:
             print("Not a valid choice, but I suggest...")
@@ -296,8 +304,7 @@ if lounge_action.lower().strip() == "c":
             print("You stalk the stalker, like a ninja")
             print("right until, he turns around and puts you in a headlock")
             print("Sorry the Stalker caught you, better luck next time")
-            word = pyfiglet.figlet_format(' Game Over! ')
-            print(word)
+            you_die()
             sys.exit()
         elif stranger.strip() == "2":
             print("Good chooice, they maybe running out of the food")
@@ -342,7 +349,7 @@ else:
 
 
 def show_information(guest1):
-    """_show details on guests_
+    """_show format for guest details_
 
     Args:
         guest1 (_type_): _description_
@@ -412,13 +419,7 @@ while buddy_choice != "1" and buddy_choice != "2" and buddy_choice != "3" and bu
         print("You are with Tobias, don't take it personal, he's always rude")
     elif buddy_choice.strip() == "4":
         print("You are with Camilla, try to act richer")
-        """
-    else:
-        print("Sorry, it's too dangerous alone, I think it's safer to leave")
-        word = pyfiglet.figlet_format(' Game Over! ')
-        print(word)
-        sys.exit()
-        """
+
 print("Before you leave with your Buddy there is one more thing...")
 print("For your own safety, you get to choose an item of protection...\n")
 print(item1.index + item1.name)
@@ -458,8 +459,7 @@ else:
 
 
 def survival():
-    """
-    will user survive, is your partner a killer
+    """_will user survive, is your buddy a killer_
     """
     global killer
     global safetyitem
@@ -468,10 +468,7 @@ def survival():
         print("There is an attempt on your life\n")
         if safetyitem != "Safety Helmet":
             print("Luscious was the killer along\n")
-            print("Bad Luck, you die")
-            print(Back.BLACK)
-            print(Fore.LIGHTRED_EX + art.DEATH)
-            print(Fore.RESET)
+            you_die()
         else:
             print("Luscious tried to kill you by hitting you... ")
             print("with a selfie stick, lucky you were wearing....")
@@ -482,6 +479,8 @@ def survival():
     else:
         print("You are safe, Luscious is not the killer")
         print("You will survive the night")
+        print("The killer was:" + killer + ", who has killed the other guests")
+        print("You and Luscious get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
         options_for_player()
@@ -541,8 +540,7 @@ def luscious():
         print("You are in the bedroom and have barricaded yourself in")
         print("Luscious has got a phone signal, and is trying to get help")
         print("She calls the police and tell them about the death threat")
-        print("You feel better now, that the police are on their way")
-        print("\n")
+        print("You feel better now, that the police are on their way\n")
         print(Fore.RED)
         print(Style.BRIGHT)
         print("What do you feel like doing now?\n")
@@ -561,7 +559,7 @@ def luscious():
             print("Wise choice, no killer is going to get you")
         elif waiting.strip() == "3":
             print("Who could blame you, you may be broke, but will be alive")
-            options_for_player()
+            goodbye()            
         else:
             print("Not a valid choice, but its ok, you should wait here")
 
@@ -570,7 +568,7 @@ def luscious():
         print("About 20 minutes later you hear a loud bang, somewhere close")
         print("You look around, but you cannot see Luscious, where is she")
         print("The light goes out, you start freaking out")
-        print("You can sense someone is close to you...Are you in danger?")
+        print("You can sense someone is close to you...Are you in danger?\n")
         time.sleep(B)
         survival()
 
@@ -589,20 +587,19 @@ def survival2():
         print("There is an attempt on your life\n")
         if safetyitem != "Book on Movie Murders":
             print("Brad was the killer along\n")
-            print("Bad Luck, you die")
-            print(Back.BLACK)
-            print(Fore.LIGHTRED_EX + art.DEATH)
-            print(Fore.RESET)
+            you_die()
         else:
             print("Brad tried to kill you by stabbing you... ")
-            print("lucky you were wearing whatever")
-            print(", you survive")
+            print("lucky you had that movie book")
+            print("you managed to thwart his attempt, you survive")
             time.sleep(B)
             add_narration(narration.SURVIVAL_MESSAGE)
             options_for_player()
     else:
         print("You are safe, Brad is not the killer")
         print("You will survive the night")
+        print("The killer was:" + killer + ", who has killed the other guests")
+        print("You and Brad get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
         options_for_player()
@@ -617,8 +614,7 @@ def brad():
         time.sleep(B)
         print("You both look around the kitchen, to make sure it's safe")
         print("You make sure the doors are locked securely just in case")
-        print("You are looking out the window, its dark outside...")
-        print("\n")
+        print("You are looking out the window, its dark outside...\n")       
         print("Suddenly you see a figure crouching in the garden")
         print("You both are frantic, is the killer about to strike!")
         print(Fore.RED)
@@ -664,6 +660,7 @@ def brad():
             print("Good choice, but he may find another way to get in")
         elif cellar.lower().strip() == "b":
             print("You run away, you and Brad are never seen again")
+            goodbye()
             options_for_player()
         elif cellar.lower().strip() == "c":
             print("Is that the wisest decision, well you only live once")
@@ -699,10 +696,7 @@ def survival3():
         print("There is an attempt on your life\n")
         if safetyitem != "Bulletproof Vest":
             print("Tobias was the killer along\n")
-            print("Bad Luck, you die")
-            print(Back.BLACK)
-            print(Fore.LIGHTRED_EX + art.DEATH)
-            print(Fore.RESET)
+            you_die()            
         else:
             print("Tobias tried to kill you by shooting you... ")
             print("lucky you were wearing your bulletproof vest")
@@ -713,6 +707,8 @@ def survival3():
     else:
         print("You are safe, Tobias is not the killer")
         print("You will survive the night")
+        print("The killer was:" + killer + ", who has killed the other guests")
+        print("You and Tobias get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
         options_for_player()
@@ -727,7 +723,7 @@ def tobias():
         time.sleep(B)
         print("You are situated in the Study now, Tobias is hard work")
         print("He is all fired up about the situation and is disgruntled")
-        print("You try to distract yourself from the ranting\n")       
+        print("You try to distract yourself from the ranting\n")
         print("Your are looking around the study and try the landline")
         print("It looks\'s like the phone line has been cut")
         print("Tobias is not a happy and vows to sue for emotinal damage")
@@ -743,7 +739,7 @@ def tobias():
         print(Fore.RESET)
         if CORRIDOR.lower().strip() == "a":
             print("But that big Screen TV is history")
-            options_for_player()
+            goodbye()
         elif CORRIDOR.lower().strip() == "b":
             print("You listen for a while but don't hear anything further")
             print("You decide to venture outside and check it out")
@@ -785,6 +781,7 @@ def tobias():
             survival3()
         elif ATTIC.lower().strip() == "c":
             print("So close, but I guess you get to live another day")
+            goodbye()
             options_for_player()
         else:
             print("Not a valid answer, but let\'s check if you survive anyway")
@@ -805,10 +802,7 @@ def survival4():
         print("There is an attempt on your life\n")
         if safetyitem != "Antidote":
             print("Camilla was the killer all along\n")
-            print("Bad Luck, you die")
-            print(Back.BLACK)
-            print(Fore.LIGHTRED_EX + art.DEATH)
-            print(Fore.RESET)
+            you_die()            
         else:
             print("Camilla tried to kill you by shooting you... ")
             print("lucky you had the antidote")
@@ -819,6 +813,8 @@ def survival4():
     else:
         print("You are safe, Camilla is not the killer")
         print("You will survive the night")
+        print("The killer was:" + killer + ", who has killed the other guests")
+        print("You and Camilla get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
         options_for_player()
@@ -851,6 +847,7 @@ def camilla():
         print(Fore.RESET)
         if DOOR.lower().strip() == "a":
             print("Well at least you are well fed and alive, that\'s good")
+            goodbye()
             options_for_player()
         elif DOOR.lower().strip() == "b":
             print("You both walk to the front door, you can\'t see anyone")
