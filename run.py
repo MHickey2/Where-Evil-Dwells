@@ -19,14 +19,15 @@ import art
 import narration
 from art import *
 from classification import (guest1, guest2, guest3, guest4, item1, item2,
-                            item3, item4, item5, killer, random_item)
+                            item3, item4, item5, killer, random_item,
+                            random_buddy)
 from narration import *
 
 colorama.init()
 
-A = 3
-B = 2
-C = 1
+A = 2.5
+B = 1.5
+C = .08
 D = 0.2
 E = 0.08
 
@@ -170,9 +171,7 @@ def you_die():
 
 """
 def validating_name(name, minlen):
-    
-# Checks if the name is acceptable.
-   
+    # Checks if the name is acceptable
 if not isinstance(name, str) is str:
         raise TypeError("Only letters are allowed")
     if name.isnumeric is True:
@@ -388,37 +387,40 @@ elif review.strip() == "4":
     show_information(guest4)
 else:
     print("not a valid answer, but you can choose a Buddy anyway")
+
 print(Fore.RED)
 print(Style.BRIGHT)
-buddy_choice = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ")
+buddy_c = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ")
 print(Fore.RESET)
-while buddy_choice != "1" and buddy_choice != "2" and buddy_choice != "3" and buddy_choice != "4":
-    buddy_choice = input("You really need a buddy? 1, 2, 3 or 4?\n ")
-    if buddy_choice.strip() == "1":
-        buddy = "Luscious Campbell"
-        print("You are teamed up with Luscious, I hope you like social media")
-        print("and watch your back, there's a killer about")
-    elif buddy_choice.strip() == "2":
-        buddy = "Brad Jameson"
-        print("You are teamed up with Brad, keep him away from mirrors")
-        print("Keep your wits about you, there is a killer around")
-    elif buddy_choice.strip() == "3":
-        buddy = "Tobias Cooper"
-        print("You are with Tobias, don't take it personal, he's always rude")
-    elif buddy_choice.strip() == "4":
-        buddy = "Camilla Royce"
-        print("You are with Camilla, try to act richer")
+if buddy_c.strip() == "1":
+    buddy = "Luscious Campbell"
+    print("You are teamed up with Luscious, I hope you like social media")
+    print("and watch your back, there's a killer about")
+elif buddy_c.strip() == "2":
+    buddy = "Brad Jameson"
+    print("You are teamed up with Brad, keep him away from mirrors")
+    print("Keep your wits about you, there is a killer around")
+elif buddy_c.strip() == "3":
+    buddy = "Tobias Cooper"
+    print("You are with Tobias, don't take it personal, he's always rude")
+elif buddy_c.strip() == "4":
+    buddy = "Camilla Royce"
+    print("You are with Camilla, try to act richer")
+else:
+    print("Invalid choice, a Buddy will be assigned to you")
+    buddy_c = random_buddy()
+    time.sleep(B)
 
-    if buddy_choice.strip() == "1":
-        print("You are teamed up with Luscious, I hope you like social media")
-        print("and watch your back, there's a killer about")
-    elif buddy_choice.strip() == "2":
-        print("You are teamed up with Brad, keep him away from mirrors")
-        print("Keep your wits about you, there is a killer around")
-    elif buddy_choice.strip() == "3":
-        print("You are with Tobias, don't take it personal, he's always rude")
-    elif buddy_choice.strip() == "4":
-        print("You are with Camilla, try to act richer")
+if buddy_c.strip() == "1":
+    print("You are teamed up with Luscious, I hope you like social media")
+    print("and watch your back, there's a killer about")
+elif buddy_c.strip() == "2":
+    print("You are teamed up with Brad, keep him away from mirrors")
+    print("Keep your wits about you, there is a killer around")
+elif buddy_c.strip() == "3":
+    print("You are with Tobias, don't take it personal, he's always rude")
+elif buddy_c.strip() == "4":
+    print("You are with Camilla, try to act richer")
 
 print("Before you leave with your Buddy there is one more thing...")
 print("For your own safety, you get to choose an item of protection...\n")
@@ -490,7 +492,7 @@ def luscious():
     """
     The Luscious Experience: if selected Path
     """
-    if buddy_choice == "1":
+    if buddy_c == "1":
         print(Back.BLACK)
         print(Fore.LIGHTGREEN_EX + art.BEDROOM)
         print(Fore.RESET)
@@ -559,7 +561,7 @@ def luscious():
             print("Wise choice, no killer is going to get you")
         elif waiting.strip() == "3":
             print("Who could blame you, you may be broke, but will be alive")
-            goodbye()            
+            goodbye()
         else:
             print("Not a valid choice, but its ok, you should wait here")
 
@@ -609,18 +611,16 @@ def brad():
     """
     The Brad Experience: if Selected Path
     """
-    if buddy_choice.strip() == "2":
+    if buddy_c.strip() == "2":
         add_narration(narration.BRAD)
         time.sleep(B)
         print("You both look around the kitchen, to make sure it's safe")
         print("You make sure the doors are locked securely just in case")
-        print("You are looking out the window, its dark outside...\n")       
+        print("You are looking out the window, its dark outside...\n")
         print("Suddenly you see a figure crouching in the garden")
         print("You both are frantic, is the killer about to strike!")
-        print(Fore.RED)
-        print(Style.BRIGHT)
+        time.sleep(B)
         print("What is your next step, will you:\n")
-        print(Fore.RESET)
         print("1. Find a weapon and confront the crouching man together")
         print("2. Do you volunteer Brad to confront the man")
         print("3. Do you step up and deal with the guy yourself")
@@ -645,16 +645,15 @@ def brad():
             time.sleep(B)
 
         print("You are both spooked by the experience")
-        print("You hear a door opening, it sounds like it\'s below you")
+        print("You hear a door opening, it sounds like it\'s below you\n")
         print("There is a door leading to the cellar")
         print("There seems to be someone rummaging in the cellar")
-        print("The sound seems to be getting closer")
-        print("\n")
-        print("You and Brad decide to: ")
-        print("\n")
+        print("The sound seems to be getting closer....\n")
+
+        print("You and Brad decide to:\n ")
         print("A. Ensure the cellar door is locked and and block it off")
         print("B. Leave by the backdoor and escape this House of Doom")
-        print("C. Risk it all and go investigate the noise")
+        print("C. Risk it all and go investigate the noise\n")
         cellar = input("What is your choice, A, B or C: ")
         if cellar.lower().strip() == "a":
             print("Good choice, but he may find another way to get in")
@@ -696,7 +695,7 @@ def survival3():
         print("There is an attempt on your life\n")
         if safetyitem != "Bulletproof Vest":
             print("Tobias was the killer along\n")
-            you_die()            
+            you_die()
         else:
             print("Tobias tried to kill you by shooting you... ")
             print("lucky you were wearing your bulletproof vest")
@@ -718,7 +717,7 @@ def tobias():
     """
     The Tobias Experience: if path selected
     """
-    if buddy_choice == "3":
+    if buddy_c == "3":
         add_narration(narration.TOBIAS)
         time.sleep(B)
         print("You are situated in the Study now, Tobias is hard work")
@@ -802,7 +801,7 @@ def survival4():
         print("There is an attempt on your life\n")
         if safetyitem != "Antidote":
             print("Camilla was the killer all along\n")
-            you_die()            
+            you_die()
         else:
             print("Camilla tried to kill you by shooting you... ")
             print("lucky you had the antidote")
@@ -824,7 +823,7 @@ def camilla():
     """
     The Camilla Experience
     """
-    if buddy_choice.strip() == "4":
+    if buddy_c.strip() == "4":
         print(Back.BLACK)
         print(Fore.LIGHTBLUE_EX + art.KITCHEN)
         print(Fore.RESET)
@@ -834,7 +833,7 @@ def camilla():
         print("Camilla has come well prepared, she has a tray of food")
         print("Despite the fear, your appetite has not been affected")
         print("You eagerly tuck in to a variety of treats")
-        print("Camilla is a great host and makes sure you clean your plate\n")        
+        print("Camilla is a great host and makes sure you clean your plate\n")
         print("Your room is near the front door and you hear it being opened")
         print("You both here raised voices and then hear a scream")
         print("You and Camilla discuss your options, will you:")
