@@ -73,9 +73,6 @@ def random_item():
     return safetyitem
 
 
-random_item()
-
-
 def random_buddy():
     """
     random buddy selection, in case player does not select themselves.
@@ -83,6 +80,3 @@ def random_buddy():
     buddylist = ["1", "2", "3", "4"]
     randombuddy = random.choice(buddylist)
     return randombuddy
-
-
-random_buddy()

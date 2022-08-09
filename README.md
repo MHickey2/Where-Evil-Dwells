@@ -9,7 +9,7 @@
  
 ## Introduction <a name="introduction"></a>
 Where Evil Dwells is a Text Based Adventure for a Command Line Interface. It is utilizing the python language.
-The Game is a murder mystery based in a Creepy House. The Player acts as the protagonist and will drive the direction of the game. The decision making will allow the player to interact with characters and can experience different scenarios according to their choices. This is an original story based on the vintage horror/thriller genre with inspiration from the classic movie, 'Murder by Death'. The goal of the game is to make it to the end of the game alive aand be able to get the inheritance on offer. The hope is that the game will offer the player an interactive and fun experience, that they can repeat and experience it differently depending on different choices.
+The Game is a murder mystery based in a Creepy House. The Player acts as the protagonist and will drive the direction of the game. The decision making will allow the player to interact with characters and can experience different scenarios according to their choices. This is an original story based on the vintage horror/thriller genre with inspiration from the classic movie, 'Murder by Death'. The goal of the game is to make it to the end of the game alive and be able to claim the inheritance. The hope is that the game will offer the player an interactive and fun experience, that they can repeat and experience differently each time they play 
 
 <br/>
 
@@ -56,15 +56,17 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 <br/> 
 
 ### The Business Goals of the Website: <a name="businessgoals"></a>
-- No commercial goals, but the site's goal is to to provide an interactive Choose your Own Adventure.
+- No commercial goals, but the site's goal is to to provide an interactive 'Choose your Own Adventure'.
   
   <br/> 
 
 ### The Target Customer: <a name="targetcustomer"></a>
-- The audience of the site could encompass a number of age groups and there would generally not be any   limitation on who could avail of the quiz.
-- Would probably require some access to digital technology.
-- May be useful for a user who has spare time and enjoys using decision making to solve a mystery.
-- Someone who likes interaction in their gaming.
+
+- The audience of the site could encompass a number of age groups and there would generally not be any   limitation on who could not play.   
+       
+- Would probably require some access to digital technology(not mobile).      
+- May be useful for a user who has spare time and enjoys using decision making to solve a mystery.      
+- Someone who likes interaction in their gaming.      
 
  <br/>  
 
@@ -80,22 +82,22 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
   <br/>
 
 ### As a regular user of the site, I want to …...  <a name="regularuser"></a>  
-- I want to try the various scenarios to navigate through the game.  
-- I want to try all the options not selected before, to have different experiences.    
-- I want to have more complexity and a greater range of scenarios.   
+- I want to try the various scenarios to navigate through the game.   
+    
+- I want to avail of all the options to have different experiences.        
+- I want more complexity and a greater range of scenarios within the game.       
    
 
  <br/>
 
 ### As the site owner, I want to …..    <a name="siteowner"></a>
 - Build more complexity in the game, so it is more challenging to the user.
-- Add more scenarios to give the user a wider range of experiences within the game.
-- Offer a wider range of settings.
+- Add more scenarios to give the user a wider range of experiences.
+- Offer a wider range of settings within the game.
 - In the present game, the killer is picked at random, so clues would be unhelpful, 
  but in future games, clues and red herrings could be added to create more of an 
  investigative  experience, where the killer can be identified by the player.
-- Add more complexity to enhance the experience of the users.
-- Provide the user with ways that they can encounter greater decision making experience.
+- Provide the user with more decision making opportunities.
   
 
   <br/>  
@@ -105,13 +107,14 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 <br/>
 
 ## Colour Scheme    <a name="colourscheme"></a>  
-The colour scheme encompasses the html page and the interface screen. I wanted to have a background image that resonates with the theme of the game. I simply applied a background image of a creepy house. In regards to the interface i added aasci art images to supplement the settings depicted in the text. The background colours were used to make certain elements stand out i.e. the letter. Colour was applied to text input lines, to make them stand out from the rest of the flow of text.
+The colour scheme encompasses the html index page and the terminal screen. I wanted to have a background image that resonates with the theme of the game. I simply applied a background image of a creepy house. In regards to the interface i added aasci art images to supplement the settings depicted in the text. The background colours were used to make certain elements stand out i.e. the letter. Colour was applied to text input lines, to make them stand out from the rest of the text flow.
 
 ## UX Experience    <a name="ux"></a>
-- The Player is given instructions on what they need to do in the game.
+- The Player is given a backstory on what they need to do in the game.
 - The player is prompted when a decision needs to be made.
 - The prompts are designed to stand out from the rest of the text.
--  
+- Validation allows the Player multiple attempts of getting inputs right. 
+   
 
 ## Graphics    <a name="graphics"></a>
 
@@ -123,7 +126,7 @@ The colour scheme encompasses the html page and the interface screen. I wanted t
 Bloody Camp is a horror blood font, which creates a horror tone and felt it supplemented the
 horror theme of the game. I tried to accentuate the horror mode by selecting a nice rich font
 that is a true type font, and I used it as an image one the site. The site allowed you to set
-the color and scale of the image, so found this to be convenient.
+the color and scale of the image.
 
 <br>
 
@@ -133,18 +136,20 @@ the color and scale of the image, so found this to be convenient.
 <br/> 
 
 The background image was sourced again to supplement the horror theme and the setting of the
-game is in a house so I thought it was fitting that the user can visualize the type of setting that the game is imaging.
+game is in a house so I thought it was fitting that the user can visualize the type of setting that the game is depicting.
 
 
 There rest of the images consist of aasci art sourced from an online generator and a free
-resource that contains different categories of images, I choose images that set the scene for various settings within the game. I did not overdo this as I didn't want to distract the player
-too much.
+resource that contains different categories of images, I choose images that set the scene for various settings within the game. I did not overdo this as I didn't want to distract the player too much from game play.
 
  #### [Return to Table of Contents](#toc)
 ----
 
 ## Flow Chart for the Game  <a name="flowchart"></a>
 
+I created a flow chart in Draw.io, which helped me to focus on how the game should flow. The first stage of the
+game is the intro where the user gets information on how to play the game, there is a little exploration of the
+settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and the the end result will be revealed to the user.
   
 
 
