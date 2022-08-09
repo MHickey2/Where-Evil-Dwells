@@ -7,7 +7,7 @@ be determined by their game play
 """
 
 import os
-import re
+# import re
 import sys
 import time
 
@@ -17,11 +17,11 @@ from colorama import Back, Fore, Style
 
 import art
 import narration
-from art import *
+
 from classification import (guest1, guest2, guest3, guest4, item1, item2,
                             item3, item4, item5, killer, random_item,
                             random_buddy)
-from narration import *
+# from narration import *
 
 colorama.init()
 
@@ -88,7 +88,7 @@ def main():
     elif response.lower().strip() == "no":
         print("understandable, sorry to see you go")
         start_game = False
-        goodbye()       
+        goodbye()
     else:
         print("That is not a valid response")
         start_game = False
@@ -283,7 +283,7 @@ if lounge_action.lower().strip() == "c":
         elif doorchoice.strip() == "3":
             print("You enter the room, and are caught by an evil wrongdoer")
             print("alas the adventure has ended, better luck next time")
-            you_die()         
+            you_die()      
         else:
             print("Not a valid choice, but I suggest...")
             print("It's not worth the risk, let/'s get back to the lounge")
@@ -653,7 +653,10 @@ def brad():
         print("A. Ensure the cellar door is locked and and block it off")
         print("B. Leave by the backdoor and escape this House of Doom")
         print("C. Risk it all and go investigate the noise\n")
+        print(Fore.RED)
+        print(Style.BRIGHT)
         cellar = input("What is your choice, A, B or C: ")
+        print(Fore.RESET)
         if cellar.lower().strip() == "a":
             print("Good choice, but he may find another way to get in")
         elif cellar.lower().strip() == "b":
@@ -841,16 +844,16 @@ def camilla():
         print("C. You leave the room by a backdoor and check it out")
         print(Fore.RED)
         print(Style.BRIGHT)
-        DOOR = input("What is your choice, A, B or C: \n")
+        door = input("What is your choice, A, B or C: \n")
         print(Fore.RESET)
-        if DOOR.lower().strip() == "a":
+        if door.lower().strip() == "a":
             print("Well at least you are well fed and alive, that\'s good")
             goodbye()
             options_for_player()
-        elif DOOR.lower().strip() == "b":
+        elif door.lower().strip() == "b":
             print("You both walk to the front door, you can\'t see anyone")
             print("You can\'t hear voices anymore, you decice to look around")
-        elif DOOR.lower().strip() == "c":
+        elif door.lower().strip() == "c":
             print("You are in the back foyer and have left the voices behind")
         else:
             print("Not a valid answer, you should check out the library")
@@ -868,15 +871,15 @@ def camilla():
         print("C. You need a bathroom, you\'re feeling sick")
         print(Fore.RED)
         print(Style.BRIGHT)
-        LIBRARY = input("What is your choice a, b or c: \n")
+        library = input("What is your choice a, b or c: \n")
         print(Fore.RESET)
-        if LIBRARY.lower().strip() == "a":
+        if library.lower().strip() == "a":
             print("You return to the Dining Room and lock the door")
             print("You hope this nightmare ends soon, you eat some more food")
-        elif LIBRARY.lower().strip() == "b":
+        elif library.lower().strip() == "b":
             print("You search for a phone and find one in the hall")
             print("The line is dead, I guess you both have to tough it out")
-        elif LIBRARY.lower().strip() == "c":
+        elif library.lower().strip() == "c":
             print("You find the bathroom and you feel much better")
             print("You return to the Dining Room")
             print("You and Camilla settle in for the duration")

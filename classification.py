@@ -1,6 +1,6 @@
 """
 Create Class objects and functions for random safety item and
-choosing a random killer each time the game starts.
+random buddy and choosing a random killer each time the game starts.
 """
 
 import random
@@ -81,7 +81,7 @@ def random_buddy():
     random buddy selection, in case player does not select themselves.
     """
     buddylist = ["1", "2", "3", "4"]
-    randombuddy = random.choice(buddylist)    
+    randombuddy = random.choice(buddylist)
     return randombuddy
 
 

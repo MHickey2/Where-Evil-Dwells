@@ -1,4 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # Where Evil Dwells: Milestone 3 Project
 
@@ -206,33 +205,33 @@ whether the user wants to play the game.
 
 ### Manual Testing
 
-Start Screen displays when Heroku link is used.
-The Title displays
-Would you like an encounter with Evil? input fields - inputs work correctly
-House Image displays correctly
-Intro to Game displays
-Do you accept the invite? yes/no? - inputs work correctly
-repeat invite - inputs work correctly
-Door Image displays correctly
-Arrival Details display
-Drink Image display correctly
-lounge(What do you choose to do in Lounge)  - inputs work correctly
-You sneak out to the staircase, up or down? - inputs work correctly
-up = stranger(What do you do next, 1, 2 or 3?) - inputs work correctly
-down = doorchoice(Which door do you pick to explore, 1, 2 or 3?) - input works correctly
-Guest names display correctly
-Enter your name   ???
-Welcome Message displays correctly
-letter(Do you want to see what is in the letter? yes/no) - input works correctly
-letter displays correctly
-Review(Would you like to see details on all or 1 2 3 or 4?) - input works correctly
-Details are displayed according to user choice
-buddy_c(Now you can choose your buddy? 1, 2, 3 or 4?) - input works correctly
-If correct choice not made a buddy is assigned randomly - working correctly
-safetyitemchoice(What is your chosen protection, 1, 2, 3, 4, 5?) input works correctly
-Random Protection assignment working correctly
-corridor(What is your course of action: A,B or C) - input works correctly
-attic(What is your course of action: A,B or C?) - input works correctly
+- Start Screen displays when Heroku link is used.
+- The Title displays
+- Would you like an encounter with Evil? input fields - inputs work correctly
+- House Image displays correctly
+- Intro to Game displays
+- Do you accept the invite? yes/no? - inputs work correctly
+- repeat invite - inputs work correctly
+- Door Image displays correctly
+- Arrival Details display
+- Drink Image display correctly
+- lounge(What do you choose to do in Lounge)  - inputs work correctly
+- You sneak out to the staircase, up or down? - inputs work correctly
+- up = stranger(What do you do next, 1, 2 or 3?) - inputs work correctly
+- down = doorchoice(Which door do you pick to explore, 1, 2 or 3?) - input works correctly
+- Guest names display correctly
+- Enter your name   ???
+- Welcome Message displays correctly
+- letter(Do you want to see what is in the letter? yes/no) - input works correctly
+- letter displays correctly
+- Review(Would you like to see details on all or 1 2 3 or 4?) - input works correctly
+- Details are displayed according to user choice
+- buddy_c(Now you can choose your buddy? 1, 2, 3 or 4?) - input works correctly
+- If correct choice not made a buddy is assigned randomly - working correctly
+- safetyitemchoice(What is your chosen protection, 1, 2, 3, 4, 5?) input works correctly
+- Random Protection assignment working correctly
+- corridor(What is your course of action: A,B or C) - input works correctly
+- attic(What is your course of action: A,B or C?) - input works correctly
 
 
  #### [Return to Table of Contents](#toc)
