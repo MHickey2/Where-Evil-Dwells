@@ -65,7 +65,7 @@ item5 = Protection("5 ", "Book on Movie Murders", "Help defend yourself",
 
 def random_item():
     """
-    random safetyitem selection, in case player does not select themselves.
+    randomSAFETYITEMselection, in case player does not select themselves.
     """
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)

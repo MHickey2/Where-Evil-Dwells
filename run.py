@@ -334,6 +334,7 @@ while True:
         print(Fore.RESET)
         break
     elif letter == "no":
+        print(Fore.RESET)
         print("I guess that might have been important")
         print("A rock comes through window, with note attached, it reads")
         time.sleep(C)
@@ -413,20 +414,6 @@ else:
     buddy_c = random_buddy()
     time.sleep(B)
 
-if buddy_c == "1":
-    print("You are teamed up with Luscious, I hope you like social media")
-    print("and watch your back, there's a killer about")
-elif buddy_c == "2":
-    print("You are teamed up with Brad, keep him away from mirrors")
-    print("Keep your wits about you, there is a killer around")
-elif buddy_c == "3":
-    print("You are with Tobias, don't take it personal, he's always rude")
-elif buddy_c == "4":
-    print("You are with Camilla, try to act richer")
-else:
-    print("You will be allocated a random Buddy: ")
-    safetyitem = random_item()
-    time.sleep(B)
 
 print("Before you leave with your Buddy there is one more thing...")
 print("For your own safety, you get to choose an item of protection...\n")
@@ -437,7 +424,7 @@ print(item4.index + item4.name)
 print(item5.index + item5.name)
 print(Fore.RED)
 print(Style.BRIGHT)
-safetyitemchoice = input("Choose your protection, 1, 2, 3, 4, 5?\n ").strip()
+safetyitemchoice = input("Choose protection, 1, 2, 3, 4, 5?\n ").strip()
 print(Fore.RESET)
 time.sleep(B)
 if safetyitemchoice == "1":
@@ -484,7 +471,7 @@ def survival():
     else:
         print("You are safe, Luscious is not the killer")
         print("You will survive the night")
-        print("The killer was:" + killer + ", who has killed the other guests")
+        print("The killer was " + killer + ", who has killed the other guests")
         print("You and Luscious get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
@@ -567,16 +554,18 @@ def luscious():
             waiting = input("What is your choice 1, 2 or 3: ").strip()
             if waiting not in {"1", "2", "3"}:
                 print("Invalid input")
-                print(Fore.RESET)
                 continue
             if waiting == "1":
+                print(Fore.RESET)
                 print("you deserve a rest, I'm sure you'll sleep soundly")
                 print("Then again, I would keep one eye open, you never know")
                 break
             elif waiting == "2":
+                print(Fore.RESET)
                 print("Wise choice, no killer is going to get you")
                 break
             elif waiting == "3":
+                print(Fore.RESET)
                 print("Who could blame you, you may be broke, but still alive")
                 goodbye()
                 break
@@ -585,7 +574,7 @@ def luscious():
         print(Fore.RESET)
         print("\n")
         print("About 20 minutes later you hear a loud bang, somewhere close")
-        print("You look around, but you cannot see Luscious, where is she")
+        print("You look around, but you cannot see Luscious, where is she\n")
         print("The light goes out, you start freaking out")
         print("You can sense someone is close to you...Are you in danger?\n")
         time.sleep(B)
@@ -614,7 +603,7 @@ def survival2():
     else:
         print("You are safe, Brad is not the killer")
         print("You will survive the night")
-        print("The killer was:" + killer + ", who has killed the other guests")
+        print("The killer was " + killer + ", who has killed the other guests")
         print("You and Brad get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
@@ -729,7 +718,7 @@ def survival3():
     else:
         print("You are safe, Tobias is not the killer")
         print("You will survive the night")
-        print("The killer was:" + killer + ", who has killed the other guests")
+        print("The killer was " + killer + ", who has killed the other guests")
         print("You and Tobias get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
@@ -847,7 +836,7 @@ def survival4():
     else:
         print("You are safe, Camilla is not the killer")
         print("You will survive the night")
-        print("The killer was:" + killer + ", who has killed the other guests")
+        print("The killer was " + killer + ", who has killed the other guests")
         print("You and Camilla get to share the inheritance")
         time.sleep(B)
         add_narration(narration.SURVIVAL_MESSAGE)
