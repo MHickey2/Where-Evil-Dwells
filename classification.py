@@ -1,6 +1,11 @@
 """
-Create Class objects and functions for random safety item and
-random buddy and choosing a random killer each time the game starts.
+Create Class objects for Person and Protection and
+functions for random safety item and choosing a
+random killer each time the game starts. The
+Person class and Protection class has more properties
+than are shown to the player, but they are intended
+to be the base for future development. This would
+add more of RPG style to the existing game format.
 """
 
 import random
@@ -36,7 +41,6 @@ guest4 = Person("4", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
 guests = [guest1, guest2, guest3, guest4]
 names = [guest1.name, guest2.name, guest3.name, guest4.name]
 killer = random.choice(names)
-print(killer)
 
 
 class Protection(object):
@@ -65,7 +69,8 @@ item5 = Protection("5 ", "Book on Movie Murders", "Help defend yourself",
 
 def random_item():
     """
-    randomSAFETYITEMselection, in case player does not select themselves.
+    random safety item selection, in case player does not select themselves.
+    The player will be allocated an item of protection
     """
     itemlist = [item1.name, item2.name, item3.name, item4.name, item5.name]
     safetyitem = random.choice(itemlist)

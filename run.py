@@ -54,7 +54,6 @@ def random_buddy():
     """
     buddylist = [guest1.index, guest2.index, guest3.index, guest4.index]
     randombuddy = random.choice(buddylist)
-    print(randombuddy)
     return randombuddy
 
 
@@ -173,7 +172,7 @@ def add_player_details():
     """
     while True:
         minlen = 3
-        name = input("Enter your name:\n ").strip().lower()
+        name = input("Enter your name:\n ").lower().strip()
         # name can't be a number
         if not name.isalpha():
             print((Fore.RED) + "Your name must only have digits")
@@ -649,7 +648,6 @@ def brad():
                 print("Invalid input")
                 print(Fore.RESET)
                 continue
-
             if confrontation == "1":
                 print(Fore.RESET)
                 print("you load up with pots and pans and go after the man")
@@ -681,7 +679,7 @@ def brad():
             print("C. Risk it all and go investigate the noise\n")
             print(Fore.RED)
             print(Style.BRIGHT)
-            cellar = input("What is your choice, A, B or C: ").lower().strip()
+            cellar = input("What is your choice, A, B or C? ").lower().strip()
             print(Fore.RESET)
             if cellar not in {"a", "b", "c"}:
                 print("Invalid input")
@@ -802,7 +800,6 @@ def tobias():
                 print("Invalid input")
                 print(Fore.RESET)
                 continue
-
             if attic == "a":
                 print(Fore.RESET)
                 print("You make your way up the ladder really quitely")
@@ -877,8 +874,8 @@ def camilla():
         print("You eagerly tuck in to a variety of treats")
         print("Camilla is a great host and makes sure you clean your plate\n")
         print("Your room is near the front door and you hear it being opened")
-        print("You both here raised voices and then hear a scream")
-        print("You and Camilla discuss your options, will you:")
+        print("You both hear raised voices and then hear a scream...\n")
+        print("You and Camilla discuss your options, will you:\n")
         print("A. Escape through the window with Camilla by your side")
         print("B. You chance it and open the door to investigate the scream")
         print("C. You leave the room by a backdoor and check it out")
@@ -907,16 +904,16 @@ def camilla():
         print("You and Camilla have reached the Library room and you enter")
         print("The room is in disarray, there has been an altercation")
         print("Books are scattered everywhere and the furniture is overturned")
-        print("You see a message written in red on the mirror")
+        print("You see a message written in red on the mirror\n")
         print("The message says 'Leave Before you Both Die")
         while True:
-            print("You both are alarmed, do you: ")
+            print("You both are alarmed, do you:\n ")
             print("A. Retreat back to the dining room, maybe it will be safer")
             print("B. Try to find a phone and call for help, this is scary")
             print("C. You need a bathroom, you\'re feeling sick")
             print(Fore.RED)
             print(Style.BRIGHT)
-            library = input("Your choice A, B or C: \n").lower().strip()
+            library = input("Your choice A, B or C? \n").lower().strip()
             if library not in {"a", "b", "c"}:
                 print("Invalid input")
                 continue
