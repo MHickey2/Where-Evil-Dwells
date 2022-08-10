@@ -7,7 +7,6 @@ be determined by their game play
 """
 
 import os
-# import re
 import sys
 import time
 
@@ -80,17 +79,17 @@ def main():
     print(Style.BRIGHT)
     print(Fore.RED + art.BANNER)
     while True:
-        response = input("An encounter with Evil? yes/no\n ").lower().strip()
+        response = input("Encounter with Evil? yes/no\n ").lower().strip()
         if response not in {"yes", "no"}:
             print("Invalid input")
             continue
-        if response.lower().strip() == "yes":
+        if response == "yes":
             print(Fore.RESET)
             print("welcome to the Game, let's hope you make it out alive!")
             time.sleep(C)
             start_game = True
             break
-        elif response.lower().strip() == "no":
+        elif response == "no":
             print("understandable, sorry to see you go")
             start_game = False
             goodbye()
@@ -128,7 +127,7 @@ def accept_invite():
             print("Invalid input")
             continue
         print(Fore.RESET)
-        if rsvp_accepted.lower().strip() == "yes":
+        if rsvp_accepted == "yes":
             print("Great, I see a Hot-Tub and Big Screen TV in your future")
             rsvp_accepted = "yes"
             time.sleep(A)
@@ -137,7 +136,7 @@ def accept_invite():
             add_narration(narration.ARRIVAL)
             time.sleep(A)
             break
-        elif rsvp_accepted.lower().strip() == "no":
+        elif rsvp_accepted == "no":
             print("Well I guess it is instant noodles for you")
             rsvp_accepted = "no"
             goodbye()
@@ -156,39 +155,33 @@ def you_die():
     sys.exit()
 
 
-"""
-def validating_name(name, minlen):
-    # Checks if the name is acceptable
-if not isinstance(name, str) is str:
-        raise TypeError("Only letters are allowed")
-    if name.isnumeric is True:
-        raise TypeError("Name must be a string")
-    if minlen < 3:
-        raise ValueError("minimum length must be at least 3")
-
-    # name can't be shorter than minlen
-    minlen = 3
-    if len(name) < minlen:
-        return False
-    # name can only use letters
-    if not re.match('^[a-z]*$', name):
-        return False
-    # name can't be a number
-    if name.isnumeric():
-        return False
-"""
-
-
 def add_player_details():
-    """_Function to add player to the game_
+    """_Function to add player to the game,
+    and checks if the name is acceptable_
     """
-    # minlen = 3
-    name = input("Enter your name:\n ")
-    print(Fore.BLUE)
-    print(Style.BRIGHT)
-    print("Welcome to Harland Manor " + name + "!")
-    print(Fore.RESET)
-    # validating_name(name, minlen)
+    while True:
+        minlen = 3
+        name = input("Enter your name:\n ").strip().lower()
+        # name can't be a number
+        if not name.isalpha():
+            print(Fore.RED)
+            print("Your name must only have digits")
+            continue
+        # name can't be shorter than minlen
+        if len(name) < minlen:
+            print("minimum length must be at least 3")
+            continue
+        # name field can't be left blank
+        if name == "":
+            print("You can\'t leave name blank")
+            continue
+        else:
+            print(Fore.RESET)
+            print(Fore.BLUE)
+            print(Style.BRIGHT)
+            print("Welcome to Harland Manor " + name + "!")
+            print(Fore.RESET)
+            break
 
 
 def setting_lounge():

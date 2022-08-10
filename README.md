@@ -239,6 +239,26 @@ whether the user wants to play the game.
 - attic(What is your course of action: A,B or C?) - input works correctly
 
 
+### Browser Testing
+
+The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no
+issues on any of the browsers.
+
+### Validators
+
+#### HTML Checker
+
+I tested the index page with W3C checked and it validated cleanly. I had added the css file in an external file
+but it didn't work in Heroku and so left inline.
+
+<p align ="center">      
+     <img src="assets/images/readme/images/htmlchecker.png"  alt="HTML Validation" />    
+</p>
+<br/>
+
+
+#### Pep8 Validation
+
  #### [Return to Table of Contents](#toc)
 ----
  ## Bugs and Issues  <a name="bugs"></a>
