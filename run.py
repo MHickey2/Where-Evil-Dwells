@@ -9,6 +9,7 @@ be determined by their game play
 import os
 import sys
 import time
+import random
 
 import colorama
 import pyfiglet
@@ -17,8 +18,7 @@ from colorama import Back, Fore, Style
 import art
 import narration
 from classification import (guest1, guest2, guest3, guest4, item1, item2,
-                            item3, item4, item5, killer, random_buddy,
-                            random_item)
+                            item3, item4, item5, killer, random_item)
 
 colorama.init()
 
@@ -46,6 +46,19 @@ def clear():
     """
     command = 'clear'
     os.system(command)
+
+
+def random_buddy():
+    """
+    random buddy selection, in case player does not select themselves.
+    """
+    buddylist = [guest1.index, guest2.index, guest3.index, guest4.index]
+    randombuddy = random.choice(buddylist)
+    print(randombuddy)
+    return randombuddy
+
+
+random_buddy()
 
 
 def goodbye():
@@ -284,6 +297,7 @@ if lounge_action == "c":
 
         if staircase == "up":
             while True:
+                print(Fore.RESET)
                 print("You are going up the stairs to the bedroom area")
                 print("On the landing you see a person skulking")
                 print("1. You follow him, he looks suspicious")
@@ -294,6 +308,7 @@ if lounge_action == "c":
                 stranger = input("What do you do next, 1, 2 or 3?\n ").strip()
                 if stranger not in {"1", "2", "3"}:
                     print("Invalid input")
+                    print(Fore.RESET)
                     continue
                 if stranger == "1":
                     print(Fore.RESET)
@@ -389,7 +404,6 @@ while True:
     elif review == "4":
         show_information(guest4)
         break
-
 
 print(Fore.RED)
 print(Style.BRIGHT)
@@ -637,15 +651,18 @@ def brad():
                 continue
 
             if confrontation == "1":
+                print(Fore.RESET)
                 print("you load up with pots and pans and go after the man")
                 print("The mystery man disappears into bushes")
                 print("You decide it's too dangergous, return to kitchen")
                 break
             elif confrontation == "2":
+                print(Fore.RESET)
                 print("Brad wimps out and hides under the table")
                 print("You join him under the table, twos company")
                 break
             elif confrontation == "3":
+                print(Fore.RESET)
                 print("You chase after the man, full of bravado")
                 print("He gives you the slip, so you return to the kitchen")
                 print("Brad tells you he has your back, but you doubt it")
@@ -692,6 +709,7 @@ def brad():
         print(Fore.RESET)
         print("You are back in the kitchen, contemplating your next move")
         print("When suddenly, you hear a loud noise, you turn your head and..")
+        print("\n")
         time.sleep(B)
         survival2()
 
