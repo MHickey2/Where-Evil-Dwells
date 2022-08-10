@@ -24,13 +24,13 @@ class Person(object):
 
 
 # Characters: Guests
-guest1 = Person("1 ", "Luscious Campbell", "Blogger", 29, "Happy", "Selfish",
+guest1 = Person("1", "Luscious Campbell", "Blogger", 29, "Happy", "Selfish",
                 "Bludgeoning with Selfie stick", 3, "Safety Helmet")
-guest2 = Person("2 ", "Brad Jameson", "Actor/Model", 32, "Charasmatic", "Vain",
+guest2 = Person("2", "Brad Jameson", "Actor/Model", 32, "Charasmatic", "Vain",
                 "uses murder methods from movies", 6, "Book on movie murders")
-guest3 = Person("3 ", "Tobias Cooper", "Reality Show Judge", 42, "Smooth",
+guest3 = Person("3", "Tobias Cooper", "Reality Show Judge", 42, "Smooth",
                 "Rude and Harsh", "Crack Shot", 4, "Bulletproof Vest")
-guest4 = Person("4 ", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
+guest4 = Person("4", "Camilla Royce", "Society Lady", 46, "Warm Hearted",
                 "Classist", "Poisoner", 2, "Anctidote")
 # Killer is chosen at random each time the game starts
 guests = [guest1, guest2, guest3, guest4]
@@ -77,6 +77,6 @@ def random_buddy():
     """
     random buddy selection, in case player does not select themselves.
     """
-    buddylist = ["1", "2", "3", "4"]
+    buddylist = [guest1.index, guest2.index, guest3.index, guest4.index]
     randombuddy = random.choice(buddylist)
     return randombuddy
