@@ -3,7 +3,7 @@ narrative pieces for insertion into run.py(game)
 """
 
 INSTRUCTIONS = """
-Instruction:
+Instructions:
 The object of this game is to navigate your way through the story and
 your decisions will determine the paths you will take.
 

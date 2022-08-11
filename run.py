@@ -89,7 +89,8 @@ def main():
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    print(Fore.RED + art.BANNER)   
+    print(Back.BLACK)
+    print(Fore.RED + art.BANNER)
     while True:
         response = input("Want to play a Game? yes/no\n ").lower().strip()
         if response not in {"yes", "no"}:
@@ -234,7 +235,7 @@ def setting_lounge():
     time.sleep(B)
     print("\n")
     print("You are in the lounge now and the other guests have arrived")
-    print("There are four guests, they introuduce themselves, as:\n ")
+    print("There are four guests, they introuduce themselves as:\n")
     print(guest1.index + " " + guest1.name)
     print(guest2.index + " " + guest2.name)
     print(guest3.index + " " + guest3.name)
@@ -250,7 +251,7 @@ print(Fore.RESET)
 print("You are now in the lounge, you can... ")
 print("A. Make a start on the booze and work your way through the spirits")
 print("B. Fill your pockets with canopies and the smoked salmon entrees")
-print("C. Decide to explore a little, when you will get this change again")
+print("C. Decide to explore a little, when will you get this change again")
 print("D. Wait for the other guests to arrive")
 while True:
     print(Fore.RED)
@@ -288,7 +289,7 @@ if lounge_action == "c":
     while True:
         print(Fore.RED)
         print(Style.BRIGHT)
-        staircase = input("At the staircase, up or down?:\n ").lower().strip()
+        staircase = input("At the staircase now, up/down?\n ").lower().strip()
         if staircase not in {"up", "down"}:
             print("Invalid input")
             continue
@@ -296,15 +297,15 @@ if lounge_action == "c":
         print(Fore.LIGHTBLUE_EX + art.ARROWS)
         print(Fore.RESET)
         if staircase == "down":
+            print("You are going down a creepy staircase to the cellar")
+            print("When you reach the bottom, you can see 3 doors...")
+            print("1. A battered door, it that laughter you hear?")
+            print("2. A pristine door, with soothing music inside")
+            print("3. A solid oak door, with a tapping sound from within")
             while True:
-                print("You are going down a creepy staircase to the cellar")
-                print("When you reach the bottom, you can see 3 doors...")
-                print("1. A battered door, it that laughter you hear?")
-                print("2. A pristine door, with soothing music inside")
-                print("3. A solid oak door, with a tapping sound from within")
                 print(Fore.RED)
                 print(Style.BRIGHT)
-                doorchoice = input("Explore which door, 1, 2 or 3?\n ").strip()
+                doorchoice = input("Explore which door, 1, 2 or 3?\n").strip()
                 print(Fore.RESET)
                 time.sleep(B)
                 if doorchoice not in {"1", "2", "3"}:
@@ -327,13 +328,13 @@ if lounge_action == "c":
             break
 
         if staircase == "up":
+            print(Fore.RESET)
+            print("You are going up the stairs to the bedroom area")
+            print("On the landing you see a person skulking")
+            print("1. You follow him, he looks suspicious")
+            print("2. You get scared and decide to return to the lounge")
+            print("3. You ignore the skulker and continue skulking")
             while True:
-                print(Fore.RESET)
-                print("You are going up the stairs to the bedroom area")
-                print("On the landing you see a person skulking")
-                print("1. You follow him, he looks suspicious")
-                print("2. You get scared and decide to return to the lounge")
-                print("3. You ignore the skulker and continue skulking")
                 print(Fore.RED)
                 print(Style.BRIGHT)
                 stranger = input("What do you do next, 1, 2 or 3?\n ").strip()
@@ -365,10 +366,11 @@ if lounge_action == "c":
 
 print("\n")
 print("You are mingling, when Jeeves enters with a letter on a tray")
+print("This looks ominous, Jeeves offers to show you the details...")
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
-    letter = input("Want to read the letter? yes/no:\n ").lower().strip()
+    letter = input("Want to read the letter? yes/no\n").lower().strip()
     if letter not in {"yes", "no"}:
         print("Invalid input")
         continue
@@ -378,15 +380,17 @@ while True:
         print(Back.WHITE)
         add_narration(narration.LETTER)
         print(Fore.RESET)
+        print("\n")
         break
     elif letter == "no":
         print(Fore.RESET)
         print("I guess that might have been important")
-        print("A rock comes through window, with note attached, it reads")
+        print("A rock comes through window, with note attached, it reads:")
         time.sleep(C)
         print(Fore.BLACK)
         print(Back.WHITE)
         add_narration(narration.LETTER)
+        print("\n")
         break
 
 
@@ -407,7 +411,7 @@ print("you are in a dangerous dilemma, you need to team up with a buddy")
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
-    review = input("See details on 'all' or 1 2 3 or 4?\n ").lower().strip()
+    review = input("See details on 'all' or 1, 2, 3, or 4?\n ").lower().strip()
     if review not in {"all", "1", "2", "3", "4"}:
         print("Invalid input")
         continue
@@ -455,7 +459,7 @@ elif buddy_c == "4":
     BUDDY = "Camilla Royce"
     print("You are with Camilla, try to act richer")
 else:
-    print("Invalid choice, a Buddy will be assigned to you")
+    print("Invalid choice, a Buddy will be assigned to you\n")
     buddy_c = random_buddy()
     time.sleep(B)
 
@@ -554,13 +558,13 @@ def luscious():
         print("Luscious has no access to wifi, so is not a happy girl")
         print("you are settling in for the stay when you hear loud noises")
         print("It is coming from behind a doorway in the bedroom\n")
-        print("1. Do you go see what's causing the noise")
-        print("2. Do you ask Luscious to join you in the investigation")
-        print("3. Do you pretend not to hear, and keep listening to Luscious")
         while True:
+            print("1. Do you go see what's causing the noise")
+            print("2. Do you ask Luscious to join you in the investigation")
+            print("3. Do you pretend not to hear the noise")
             print(Fore.RED)
             print(Style.BRIGHT)
-            noise = input("What choice do you pick 1 2 or 3 ?\n ").strip()
+            noise = input("What choice do you pick 1, 2 or 3?\n").strip()
             print(Fore.RESET)
             if noise not in {"1", "2", "3"}:
                 print("Invalid input")
@@ -597,6 +601,7 @@ def luscious():
             print(Fore.RED)
             print(Style.BRIGHT)
             waiting = input("What is your choice 1, 2 or 3: \n").strip()
+            print(Fore.RESET)
             if waiting not in {"1", "2", "3"}:
                 print("Invalid input")
                 continue
@@ -675,7 +680,8 @@ def brad():
             print("3. Do you step up and deal with the guy yourself")
             print(Fore.RED)
             print(Style.BRIGHT)
-            confrontation = input("Your choice 1, 2 or 3?\n ").strip()
+            confrontation = input("Your choice 1, 2 or 3?\n").strip()
+            print(Fore.RESET)
             if confrontation not in {"1", "2", "3"}:
                 print("Invalid input")
                 print(Fore.RESET)
@@ -795,7 +801,7 @@ def tobias():
             print("C. Grab improvised weapons and confront whoever it is")
             print(Fore.RED)
             print(Style.BRIGHT)
-            corridor = input("Your choice: A,B or C: \n").lower().strip()
+            corridor = input("Your choice: A,B or C? \n").lower().strip()
             if corridor not in {"a", "b", "c"}:
                 print("Invalid input")
                 print(Fore.RESET)
@@ -803,14 +809,14 @@ def tobias():
 
             if corridor == "a":
                 print(Fore.RESET)
-                print("You both will live to see anothr day")
-                print("But that big Screen TV is history")
+                print("You both will live to see another day")
+                print("But that big Screen TV is off the wishlist")
                 goodbye()
                 break
             elif corridor == "b":
                 print(Fore.RESET)
                 print("You listen for a while but don't hear anything further")
-                print("You decide to venture outside and check it out")
+                print("You decide to venture outside and check it out\n")
                 break
             elif corridor == "c":
                 print(Fore.RESET)
@@ -820,15 +826,15 @@ def tobias():
 
         time.sleep(B)
         print("You are now in the corridor, the person has long gone")
-        print("You see a ladder leading up to the Attack")
+        print("You see a ladder leading up to the Attic")
         while True:
-            print("You figure the killer may be up there do you:\n")
+            print("You figure the killer may be up there, do you:\n")
             print("A. Go up the ladder and catch him before he get's you")
-            print("B. Close the door of the attack and get rid of the ladder")
+            print("B. Close the door of the attica and get rid of the ladder")
             print("C. Use this opportunity to run down the stairs and escape")
             print(Fore.RED)
             print(Style.BRIGHT)
-            attic = input("What is your choice: A, B or C? \n").lower().strip()
+            attic = input("What is your choice: A, B or C?\n").lower().strip()
             if attic not in {"a", "b", "c"}:
                 print("Invalid input")
                 print(Fore.RESET)
@@ -908,14 +914,14 @@ def camilla():
         print("Camilla is a great host and makes sure you clean your plate\n")
         print("Your room is near the front door and you hear it being opened")
         print("You both hear raised voices and then hear a scream...\n")
-        print("You and Camilla discuss your options, will you:\n")
-        print("A. Escape through the window with Camilla by your side")
-        print("B. You chance it and open the door to investigate the scream")
-        print("C. You leave the room by a backdoor and check it out")
         while True:
+            print("You and Camilla discuss your options, will you:\n")
+            print("A. Escape through the window with Camilla by your side")
+            print("B. You chance it and go to investigate the scream")
+            print("C. You leave the room by a backdoor and check it out")
             print(Fore.RED)
             print(Style.BRIGHT)
-            door = input("What is your choice, A, B or C: \n").lower().strip()
+            door = input("What is your choice, A, B or C?\n").lower().strip()
             print(Fore.RESET)
             if door not in {"a", "b", "c"}:
                 print("Invalid input")
@@ -946,11 +952,11 @@ def camilla():
             print("C. You need a bathroom, you\'re feeling sick")
             print(Fore.RED)
             print(Style.BRIGHT)
-            library = input("Your choice A, B or C? \n").lower().strip()
+            library = input("Your choice A, B or C?\n").lower().strip()
+            print(Fore.RESET)
             if library not in {"a", "b", "c"}:
                 print("Invalid input")
                 continue
-            print(Fore.RESET)
             if library == "a":
                 print("You return to the Dining Room and lock the door")
                 print("You hope this nightmare ends soon, you eat more food")
