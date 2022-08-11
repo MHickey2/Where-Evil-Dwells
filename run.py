@@ -126,7 +126,7 @@ def show_instructions():
             continue
         if instructions == "yes":
             print(Back.WHITE)
-            add_narration((Fore.BLUE) + narration.INSTRUCTIONS)
+            add_narration((Fore.BLACK) + narration.INSTRUCTIONS)
             print(Fore.RESET)
             print(Back.RESET)
             time.sleep(A)

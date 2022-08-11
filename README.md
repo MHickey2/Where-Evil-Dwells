@@ -147,12 +147,16 @@ resource that contains different categories of images, I choose images that set 
  #### [Return to Table of Contents](#toc)
 ----
 
-## Flow Chart for the Game  <a name="flowchart"></a>
+## Flow Diagram for the Game  <a name="flowchart"></a>
 
-I created a flow chart in Draw.io, which helped me to focus on how the game should flow. The first stage of the
-game is the intro where the user gets information on how to play the game, there is a little exploration of the
-settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and the the end result will be revealed to the user.
+
+I created a flow diagram in Draw.io, which helped me to focus on how the game should flow. The first stage of the game is the intro where the user gets information on how to play the game, there is a little exploration of the settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and the the end result will be revealed to the user.
   
+
+<p align ="center">      
+     <img src="assets/images/readme/images/flowdiagram.jpg"  alt="Flow Diagram" />    
+</p>
+<br/> 
 
 
  #### [Return to Table of Contents](#toc)
@@ -168,6 +172,10 @@ settings and the hook would be the warning, which steers the player to make deci
 
 The Introduction to the Game shows the Banner for the game and an invite to start the game, initially asking
 whether the user wants to play the game.
+
+The player can choose to see the instructions for the game, but prompts will help the player at evey step of the game.
+
+The intro to the game is displayed to the player
 
  #### [Return to Table of Contents](#toc)
 ----
@@ -224,7 +232,9 @@ whether the user wants to play the game.
 
 - Start Screen displays when Heroku link is used.                                     :heavy_check_mark:
 - The Title displays
-- Would you like an encounter with Evil? input fields - inputs work correctly  :heavy_check_mark:
+- Do you want to play a game? input fields - inputs work correctly  :heavy_check_mark:
+- instructions = input(See Instructions yes/no) - inputs work correctly
+- Instructions display correctly  :heavy_check_mark:
 - House Image displays correctly  :heavy_check_mark:
 - Intro to Game displays   :heavy_check_mark:
 - Do you accept the invite? yes/no? - inputs work correctly   :heavy_check_mark:
@@ -340,10 +350,18 @@ the complexity. The house has a few rooms at the moment but there is the possibi
 
 <br>
 
-### Browser Testing
+### Browser and  Responsive Testing
 
 The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no
 issues on any of the browsers.
+
+In regards to responsive testing, the Terminal does not work on smaller screens so just tested for the
+bigger screens.
+
+<p align ="center">      
+     <img src="assets/images/readme/images/responsive2screen.png"  alt="Responsive Testing Image" />    
+</p>
+<br/> 
 
 <br>
 
@@ -392,7 +410,15 @@ external file but it didn't work in Heroku and so left css inline.
 
  ### Resolved <a name="resolved"></a>
 
+ Most of the original bugs were centered on path choice and figuring how to bypass other parts of the game, just when you thought you had it figured, it would end up on a completly different path. In regards to validation the whole way through I had devised an else in each prompt so that the game would continue even if the wrong input was given. I did not want to penalize a player for getting it wrong, but fundamentally this was wrong as I was making the decisions for the player and that would not be a good user experience. So I added validation in the later stages of the project, adding 'While True' and asking the users for the correct input, in this way the user can't be wrong the majority of time.
+
+ I had problems with the name validation, I was trying to use a regex and it didn't work right, so again at the later stages I added validation within the name function itself. Now it will repeat the prompt until the user gives a name with only words, can not the field blank or have numbers in the string. 
+
+ There is a random element to the game, the killer is picked at random, the buddy is assigned if user does not give correct input and a safetyitem is allocated if they do not give the correct input, this is not faullty validation but an effort to create a wildcard element to the game. At on point the random assigned buddy was always 'Brad', but this has been since fixed
+ 
  ### Unresolved <a name="unresolved"></a>
+
+ I was going to use a clear function, but the game does not lend itself too well to that, there is no set size between prompts and there are so many routes to choose, it could be problematic, although I would hope to improve the flow of the game in future iterations. If the player needs to finish the game, they are given several options throughout the game to leave, but if you were to start the game, the way i originally had used earlier in development(options for player), there were problems in allocating the random killer at the start of the game, so instead the user can leave at the end of the game and use the run programme button to begin again.
 
  #### [Return to Table of Contents](#toc)
 ----
