@@ -64,6 +64,7 @@ def goodbye():
     """_This displays leaving message_
     """
     print(Fore.RED)
+    print(Back.BLACK)
     bye = pyfiglet.figlet_format(' Bye for Now!')
     print(bye)
     print(Fore.RESET)
@@ -88,7 +89,7 @@ def main():
     """
     print(Fore.RED)
     print(Style.BRIGHT)
-    print(Fore.RED + art.BANNER)
+    print(Fore.RED + art.BANNER)   
     while True:
         response = input("Want to play a Game? yes/no\n ").lower().strip()
         if response not in {"yes", "no"}:
@@ -710,7 +711,7 @@ def brad():
             print("C. Risk it all and go investigate the noise\n")
             print(Fore.RED)
             print(Style.BRIGHT)
-            cellar = input("What is your choice, A, B or C? \n").lower().strip()
+            cellar = input("Your choice, A, B or C? \n").lower().strip()
             print(Fore.RESET)
             if cellar not in {"a", "b", "c"}:
                 print("Invalid input")

@@ -31,13 +31,13 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
     1. [Colour Scheme](#colourscheme)
     2. [UX experience](#UX)
     3. [Graphics](#graphics)
-4.  [Flow Chart for Game](#flowchart)        
+4.  [Flow Diagram for Game](#flowdiagram)        
 5.  [Features](#features)
     1. [Index Page](#intropage)    
 6.  [Future Implementation](#future)
 7.  [Tools and Technology](#technology)
 8.  [Testing](#testing)
-    1. [Manual Tesing](#manual)
+    1. [Manual and Responsive Tesing](#manual/responsive)
     2. [Browser Testing](#browser)
     3. [Validation](#validation)
 9. [Bugs and Issues](#bugs)
@@ -147,7 +147,8 @@ resource that contains different categories of images, I choose images that set 
  #### [Return to Table of Contents](#toc)
 ----
 
-## Flow Diagram for the Game  <a name="flowchart"></a>
+
+## Flow Diagram for the Game  <a name="flowdiagram"></a>
 
 
 I created a flow diagram in Draw.io, which helped me to focus on how the game should flow. The first stage of the game is the intro where the user gets information on how to play the game, there is a little exploration of the settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and the the end result will be revealed to the user.
@@ -158,7 +159,7 @@ I created a flow diagram in Draw.io, which helped me to focus on how the game sh
 </p>
 <br/> 
 
-
+[Flow Diagram(Bigger Version)](/views/flow.html)
  #### [Return to Table of Contents](#toc)
 ----
 ## Features  <a name="features"></a>
@@ -230,10 +231,10 @@ The intro to the game is displayed to the player
 #### Feature being tested and Result                                                    
 
 
-- Start Screen displays when Heroku link is used.                                     :heavy_check_mark:
-- The Title displays
+- Start Screen displays when Heroku link is used.   :heavy_check_mark:
+- The Title displays    :heavy_check_mark:
 - Do you want to play a game? input fields - inputs work correctly  :heavy_check_mark:
-- instructions = input(See Instructions yes/no) - inputs work correctly
+- instructions = input(See Instructions yes/no) - inputs work correctly    :heavy_check_mark:
 - Instructions display correctly  :heavy_check_mark:
 - House Image displays correctly  :heavy_check_mark:
 - Intro to Game displays   :heavy_check_mark:
@@ -350,22 +351,15 @@ the complexity. The house has a few rooms at the moment but there is the possibi
 
 <br>
 
-### Browser and  Responsive Testing
+### Browser Testing   <a name="manual/responsive"></a>
 
 The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no
 issues on any of the browsers.
 
-In regards to responsive testing, the Terminal does not work on smaller screens so just tested for the
-bigger screens.
-
-<p align ="center">      
-     <img src="assets/images/readme/images/responsive2screen.png"  alt="Responsive Testing Image" />    
-</p>
-<br/> 
 
 <br>
 
-### Validation
+### Validation      <a name="validation"></a>
 
 I used pep8 validation to test the 4 pages and no errors were found (See images below)
 
@@ -391,7 +385,7 @@ I used pep8 validation to test the 4 pages and no errors were found (See images 
 
 <br>
 
-#### HTML Checker
+#### HTML Checker     
 
 I tested the index page with W3C checked and it validated cleanly. I had added the css file in an 
 external file but it didn't work in Heroku and so left css inline.
@@ -401,7 +395,22 @@ external file but it didn't work in Heroku and so left css inline.
 </p>
 <br/>
 
+#### Responsive Testing
 
+In regards to responsive testing, the Terminal does not work on smaller screens so just tested for the
+bigger screens.
+
+<p align ="center">      
+     <img src="assets/images/readme/images/responsive2screen.png"  alt="Responsive Testing Image" />    
+</p>
+<br/> 
+
+#### Lighthouse Testing
+
+<p align ="center">      
+     <img src="assets/images/readme/images/lighthouse.png"  alt="lighouse testing specs" />    
+</p>
+<br/> 
 
 
  #### [Return to Table of Contents](#toc)
@@ -471,6 +480,8 @@ provided
 #### [Return to Table of Contents](#toc)
 ----
  ## Credits <a name="credits"></a>
+ How to print Coloured text in Python [Tutorial](https://www.youtube.com/watch?v=u51Zjlnui4Y)
+
  Choose Your Own Adventure Game in Python (Beginners) [Tutorial](https://www.youtube.com/watch?v=DEcFCn2ubSg)
 
  Python Text Based Adventure Game Tutorial [Tutorial](https://www.youtube.com/watch?v=u8X6TiJA8as&t=186s)
