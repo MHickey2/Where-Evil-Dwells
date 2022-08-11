@@ -88,22 +88,20 @@ def main():
     """_main function, the players intro screen for game_
     """
     print(Fore.RED)
-    print(Style.BRIGHT)
-    print(Back.BLACK)
+    print(Style.BRIGHT)    
     print(Fore.RED + art.BANNER)
     while True:
         response = input("Want to play a Game? yes/no\n ").lower().strip()
+        print(Fore.RESET)
         if response not in {"yes", "no"}:
             print("Invalid input")
             continue
-        if response == "yes":
-            print(Fore.RESET)
+        if response == "yes":            
             print("welcome to the Game, let's hope you make it out alive!\n")
             time.sleep(B)
             start_game = True
             break
-        elif response == "no":
-            print(Fore.RESET)
+        elif response == "no":           
             print("understandable, sorry to see you go")
             start_game = False
             goodbye()
@@ -122,9 +120,9 @@ def show_instructions():
         print(Fore.RED)
         print(Style.BRIGHT)
         instructions = input("See Instructions yes/no\n ").lower().strip()
+        print(Fore.RESET)
         if instructions not in {"yes", "no"}:
             print("Invalid input")
-            print(Fore.RESET)
             continue
         if instructions == "yes":
             print(Back.WHITE)
@@ -165,10 +163,10 @@ def accept_invite():
         print(Fore.RED)
         print(Style.BRIGHT)
         rsvp_accepted = input("Accept the invite? yes/no?\n ").lower().strip()
+        print(Fore.RESET)
         if rsvp_accepted not in {"yes", "no"}:
             print("Invalid input")
             continue
-        print(Fore.RESET)
         if rsvp_accepted == "yes":
             print("Great, I see a Hot-Tub and Big Screen TV in your future")
             rsvp_accepted = "yes"
