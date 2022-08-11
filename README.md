@@ -224,76 +224,76 @@ whether the user wants to play the game.
 
 - Start Screen displays when Heroku link is used.                                     :heavy_check_mark:
 - The Title displays
-- Would you like an encounter with Evil? input fields - inputs work correctly
-- House Image displays correctly
-- Intro to Game displays
-- Do you accept the invite? yes/no? - inputs work correctly
+- Would you like an encounter with Evil? input fields - inputs work correctly  :heavy_check_mark:
+- House Image displays correctly  :heavy_check_mark:
+- Intro to Game displays   :heavy_check_mark:
+- Do you accept the invite? yes/no? - inputs work correctly   :heavy_check_mark:
 
 <br>
 
-- Door Image displays correctly
-- Arrival Details display
-- Drink Image display correctly
-- lounge(What do you choose to do in Lounge?)  - inputs work correctly
-- You sneak out to the staircase, up or down? - inputs work correctly
-- up = stranger(What do you do next, 1, 2 or 3?) - inputs work correctly
-- down = doorchoice(Which door do you pick to explore, 1, 2 or 3?) - inputs works correctly
-- stranger = input(What do you do next, 1, 2 or 3?) - inputs work correctly
-- doorchoice = input(Explore which door, 1, 2 or 3?) - inputs work correctly
-- Guest names display correctly
-- Enter your name including validation - works correctly 
-- Welcome Message displays correctly
-- letter(Do you want to see what is in the letter? yes/no) - inputs works correctly
-- letter displays correctly
-- Review(Would you like to see details on all or 1 2 3 or 4?) - inputs works correctly
-- Guest information is displayed in the right format
-- Details are displayed according to user choice
-- buddy_c(Now you can choose your buddy? 1, 2, 3 or 4?) - input works correctly
-- If correct choice not made a buddy is assigned randomly - working correctly
-- safetyitemchoice(What is your chosen protection, 1, 2, 3, 4, 5?) input works correctly
-- Random Protection assignment working correctly
+- Door Image displays correctly  :heavy_check_mark:
+- Arrival Details display   :heavy_check_mark:
+- Drink Image display correctly   :heavy_check_mark:
+- lounge(What do you choose to do in Lounge?)  - inputs work correctly   :heavy_check_mark:
+- You sneak out to the staircase, up or down? - inputs work correctly   :heavy_check_mark:
+- up = stranger(What do you do next, 1, 2 or 3?) - inputs work correctly  :heavy_check_mark:
+- down = doorchoice(Which door do you pick, 1, 2 or 3?) - inputs works correctly   :heavy_check_mark:
+- stranger = input(What do you do next, 1, 2 or 3?) - inputs work correctly   :heavy_check_mark:
+- doorchoice = input(Explore which door, 1, 2 or 3?) - inputs work correctly   :heavy_check_mark:
+- Guest names display correctly   :heavy_check_mark:
+- Enter your name including validation - works correctly   :heavy_check_mark:
+- Welcome Message displays correctly   :heavy_check_mark:
+- letter(Do you want to see what is in the letter? yes/no) - inputs works correctly   :heavy_check_mark:
+- letter displays correctly   :heavy_check_mark:
+- Review(Would you like to see details on all or 1 2 3 or 4?) - inputs works correctly   :heavy_check_mark:
+- Guest information is displayed in the right format   :heavy_check_mark:
+- Details are displayed according to user choice   :heavy_check_mark:
+- buddy_c(Now you can choose your buddy? 1, 2, 3 or 4?) - input works correctly   :heavy_check_mark:
+- If correct choice not made a buddy is assigned randomly - working correctly   :heavy_check_mark:
+- safetyitemchoice(What is your chosen protection, 1, 2, 3, 4, 5?) input works correctly  :heavy_check_mark:
+- Random Protection assignment working correctly   :heavy_check_mark:
 
 <br>
 
-- When the Luscious path is chosen, the Luscious narration displays
-- brandy = input(She offers you a glass yes/no?) - inputs work correctly
-- noise = input(What choice do you pick 1 2 or 3?) - inputs work correctly
-- Secret room message displays correctly
-- waiting = input(What is your choice 1, 2 or 3?) - inputs work correctly
-- Survival function called and the player finds if they survive - working correctly
-- If player survives the Final message displays correctly
-- if player dies in game, death image is shown correctly
-- player is show option to leave the game - works correctly
+- When the Luscious path is chosen, the Luscious narration displays   :heavy_check_mark:
+- brandy = input(She offers you a glass yes/no?) - inputs work correctly   :heavy_check_mark:
+- noise = input(What choice do you pick 1 2 or 3?) - inputs work correctly   :heavy_check_mark:
+- Secret room message displays correctly   :heavy_check_mark:
+- waiting = input(What is your choice 1, 2 or 3?) - inputs work correctly   :heavy_check_mark:
+- Survival function called and the player finds if they survive - working correctly   :heavy_check_mark:
+- If player survives the Final message displays correctly   :heavy_check_mark:
+- if player dies in game, death image is shown correctly   :heavy_check_mark:
+- player is show option to leave the game - works correctly   :heavy_check_mark:
 
 <br>
 
-- When the Brad path is chosen, the Brad narration displays
-- confrontation = input(Your choice 1, 2 or 3?) - inputs work correctly
-- cellar = input(What is your choice, A, B or C?) - inputs work correctly
-- Survival2 function called and the player finds if they survive - working correctly
-- If player survives the Final message displays correctly
-- if player dies in game, death image is shown correctly
-- player is show option to leave the game - works correctly
+- When the Brad path is chosen, the Brad narration displays   :heavy_check_mark:
+- confrontation = input(Your choice 1, 2 or 3?) - inputs work correctly   :heavy_check_mark:
+- cellar = input(What is your choice, A, B or C?) - inputs work correctly   :heavy_check_mark:
+- Survival2 function called and the player finds if they survive - working correctly   :heavy_check_mark:
+- If player survives the Final message displays correctly   :heavy_check_mark:
+- if player dies in game, death image is shown correctly   :heavy_check_mark:
+- player is show option to leave the game - works correctly   :heavy_check_mark:
 
 <br>
 
-- When the Tobias path is chosen, the Tobias narration displays
-- corridor(What is your course of action: A,B or C?) - inputs work correctly
-- attic(What is your course of action: A,B or C?) - inputs work correctly
-- Survival3 function called and the player finds if they survive - working correctly
-- If player survives the Final message displays correctly
-- if player dies in game, death image is shown correctly
-- player is show option to leave the game - works correctly
+- When the Tobias path is chosen, the Tobias narration displays   :heavy_check_mark:
+- corridor(What is your course of action: A,B or C?) - inputs work correctly   :heavy_check_mark:
+- attic(What is your course of action: A,B or C?) - inputs work correctly   :heavy_check_mark:
+- Survival3 function called and the player finds if they survive - working correctly   :heavy_check_mark:
+- If player survives the Final message displays correctly   :heavy_check_mark:
+- if player dies in game, death image is shown correctly   :heavy_check_mark:
+- player is show option to leave the game - works correctly   :heavy_check_mark:
 
 <br>
 
-- When the Camilla path is chosen, the Camilla narration displays
-- door = input(What is your choice, A, B or C?) - inputs work correctly
-- library = input(Your choice A, B or C?) - input works correctly
-- Survival4 function called and the player finds if they survive - working correctly
-- If player survives the Final message displays correctly
-- if player dies in game, death image is shown correctly
-- player is show option to leave the game - works correctly
+- When the Camilla path is chosen, the Camilla narration displays   :heavy_check_mark:
+- door = input(What is your choice, A, B or C?) - inputs work correctly   :heavy_check_mark:
+- library = input(Your choice A, B or C?) - input works correctly   :heavy_check_mark:
+- Survival4 function called and the player finds if they survive - working correctly   :heavy_check_mark:
+- If player survives the Final message displays correctly   :heavy_check_mark:
+- if player dies in game, death image is shown correctly   :heavy_check_mark:
+- player is show option to leave the game - works correctly   :heavy_check_mark:
  
 
 <br>

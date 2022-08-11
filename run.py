@@ -90,14 +90,14 @@ def main():
     print(Style.BRIGHT)
     print(Fore.RED + art.BANNER)
     while True:
-        response = input("Encounter with Evil? yes/no\n ").lower().strip()
+        response = input("Want to play a Game? yes/no\n ").lower().strip()
         if response not in {"yes", "no"}:
             print("Invalid input")
             continue
         if response == "yes":
             print(Fore.RESET)
-            print("welcome to the Game, let's hope you make it out alive!")
-            time.sleep(C)
+            print("welcome to the Game, let's hope you make it out alive!\n")
+            time.sleep(B)
             start_game = True
             break
         elif response == "no":
@@ -112,11 +112,38 @@ def main():
 main()
 
 
+def show_instructions():
+    """_function, to show instructions to the player_
+    """
+    while True:
+        print(Fore.RED)
+        print(Style.BRIGHT)
+        instructions = input("See instructions yes/no\n ").lower().strip()
+        if instructions not in {"yes", "no"}:
+            print("Invalid input")
+            print(Fore.RESET)
+            continue
+        if instructions == "yes":
+            print(Back.WHITE)
+            add_narration((Fore.GREEN) + narration.INSTRUCTIONS)
+            print(Fore.RESET)
+            print(Back.RESET)
+            time.sleep(B)
+            break
+        elif instructions == "no":
+            print("No problem, it\'s easy to understand anyway")
+            time.sleep(B)
+            break
+
+
+show_instructions()
+
+
 def show_intro():
     """
     _function to show intro to the user_
     """
-    time.sleep(C)
+    time.sleep(B)
     print(Back.BLACK)
     print(Fore.LIGHTBLUE_EX + art.HOUSE)
     print(Fore.RESET)
@@ -564,7 +591,7 @@ def luscious():
             print("3. You've had enough, you escape from this horror house")
             print(Fore.RED)
             print(Style.BRIGHT)
-            waiting = input("What is your choice 1, 2 or 3: ").strip()
+            waiting = input("What is your choice 1, 2 or 3: \n").strip()
             if waiting not in {"1", "2", "3"}:
                 print("Invalid input")
                 continue
@@ -679,7 +706,7 @@ def brad():
             print("C. Risk it all and go investigate the noise\n")
             print(Fore.RED)
             print(Style.BRIGHT)
-            cellar = input("What is your choice, A, B or C? ").lower().strip()
+            cellar = input("What is your choice, A, B or C? \n").lower().strip()
             print(Fore.RESET)
             if cellar not in {"a", "b", "c"}:
                 print("Invalid input")
