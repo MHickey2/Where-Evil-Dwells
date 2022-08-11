@@ -2,7 +2,7 @@
 Text Based Adventure Game based on the old horror movie genre, set in a creepy
 house and the player is coming as a benefactor, and then there is the matter
 of a warning, whereby someone in the house means to kill them and they have
-to survive by choosing a safe route throughout the game and there fate will
+to survive by choosing a safe route throughout the game and their fate will
 be determined by their game play
 """
 
@@ -101,6 +101,7 @@ def main():
             start_game = True
             break
         elif response == "no":
+            print(Fore.RESET)
             print("understandable, sorry to see you go")
             start_game = False
             goodbye()
@@ -118,21 +119,22 @@ def show_instructions():
     while True:
         print(Fore.RED)
         print(Style.BRIGHT)
-        instructions = input("See instructions yes/no\n ").lower().strip()
+        instructions = input("See Instructions yes/no\n ").lower().strip()
         if instructions not in {"yes", "no"}:
             print("Invalid input")
             print(Fore.RESET)
             continue
         if instructions == "yes":
             print(Back.WHITE)
-            add_narration((Fore.GREEN) + narration.INSTRUCTIONS)
+            add_narration((Fore.BLUE) + narration.INSTRUCTIONS)
             print(Fore.RESET)
             print(Back.RESET)
-            time.sleep(B)
+            time.sleep(A)
             break
         elif instructions == "no":
+            print(Fore.RESET)
             print("No problem, it\'s easy to understand anyway")
-            time.sleep(B)
+            time.sleep(A)
             break
 
 
@@ -186,6 +188,7 @@ accept_invite()
 def you_die():
     """_Final Message if you die in game_
     """
+    print("\n")
     print("Bad Luck, you die")
     print(Back.BLACK)
     print(Fore.LIGHTRED_EX + art.DEATH)
@@ -290,6 +293,7 @@ if lounge_action == "c":
             continue
         print(Fore.RESET)
         print(Fore.LIGHTBLUE_EX + art.ARROWS)
+        print(Fore.RESET)
         if staircase == "down":
             while True:
                 print("You are going down a creepy staircase to the cellar")
@@ -798,6 +802,7 @@ def tobias():
 
             if corridor == "a":
                 print(Fore.RESET)
+                print("You both will live to see anothr day")
                 print("But that big Screen TV is history")
                 goodbye()
                 break
