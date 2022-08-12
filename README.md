@@ -7,15 +7,18 @@
 <br/>  
 
  
-## Introduction <a name="introduction"></a>
+## Introduction <a name="introduction"></a>  
+
+
 Where Evil Dwells is a Text Based Adventure for a Command Line Interface. It is utilizing the python language.
-The Game is a murder mystery based in a Creepy House. The Player acts as the protagonist and will drive the direction of the game. The decision making will allow the player to interact with characters and can experience different scenarios according to their choices. This is an original story based on the vintage horror/thriller genre with inspiration from the classic movie, 'Murder by Death'. The goal of the game is to make it to the end of the game alive and be able to claim the inheritance. The hope is that the game will offer the player an interactive and fun experience, that they can repeat and experience differently each time they play 
+The Game is a murder mystery based in a Creepy House. The Player acts as the protagonist and will drive the direction of the game. The decision making will allow the player to interact with the characters and they can experience different scenarios according to their choices. This is an original story based on the vintage horror/thriller genre with inspiration from the classic movie, 'Murder by Death'. The goal of the game is to make it to the end of the game alive and be able to claim the inheritance. The hope is that the game will offer the player an interactive and fun experience, that they can repeat and experience differently each time they play. 
 
 <br/>
 
 [Visit the Where Evil Dwells Site](https://where-evil-dwells.herokuapp.com/)  
 
-[Visit the Where Evil Dwells Repository](https://github.com/MHickey2/Where-Evil-Dwells)  
+[Visit the Where Evil Dwells Repository](https://github.com/MHickey2/Where-Evil-Dwells)
+
 <br/>    
 
 # Table of Contents <a name="toc"></a>
@@ -27,19 +30,28 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
     1. [First Time User](#firsttimeuser)
     2. [Regular User](#regularuser)
     3. [Site Owner](#siteowner)
-3.  [Layout and Logic](#layout)
+3.  [Layout](#layout)
     1. [Colour Scheme](#colourscheme)
     2. [UX experience](#UX)
     3. [Graphics](#graphics)
-4.  [Flow Diagram for Game](#flowchart)        
+4.  [Flow Chart for Game](#flowchart)        
 5.  [Features](#features)
-    1. [Index Page](#intropage)    
+    1. [Start Page](#startpage)
+    2. [Instructions](#instructions) 
+    3. [Intro To Game](#intro)
+    4. [Arrival](#arrival) 
+    5. [Guest Intro](#guestintro)
+    6. [Warning Letter](#warningletter)  
+    7. [Guest Details](#guestdetails)
+    8. [Random Element](#random)
+    9. [Different Paths](#paths)
 6.  [Future Implementation](#future)
 7.  [Tools and Technology](#technology)
 8.  [Testing](#testing)
     1. [Manual Testing](#manual)
-    2. [General Testing](#general)
-    3. [Validation](#validation)
+    2. [User Story Testing](#userstorytesting)
+    3. [General Testing](#general)
+    4. [Validation](#validation)
 9. [Bugs and Issues](#bugs)
     1. [Resolved](#resolved)
     2. [Unresolved](#unresolved)
@@ -74,7 +86,13 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 
  #### [Return to Table of Contents](#toc)
 ----
+
+<br>
+
 ## User Stories  <a name="userstories"></a>
+
+<br>
+
 ### As a first time user to this site, I want to …..<a name="firsttimeuser"></a>
 - Understand how the Game Works.
 - Play the Game.
@@ -108,21 +126,32 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 
 <br/>
 
+
 ## Colour Scheme    <a name="colourscheme"></a>  
-The colour scheme encompasses the html index page and the terminal screen. I wanted to have a background image that resonates with the theme of the game. I simply applied a background image of a creepy house. In regards to the interface i added aasci art images to supplement the settings depicted in the text. The background colours were used to make certain elements stand out i.e. the letter. Colour was applied to text input lines, to make them stand out from the rest of the text flow.
+
+The colour scheme encompasses the html index page and the terminal screen. I wanted to have a background image that resonates with the theme of the game. I simply applied a background image of a creepy house. In regards to the interface i added aasci art images to supplement the settings depicted in the text. The background colours were used to make certain elements stand out i.e. the letter. Colour was applied to prompts, to make them stand out from the rest of the text flow. Colour was also used when the player dies in the game(red).
+
+<br>
 
 ## UX Experience    <a name="ux"></a>
-- The Player is given a backstory on what they need to do in the game.
+
+- The player is given a backstory on what they need to do in the game.
+- The player can choose to see the instructions for the game.
 - The player is prompted when a decision needs to be made.
 - The prompts are designed to stand out from the rest of the text.
-- Validation allows the Player multiple attempts of getting inputs right. 
+- Validation allows the Player multiple attempts of getting inputs right.
+- Player is allowed to see more information on guests before deciding on a buddy. 
    
+<br>
 
 ## Graphics    <a name="graphics"></a>
 
 <br>
 
+ 
 [![Horror fonts](https://see.fontimg.com/api/renderfont4/eZKDm/eyJyIjoiZnMiLCJoIjo3NywidyI6MTAwMCwiZnMiOjc3LCJmZ2MiOiIjRjExMDEwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/V0hFUkUgRVZJTCBEV0VMTFM/bloody-camp-free-trial.png)](https://www.fontspace.com/category/horror)
+
+<br>
 
 ### ABOUT BLOODY CAMP TRIAL FONT: 
 Bloody Camp is a horror blood font, which creates a horror tone and felt it supplemented the
@@ -132,27 +161,56 @@ the color and scale of the image.
 
 <br>
 
+<h3 align = "Center">
+Background Image
+</h3>
 <p align ="center">      
      <img src="assets/images/readme/images/hauntedhouse.jpg"  alt="background to the game" />    
 </p>
 <br/> 
 
 The background image was sourced again to supplement the horror theme and the setting of the
-game is in a house so I thought it was fitting that the user can visualize the type of setting that the game is depicting.
+game is in a house, so I thought it was fitting that the user can visualize the environment that the game is depicting and soak up the atmosphere.
+
+<br>
+
+The rest of the images consist of aasci art sourced from an online generator and a free resource that contains different images by category, I choose images that set the scene for various settings within the game. I did not overdo this as I didn't want to distract the player too much from game play.
+
+<br>
+
+<h3 align = "Center">
+Aasci House Image
+</h3>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/aascihouse.png"  alt="aasci art house image" />    
+</p>
 
 
-There rest of the images consist of aasci art sourced from an online generator and a free
-resource that contains different categories of images, I choose images that set the scene for various settings within the game. I did not overdo this as I didn't want to distract the player too much from game play.
+<br>
+
+<h3 align = "Center">
+Aasci Death Image
+</h3>
+
+
+<p align ="center">      
+     <img src="assets/images/readme/images/aascideath.png"  alt="aasci art death image" />    
+</p>
+<br/> 
 
  #### [Return to Table of Contents](#toc)
 ----
 
+<br>
 
-## Flow Chart for the Game  <a name="flowdiagram"></a>
+## Flow Chart for the Game  <a name="flowchart"></a>
 
+<br>
 
-I created a flow chart in Draw.io, which helped me to focus on how the game should flow. The first stage of the game is the intro where the user gets information on how to play the game, there is a little exploration of the settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and the the end result will be revealed to the user.
+I created a flow chart in Draw.io, which helped me to focus on how the game should flow. The first stage of the game is the intro where the user gets information on how to play the game, there is a little exploration of the settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and ultimately the end result will be revealed to the user.
   
+<br>
 
 <p align ="center">      
      <img src="assets/images/readme/images/flowchartBig.jpg"  alt="Flow Chart" />    
@@ -162,25 +220,143 @@ I created a flow chart in Draw.io, which helped me to focus on how the game shou
 
  #### [Return to Table of Contents](#toc)
 ----
+
+<br>
+
 ## Features  <a name="features"></a>
 
-### Start Page
+<br>
+
+### Starting Page   <a name="startpage"></a>
+
+
+The Introduction to the Game shows the Banner for the game and initially asking whether the user wants to play the game. If the user says no, they will be presented with a goodbye message, and if they confirm yes they can
+proceed to the game.   
+
+<br>
 
 <p align ="center">      
-     <img src="assets/images/readme/images/interface.jpg"  alt="Starting Page" />    
+     <img src="assets/images/readme/images/starterscreen.png"  alt="Starting Screen Image" />    
 </p>
+
 <br/> 
 
-The Introduction to the Game shows the Banner for the game and an invite to start the game, initially asking
-whether the user wants to play the game.
+### Instructions      <a name="instructions"></a>
 
-The player can choose to see the instructions for the game, but prompts will help the player at evey step of the game.
+The player can choose to see the instructions for the game, but if they choose not to see them, prompts will help the player at evey step of the game.
 
-The intro to the game is displayed to the player
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/instructions.png"  alt="Instructions for Player" />    
+</p>
+
+<br/> 
+
+### Intro To Game Story   <a name="intro"></a>
+
+The introduction to the background story is displayed to the player, including a depiction of a House, the player is invited and the player has to decide to accept in order to proceed to gameplay.
+
+<p align ="center">      
+     <img src="assets/images/readme/images/introtogame.png"  alt="Intro Story to Game" />    
+</p>
+
+<br/> 
+
+### Arrival at House Setting      <a name="arrival"></a>
+
+The player is introduced to the house setting and this is their entry level position for meeting with the characters in the game.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/arrival.png"  alt="Arrival information for player" />    
+</p>
+
+<br/> 
+
+### Introduction to Guests      <a name="guestintro"></a>
+
+The player gets to meet the characters they will be playing with, just their names for now and the player is required to supply their own name, which is validated for correct input, when this is supplied a greeting is displayed to the player.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/guests.png"  alt="Introduction to other guests" />    
+</p>
+
+<br/> 
+
+
+### Warning Letter      <a name="warningletter"></a>
+
+The letter is the key part of the game, as it drives the action from this moment on, it spurs the player into action. It is so important that the user has two chances of seeing the contents.
+
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/letter.png"  alt="Warning letter for the player" />    
+</p>
+
+<br/>
+
+### Guest Details       <a name="guestdetails"></a>
+
+Before choosing a buddy for the game, the player is given the opportunity to see more details on one or all of the guests before their choice. They will not see details outside of what is needed for this choice. Certain details are hidden and can be used for future development.
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/guestdetails.png"  alt="Guest details for the player" />    
+</p>
+
+<br/> 
+
+### Random Element      <a name="random"></a>
+
+In regards to choosing a buddy and choosing a random safety item, an element of randomness has been introduced, in that the player can choose to be assigned a random buddy and a random safety item and take their chances in the game.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/random.png"  alt="Random element in game" />    
+</p>
+
+<br/> 
+
+### Different Paths in the Game    <a name="paths"></a>
+
+There are Four major paths in the game, determined by the player's choice for their buddy, after buddy selection, an introduction to the character will be displayed and a location for your particular path. Then there will be a series of events with prompts for input from the player. These inputs will decide their fate in the game. They can choose to escape the game, in which case they survive but they forfeit their inheritance. If they chose wrongly they can be killed by the killer. If they make it to the end of the game they will find out if their buddy was the killer or if they have survived the night. If they survive they will be shown a survivor message and will be able to leave the game.
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/lusciousstory.png"  alt="Path for Luscious" />    
+</p>
+
+<br/> 
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/survival.png"  alt="Survival/death Notification" />    
+</p>
+
+<br/>
+
+<br>
+
+<p align ="center">      
+     <img src="assets/images/readme/images/youdie.png"  alt="Dying Notification" />    
+</p>
+
+<br/> 
 
  #### [Return to Table of Contents](#toc)
 ----
  ## Future Implementation  <a name="future"></a>
+
+ <br>
 
  The game is set within a house, so there are limitation in regards to location, but there is
  scope to encompass more settings witin future iterations. The player could choose to travel
@@ -196,6 +372,7 @@ The intro to the game is displayed to the player
  the player more routes through the game. THe different character paths could also be longer
  and this would allow the player to experience a broader experience of the game.
 
+<br>
 
  #### [Return to Table of Contents](#toc)
 ----
@@ -309,11 +486,11 @@ The intro to the game is displayed to the player
 
 <br>
 
-## User Story Testing<a name="userstorytesting"></a>
+### User Story Testing<a name="userstorytesting"></a>
 
  <br/>
 
-## As a first time user to the site
+#### As a first time user to the site
 
 - Understand how the Game Works.
 - Play the Game.
@@ -325,7 +502,7 @@ the game, currently you need to use the button above the game interface.
 
 <br>
 
-### As a regular user of the site, I want to …...  
+#### As a regular user of the site, I want to …...  
 
 - I want to try the various scenarios to navigate through the game.     
 - I want to avail of all the options to have different experiences.        
@@ -337,7 +514,7 @@ random buddy or a random protection item to experience more of a game of chance.
 
 <br>
 
-### As the site owner, I want to …..    <a name="siteowner"></a>
+#### As the site owner, I want to …..    
 - Build more complexity in the game, so it is more challenging to the user.
 - Add more scenarios to give the user a wider range of experiences.
 - Offer a wider range of settings within the game.
@@ -353,24 +530,33 @@ the complexity. The house has a few rooms at the moment but there is the possibi
 
 ### General Testing   <a name="general"></a>
 
+<br>
+
+#### Browser Testing
 
 The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no
 issues on any of the browsers.
+
+<br>
 
 
 #### Responsive Testing
 
 In regards to responsive testing, the Terminal does not work on smaller screens so just tested for the
-bigger screens.
+bigger screens. It seemed to have no issues as the content is aligned to the center.
+
+<br>
 
 <p align ="center">      
      <img src="assets/images/readme/images/responsive2screen.png"  alt="Responsive Testing Image" />    
 </p>
 <br/> 
 
-
+<br>
 
 ### Validation      <a name="validation"></a>
+
+<br>
 
 I used pep8 validation to test the 4 pages and no errors were found (See images below)
 
@@ -409,6 +595,8 @@ external file but it didn't work in Heroku and so left css inline.
 
 #### Lighthouse Testing
 
+I tend to have issues using lighouse in general, but the results seem to be generally alright. It did note some vulnerabilities but this was with existing code in the templates, so could not fix them.
+
 <p align ="center">      
      <img src="assets/images/readme/images/lighthouse.png"  alt="lighouse testing specs" />    
 </p>
@@ -416,24 +604,34 @@ external file but it didn't work in Heroku and so left css inline.
 
 
  #### [Return to Table of Contents](#toc)
+
 ----
+
  ## Bugs and Issues  <a name="bugs"></a>
+
+<br>
 
  ### Resolved <a name="resolved"></a>
 
- Most of the original bugs were centered on path choice and figuring how to bypass other parts of the game, just when you thought you had it figured, it would end up on a completly different path. In regards to validation the whole way through I had devised an else in each prompt so that the game would continue even if the wrong input was given. I did not want to penalize a player for getting it wrong, but fundamentally this was wrong as I was making the decisions for the player and that would not be a good user experience. So I added validation in the later stages of the project, adding 'While True' and asking the users for the correct input, in this way the user can't be wrong the majority of time.
+ Most of the original bugs were centered on path choice and figuring how to bypass other parts of the game, just when you thought you had it figured, it would end up on a completly different path. In regards to validation the whole way through I had devised an else in each prompt so that the game would continue even if the wrong input was given. I did not want to penalize a player for getting it wrong, but fundamentally this was wrong as I was making the decisions for the player and that would not be a good user experience. So I added validation in the later stages of the project, adding 'While True' and asking the users for the correct input, in this way the user can't be wrong.
 
  I had problems with the name validation, I was trying to use a regex and it didn't work right, so again at the later stages I added validation within the name function itself. Now it will repeat the prompt until the user gives a name with only words, can not the field blank or have numbers in the string. 
 
- There is a random element to the game, the killer is picked at random, the buddy is assigned if user does not give correct input and a safetyitem is allocated if they do not give the correct input, this is not faullty validation but an effort to create a wildcard element to the game. At on point the random assigned buddy was always 'Brad', but this has been since fixed
+ There is a random element to the game, the killer is picked at random, the buddy is assigned if user chooses this option and also for the safety item, this was a last minute decision, and decided to make it a choice as apposed to the result of bad input.  At on point the random assigned buddy was always 'Brad', but this has been since fixed
  
+ <br>
+
  ### Unresolved <a name="unresolved"></a>
 
- I was going to use a clear function, but the game does not lend itself too well to that, there is no set size between prompts and there are so many routes to choose, it could be problematic, although I would hope to improve the flow of the game in future iterations. If the player needs to finish the game, they are given several options throughout the game to leave, but if you were to start the game, the way i originally had used earlier in development(options for player), there were problems in allocating the random killer at the start of the game, so instead the user can leave at the end of the game and use the run programme button to begin again.
+ I was going to use a clear function, but the game does not lend itself too well to that, there is no set size between prompts and there are so many routes to choose, it could be problematic, although I would hope to improve the flow of the game in future iterations. If the player needs to finish the game, they are given several options throughout the game to leave, but if you were to start the game, the way I originally had used earlier in development(options for player), there were problems in allocating the random killer at the start of the game, so instead the user can leave at the end of the game and use the run programme button to begin again. I don't think this is a fault as such, but if you have the technology at hand, it seems wrong not to implement it fully.
+
+<br>
 
  #### [Return to Table of Contents](#toc)
 ----
+
  ## Deployment <a name="deployment"></a>
+
 
  ### How to make a local Clone <a name="clone"></a>
 1. Navigate to the main page of the repository.
@@ -496,11 +694,16 @@ I also used the following online resources:
 - [Code Institute](https://codeinstitute.net/ie/)
 - [Slack](https://slack.com/intl/en-ie/) 
 - [Stack OverFlow](https://stackoverflow.com)
+
+<br>
+
 #### [Return to Table of Contents](#toc)
 ----
  ## Acknowledgements <a name="acknowledgements"></a>
 
  Thank you to my mentor Brian Macharia for his guidance and support.
+
+<br>
 
  #### [Return to Table of Contents](#toc) 
 

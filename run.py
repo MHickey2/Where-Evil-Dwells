@@ -80,7 +80,7 @@ def options_for_player():
         print((Fore.BLUE) + "OK, Thanks for Playing!\n")
         goodbye()
     else:
-        print("Use button above to restart Game")
+        print("Use button above to restart the Game")
         goodbye()
 
 
@@ -119,7 +119,7 @@ def show_instructions():
     while True:
         print(Fore.RED)
         print(Style.BRIGHT)
-        instructions = input("See Instructions yes/no\n ").lower().strip()
+        instructions = input("See Instructions yes/no?\n ").lower().strip()
         print(Fore.RESET)
         if instructions not in {"yes", "no"}:
             print("Invalid input")
@@ -372,7 +372,7 @@ print("This looks ominous, Jeeves want\'s to read the details...")
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
-    letter = input("Want to read the letter? yes/no\n").lower().strip()
+    letter = input("Want to read the letter? yes/no?\n").lower().strip()
     print(Fore.RESET)
     if letter not in {"yes", "no"}:
         print("Invalid input")
@@ -735,7 +735,7 @@ def brad():
         while True:
             print(Fore.RED)
             print(Style.BRIGHT)
-            cellar = input("Your choice, A, B or C? \n").lower().strip()
+            cellar = input("Your choice, A, B or C?\n").lower().strip()
             print(Fore.RESET)
             if cellar not in {"a", "b", "c"}:
                 print("Invalid input")
@@ -820,7 +820,7 @@ def tobias():
         while True:
             print(Fore.RED)
             print(Style.BRIGHT)
-            corridor = input("Your choice: A,B or C? \n").lower().strip()
+            corridor = input("Your choice: A,B or C?\n").lower().strip()
             print(Fore.RESET)
             if corridor not in {"a", "b", "c"}:
                 print("Invalid input")
@@ -849,7 +849,7 @@ def tobias():
         print("You see a ladder leading up to the Attic")
         print("You figure the killer may be up there, do you:\n")
         print("A. Go up the ladder and catch him before he get's you")
-        print("B. Close the door of the attica and get rid of the ladder")
+        print("B. Close the door of the attic and get rid of the ladder")
         print("C. Use this opportunity to run down the stairs and escape")
         while True:
             print(Fore.RED)
@@ -884,7 +884,7 @@ def tobias():
                 break
             elif attic == "c":
                 print(Fore.RESET)
-                print("So close, but I guess you get to live another day/n")
+                print("So close, but I guess you get to live another day\n")
                 goodbye()
                 break
 
