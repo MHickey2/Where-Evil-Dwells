@@ -159,7 +159,7 @@ I created a flow chart in Draw.io, which helped me to focus on how the game shou
 </p>
 <br/> 
 
-[Flow Diagram(Bigger Version)](../Where-Evil-Dwells/views/flow.html)
+[Flow Diagram(Bigger Version)](/views/flow.html)
  #### [Return to Table of Contents](#toc)
 ----
 ## Features  <a name="features"></a>
