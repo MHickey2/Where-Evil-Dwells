@@ -8,10 +8,10 @@ be determined by their game play
 
 import os
 import sys
-import time
-import random
+import time    # deals with time delays
+import random  # deals with random element in game
 
-import colorama
+import colorama  # imports deal with colour
 import pyfiglet
 from colorama import Back, Fore, Style
 
@@ -379,7 +379,6 @@ while True:
         print(Back.WHITE)
         add_narration(narration.LETTER)
         print(Fore.RESET)
-        print("\n")
         break
     elif letter == "no":
         print(Fore.RESET)
@@ -389,7 +388,6 @@ while True:
         print(Fore.BLACK)
         print(Back.WHITE)
         add_narration(narration.LETTER)
-        print("\n")
         break
 
 
@@ -443,7 +441,7 @@ while True:
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
-    buddy_c = input("Choose a buddy? 1, 2, 3 or 'Random'?\n").lower().strip()
+    buddy_c = input("Choose a buddy? 1 2 3 4 or 'Random'?\n").lower().strip()
     print(Fore.RESET)
     if review not in {"all", "1", "2", "3", "4", "Random"}:
         print("Invalid input")
@@ -871,7 +869,7 @@ def tobias():
             elif attic == "b":
                 print(Fore.RESET)
                 print("You decide to go back to the study and hide")
-                print("You barricade the door with furniture/n")
+                print("You barricade the door with furniture\n")
                 print("You decide to have a drink from the drinks cabinet")
                 print("After a short time you feel tired and rest your eyes")
                 print("You wake suddenly, startled by a noise ..\n")
@@ -996,11 +994,11 @@ def camilla():
         print("You have gorged yourself with the rest of the food")
         print("You are really spooked and you both need to unwind")
         print("You are not feeling well, you must have ate too much")
-        print("Camilla is smoking out the window and you begin to nap")
+        print("Camilla is smoking out the window and you begin to nap\n")
         print("You don't know how long you have nodded off when...")
         print("You wake with a sense of foreboding, you are in danger")
         print("You try to shake the feeling, but it\'s useless")
-        print("You know the killer may have you in their sight...")
+        print("You know the killer may have you in their sight...\n")
         survival4()
 
 

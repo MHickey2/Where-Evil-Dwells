@@ -37,8 +37,8 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 6.  [Future Implementation](#future)
 7.  [Tools and Technology](#technology)
 8.  [Testing](#testing)
-    1. [Manual and Responsive Tesing](#manual/responsive)
-    2. [Browser Testing](#browser)
+    1. [Manual Testing](#manual)
+    2. [General Testing](#general)
     3. [Validation](#validation)
 9. [Bugs and Issues](#bugs)
     1. [Resolved](#resolved)
@@ -155,11 +155,11 @@ I created a flow chart in Draw.io, which helped me to focus on how the game shou
   
 
 <p align ="center">      
-     <img src="assets/images/readme/images/flowchart.jpg"  alt="Flow Chart" />    
+     <img src="assets/images/readme/images/flowchartBig.jpg"  alt="Flow Chart" />    
 </p>
 <br/> 
 
-[Flow Diagram(Bigger Version)](/views/flow.html)
+
  #### [Return to Table of Contents](#toc)
 ----
 ## Features  <a name="features"></a>
@@ -224,7 +224,7 @@ The intro to the game is displayed to the player
 
 <br>
 
-### Manual Testing
+### Manual Testing   <a name="manual"></a>
 
 <br>
 
@@ -351,13 +351,24 @@ the complexity. The house has a few rooms at the moment but there is the possibi
 
 <br>
 
-### Browser Testing   <a name="manual/responsive"></a>
+### General Testing   <a name="general"></a>
+
 
 The site was tested on Google Chrome, Firefox and Microsoft edge, and there seemed to be no
 issues on any of the browsers.
 
 
-<br>
+#### Responsive Testing
+
+In regards to responsive testing, the Terminal does not work on smaller screens so just tested for the
+bigger screens.
+
+<p align ="center">      
+     <img src="assets/images/readme/images/responsive2screen.png"  alt="Responsive Testing Image" />    
+</p>
+<br/> 
+
+
 
 ### Validation      <a name="validation"></a>
 
@@ -395,15 +406,6 @@ external file but it didn't work in Heroku and so left css inline.
 </p>
 <br/>
 
-#### Responsive Testing
-
-In regards to responsive testing, the Terminal does not work on smaller screens so just tested for the
-bigger screens.
-
-<p align ="center">      
-     <img src="assets/images/readme/images/responsive2screen.png"  alt="Responsive Testing Image" />    
-</p>
-<br/> 
 
 #### Lighthouse Testing
 
