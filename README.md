@@ -625,7 +625,7 @@ I tend to have issues using lighouse in general, but the results seem to be gene
 
  I was going to use a clear function, but the game does not lend itself too well to that, there is no set size between prompts and there are so many routes to choose, it could be problematic, although I would hope to improve the flow of the game in future iterations. If the player needs to finish the game, they are given several options throughout the game to leave, but if you were to start the game, the way I originally had used earlier in development(options for player), there were problems in allocating the random killer at the start of the game, so instead the user can leave at the end of the game and use the run programme button to begin again. I don't think this is a fault as such, but if you have the technology at hand, it seems wrong not to implement it fully.
 
- There was some last minute issues in regard to the terminal, I think the page needs to be refreshed to ensure randomness is guaranteed (The run programme button does not reload the programme from the start fully), Would hope to come up with a valid long term solution moving forward. If random options are not chosen it should work ok.
+ There was some last minute issues in regard to the terminal, I think the page needs to be refreshed to ensure randomness is guaranteed (The run programme button does not reload the programme from the start fully), Would hope to come up with a valid long term solution moving forward. If random options are not chosen it should work out ok. This is an intermittant problem and seems to right itself but if it is a consistant killer it needs refreshing.
 
 <br>
 
@@ -636,7 +636,7 @@ I tend to have issues using lighouse in general, but the results seem to be gene
  ## Deployment <a name="deployment"></a>
 
  <br>
- 
+
  ### How to make a local Clone <a name="clone"></a>
 1. Navigate to the main page of the repository.
 2. Click the green Code Button at top right of the repository.
