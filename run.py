@@ -80,6 +80,7 @@ def options_for_player():
         print((Fore.BLUE) + "OK, Thanks for Playing!\n")
         goodbye()
     else:
+        print("Invalid input, but thanks for Playing!")
         print("Use button above to restart the Game")
         goodbye()
 
@@ -178,6 +179,7 @@ def accept_invite():
             break
         elif rsvp_accepted == "no":
             print("Well I guess it is instant noodles for you")
+            print("Please come back soon!")
             rsvp_accepted = "no"
             goodbye()
 
@@ -461,6 +463,7 @@ while True:
     elif buddy_c == "3":
         BUDDY = "Tobias Cooper"
         print("You are with Tobias, don't take it personal, he's always rude")
+        break
     elif buddy_c == "4":
         BUDDY = "Camilla Royce"
         print("You are with Camilla, try to act richer")
@@ -603,7 +606,7 @@ def luscious():
 
         time.sleep(B)
         print("\n")
-        print("You are in the bedroom and have barricaded yourself in")
+        print("You are in the bedroom and have barricaded yourself in,")
         print("Luscious has got a phone signal, and is trying to get help")
         print("She calls the police and tell them about the death threat")
         print("You feel better now, that the police are on their way\n")

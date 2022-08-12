@@ -121,6 +121,7 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
   
 
   <br/>  
+#### [Return to Table of Contents](#toc)  
 ----
 ## Layout  <a name="layout"></a> 
 
@@ -395,10 +396,10 @@ There are Four major paths in the game, determined by the player's choice for th
 -   [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
 -   [Markdown](https://markdown-guide.readthedocs.io/en/latest/)
 -   [Draw.io](https://drawio-app.com/)
+  
  #### [Return to Table of Contents](#toc)
 ----
 ## Testing  <a name="testing"></a>
-
 <br>
 
 ### Manual Testing   <a name="manual"></a>
@@ -604,7 +605,6 @@ I tend to have issues using lighouse in general, but the results seem to be gene
 
 
  #### [Return to Table of Contents](#toc)
-
 ----
 
  ## Bugs and Issues  <a name="bugs"></a>
@@ -690,10 +690,14 @@ provided
 
  Let's Make a Text Adventure Game In Python  [Tutorial](https://www.youtube.com/watch?v=HzDcKq2NDwM&t=1603s)
 
-I also used the following online resources:
+
+ I also used the following online resources:
+
 - [Code Institute](https://codeinstitute.net/ie/)
 - [Slack](https://slack.com/intl/en-ie/) 
 - [Stack OverFlow](https://stackoverflow.com)
+- [YouTube](https://www.youtube.com/)
+- [W3Schools.com](https://www.w3schools.com/)
 
 <br>
 
@@ -706,6 +710,6 @@ I also used the following online resources:
 <br>
 
  #### [Return to Table of Contents](#toc) 
-
+----
 
  
