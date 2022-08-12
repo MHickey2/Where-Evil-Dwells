@@ -87,10 +87,10 @@ def options_for_player():
 def main():
     """_main function, the players intro screen for game_
     """
-    print(Fore.RED)
-    print(Style.BRIGHT)
     print(Fore.RED + art.BANNER)
     while True:
+        print(Fore.RED)
+        print(Style.BRIGHT)
         response = input("Want to play a Game? yes/no\n ").lower().strip()
         print(Fore.RESET)
         if response not in {"yes", "no"}:
@@ -189,9 +189,10 @@ def you_die():
     """_Final Message if you die in the game_
     """
     print("\n")
-    print("Bad Luck, you die")
+    print((Fore.RED) + "Bad Luck, you die!")
     print(Back.BLACK)
     print(Fore.LIGHTRED_EX + art.DEATH)
+    print((Fore.RED) + "Better Luck next time!")
     print(Fore.RESET)
     sys.exit()
 
@@ -255,6 +256,7 @@ while True:
     print(Fore.RED)
     print(Style.BRIGHT)
     lounge_action = input("Your choice A, B, C or D?\n ").lower().strip()
+    print(Fore.RESET)
     if lounge_action not in {"a", "b", "c", "d"}:
         print("Invalid input")
         continue
@@ -288,10 +290,10 @@ if lounge_action == "c":
         print(Fore.RED)
         print(Style.BRIGHT)
         staircase = input("At the staircase now, up/down?\n ").lower().strip()
+        print(Fore.RESET)
         if staircase not in {"up", "down"}:
             print("Invalid input")
             continue
-        print(Fore.RESET)
         print(Fore.LIGHTBLUE_EX + art.ARROWS)
         print(Fore.RESET)
         if staircase == "down":
@@ -336,6 +338,7 @@ if lounge_action == "c":
                 print(Fore.RED)
                 print(Style.BRIGHT)
                 stranger = input("What do you do next, 1, 2 or 3?\n ").strip()
+                print(Fore.RESET)
                 if stranger not in {"1", "2", "3"}:
                     print("Invalid input")
                     print(Fore.RESET)
@@ -364,12 +367,13 @@ if lounge_action == "c":
 
 print("\n")
 print("You are mingling, when Jeeves enters with a letter on a tray")
-print("This looks ominous, Jeeves offers to show you the details...")
+print("This looks ominous, Jeeves want\'s to read the details...")
 # The letter warns the user about the plot to kill them and sets the narrative
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
     letter = input("Want to read the letter? yes/no\n").lower().strip()
+    print(Fore.RESET)
     if letter not in {"yes", "no"}:
         print("Invalid input")
         continue
@@ -378,10 +382,8 @@ while True:
         print(Fore.BLACK)
         print(Back.WHITE)
         add_narration(narration.LETTER)
-        print(Fore.RESET)
         break
     elif letter == "no":
-        print(Fore.RESET)
         print("I guess that might have been important")
         print("A rock comes through window, with note attached, it reads:")
         time.sleep(C)
@@ -554,9 +556,9 @@ def luscious():
         time.sleep(B)
         print("You settle in the bedroom, and your nerves are shot")
         print("Your partner has brought some brandy from the lounge")
-        print(Fore.RED)
-        print(Style.BRIGHT)
         while True:
+            print(Fore.RED)
+            print(Style.BRIGHT)
             brandy = input("She offers you a glass yes/no?\n").lower().strip()
             print(Fore.RESET)
             if brandy not in {"yes", "no"}:
@@ -573,10 +575,10 @@ def luscious():
         print("Luscious has no access to wifi, so is not a happy girl")
         print("you are settling in for the stay when you hear loud noises")
         print("It is coming from behind a doorway in the bedroom\n")
+        print("1. Do you go see what's causing the noise")
+        print("2. Do you ask Luscious to join you in the investigation")
+        print("3. Do you pretend not to hear the noise")
         while True:
-            print("1. Do you go see what's causing the noise")
-            print("2. Do you ask Luscious to join you in the investigation")
-            print("3. Do you pretend not to hear the noise")
             print(Fore.RED)
             print(Style.BRIGHT)
             noise = input("What choice do you pick 1, 2 or 3?\n").strip()
@@ -609,10 +611,10 @@ def luscious():
         print(Style.BRIGHT)
         print("What do you feel like doing now?\n")
         print(Fore.RESET)
+        print("1. You are tired, you take a nap waiting for the police")
+        print("2. You keep alert, clutching your safety item")
+        print("3. You've had enough, you escape from this horror house")
         while True:
-            print("1. You are tired, you take a nap waiting for the police")
-            print("2. You keep alert, clutching your safety item")
-            print("3. You've had enough, you escape from this horror house")
             print(Fore.RED)
             print(Style.BRIGHT)
             waiting = input("What is your choice 1, 2 or 3?\n").strip()
@@ -689,11 +691,11 @@ def brad():
         print("Suddenly you see a figure crouching in the garden")
         print("You both are frantic, is the killer about to strike!")
         time.sleep(B)
+        print("What is your next step, will you:\n")
+        print("1. Find a weapon and confront the crouching man together")
+        print("2. Do you volunteer Brad to confront the man")
+        print("3. Do you step up and deal with the guy yourself")
         while True:
-            print("What is your next step, will you:\n")
-            print("1. Find a weapon and confront the crouching man together")
-            print("2. Do you volunteer Brad to confront the man")
-            print("3. Do you step up and deal with the guy yourself")
             print(Fore.RED)
             print(Style.BRIGHT)
             confrontation = input("Your choice 1, 2 or 3?\n").strip()
@@ -726,11 +728,11 @@ def brad():
         print("There is a door leading to the cellar")
         print("There seems to be someone rummaging in the cellar")
         print("The sound seems to be getting closer....\n")
+        print("You and Brad decide to:\n ")
+        print("A. Ensure the cellar door is locked and and block it off")
+        print("B. Leave by the backdoor and escape this House of Doom")
+        print("C. Risk it all and go investigate the noise\n")
         while True:
-            print("You and Brad decide to:\n ")
-            print("A. Ensure the cellar door is locked and and block it off")
-            print("B. Leave by the backdoor and escape this House of Doom")
-            print("C. Risk it all and go investigate the noise\n")
             print(Fore.RED)
             print(Style.BRIGHT)
             cellar = input("Your choice, A, B or C? \n").lower().strip()
@@ -788,7 +790,7 @@ def survival3():
             options_for_player()
     else:
         print("You are safe, Tobias is not the killer")
-        print("You will survive the night")
+        print("You will survive the night\n")
         print("The killer was " + killer + ", who has killed the other guests")
         print("You and Tobias get to share the inheritance")
         time.sleep(B)
@@ -811,14 +813,15 @@ def tobias():
         print("Tobias is not a happy and vows to sue for emotinal damage")
         print("You are trying to calm him, when you hear a loud noise outside")
         print("It is coming from the corridor, it may be the killer")
+        print("You and Tobias decide to:\n")
+        print("A. Shimmy down the drainpipe and escape, broke but alive")
+        print("B. The wait and see approach, no rush")
+        print("C. Grab improvised weapons and confront whoever it is")
         while True:
-            print("You and Tobias decide to:\n")
-            print("A. Shimmy down the drainpipe and escape, broke but alive")
-            print("B. The wait and see approach, no rush")
-            print("C. Grab improvised weapons and confront whoever it is")
             print(Fore.RED)
             print(Style.BRIGHT)
             corridor = input("Your choice: A,B or C? \n").lower().strip()
+            print(Fore.RESET)
             if corridor not in {"a", "b", "c"}:
                 print("Invalid input")
                 print(Fore.RESET)
@@ -844,14 +847,15 @@ def tobias():
         time.sleep(B)
         print("You are now in the corridor, the person has long gone")
         print("You see a ladder leading up to the Attic")
+        print("You figure the killer may be up there, do you:\n")
+        print("A. Go up the ladder and catch him before he get's you")
+        print("B. Close the door of the attica and get rid of the ladder")
+        print("C. Use this opportunity to run down the stairs and escape")
         while True:
-            print("You figure the killer may be up there, do you:\n")
-            print("A. Go up the ladder and catch him before he get's you")
-            print("B. Close the door of the attica and get rid of the ladder")
-            print("C. Use this opportunity to run down the stairs and escape")
             print(Fore.RED)
             print(Style.BRIGHT)
             attic = input("What is your choice: A, B or C?\n").lower().strip()
+            print(Fore.RESET)
             if attic not in {"a", "b", "c"}:
                 print("Invalid input")
                 print(Fore.RESET)
@@ -859,11 +863,11 @@ def tobias():
             if attic == "a":
                 print(Fore.RESET)
                 print("You make your way up the ladder really quitely")
-                print("You and Tobias start searching the attack")
+                print("You and Tobias start searching the attack\n")
                 print("You both split up to cover more ground")
-                print("Afer a few minutes you hear footsteps behine you")
+                print("Afer a few minutes you hear footsteps behine you\n")
                 print("You call out for Tobias, but he doesn\'t come")
-                print("you hear a new noise and you brace yourself....")
+                print("you hear a new noise and you brace yourself....\n")
                 survival3()
                 break
             elif attic == "b":
@@ -932,11 +936,11 @@ def camilla():
         print("Camilla is a great host and makes sure you clean your plate\n")
         print("Your room is near the front door and you hear it being opened")
         print("You both hear raised voices and then hear a scream...\n")
+        print("You and Camilla discuss your options, will you:\n")
+        print("A. Escape through the window with Camilla by your side")
+        print("B. You chance it and go to investigate the scream")
+        print("C. You leave the room by a backdoor and check it out")
         while True:
-            print("You and Camilla discuss your options, will you:\n")
-            print("A. Escape through the window with Camilla by your side")
-            print("B. You chance it and go to investigate the scream")
-            print("C. You leave the room by a backdoor and check it out")
             print(Fore.RED)
             print(Style.BRIGHT)
             door = input("What is your choice, A, B or C?\n").lower().strip()
@@ -963,11 +967,11 @@ def camilla():
         print("Books are scattered everywhere and the furniture is overturned")
         print("You see a message written in red on the mirror\n")
         print("The message says 'Leave Before you Both Die")
+        print("You both are alarmed, do you:\n ")
+        print("A. Retreat back to the dining room, maybe it will be safer")
+        print("B. Try to find a phone and call for help, this is scary")
+        print("C. You need a bathroom, you\'re feeling sick")
         while True:
-            print("You both are alarmed, do you:\n ")
-            print("A. Retreat back to the dining room, maybe it will be safer")
-            print("B. Try to find a phone and call for help, this is scary")
-            print("C. You need a bathroom, you\'re feeling sick")
             print(Fore.RED)
             print(Style.BRIGHT)
             library = input("Your choice A, B or C?\n").lower().strip()
