@@ -22,7 +22,7 @@ from classification import (guest1, guest2, guest3, guest4, item1, item2,
 
 colorama.init()
 
-# time sleep duration options
+# time sleep duration options using time module
 A = 2.5
 B = 1.5
 C = .08
@@ -50,7 +50,7 @@ def clear():
 
 def random_buddy():
     """
-    random buddy selection, in case player does not select themselves.
+    random buddy selection, in case player chooses the random option.
     """
     buddylist = [guest1.index, guest2.index, guest3.index, guest4.index]
     randombuddy = random.choice(buddylist)
@@ -61,7 +61,7 @@ random_buddy()
 
 
 def goodbye():
-    """_This displays leaving message_
+    """_This displays leaving message for departing player_
     """
     print(Fore.RED)
     print(Back.BLACK)
@@ -72,7 +72,7 @@ def goodbye():
 
 
 def options_for_player():
-    """_allows user to leave or instructions on
+    """_allows user to leave or instructs them on
          how to start the game again_
     """
     options = input("print L to leave the game\n")
@@ -143,7 +143,7 @@ show_instructions()
 
 def show_intro():
     """
-    _function to show intro to the user_
+    _function to show intro to the player_
     """
     time.sleep(B)
     print(Back.BLACK)
@@ -186,7 +186,7 @@ accept_invite()
 
 
 def you_die():
-    """_Final Message if you die in game_
+    """_Final Message if you die in the game_
     """
     print("\n")
     print("Bad Luck, you die")
@@ -198,7 +198,7 @@ def you_die():
 
 def add_player_details():
     """_Function to add player to the game,
-    and checks if the name is acceptable_
+    and includes validation to check name is ok_
     """
     while True:
         minlen = 3
@@ -228,7 +228,7 @@ def add_player_details():
 
 
 def setting_lounge():
-    """_lounge setting function, entry to gameplay_
+    """_lounge setting function, entry to beginning gameplay setting_
     """
     time.sleep(B)
     print("\n")
@@ -282,7 +282,7 @@ while True:
         setting_lounge()
         time.sleep(A)
         break
-
+# minor path in game, user can take journey up and down the stairs
 if lounge_action == "c":
     while True:
         print(Fore.RED)
@@ -365,6 +365,7 @@ if lounge_action == "c":
 print("\n")
 print("You are mingling, when Jeeves enters with a letter on a tray")
 print("This looks ominous, Jeeves offers to show you the details...")
+# The letter warns the user about the plot to kill them and sets the narrative
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
@@ -393,7 +394,7 @@ while True:
 
 
 def show_information(guest1):
-    """_show format for guest details_
+    """_show format for guest details, if player wants to see details_
     """
     print('Name of Guest: ' + guest1.name + '\nOccupation: ' +
           guest1.occupation + '\nAge: ' + str(guest1.age) +
@@ -405,7 +406,7 @@ time.sleep(A)
 print(Fore.WHITE)
 print(Back.BLACK)
 print("you are in a dangerous dilemma, you need to team up with a buddy")
-
+# Player can see all, or individual details on any one
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
@@ -438,7 +439,7 @@ while True:
     elif review == "4":
         show_information(guest4)
         break
-
+# Player can choose a specific buddy or leave it to random chance
 while True:
     print(Fore.RED)
     print(Style.BRIGHT)
@@ -468,7 +469,7 @@ while True:
         print("A Buddy will be assigned to you\n")
         buddy_c = random_buddy()
         break
-
+# Player can choose a specific item or leave it to random chance
 time.sleep(B)
 print("Before you leave with your Buddy there is one more thing...")
 print("For your own safety, you get to choose an item of protection...\n")
@@ -517,6 +518,7 @@ while True:
         break
 
 
+# Survival function specific to character story(Luscious)
 def survival():
     """_will user survive, is your buddy a killer_
     """
@@ -615,7 +617,7 @@ def luscious():
             print("3. You've had enough, you escape from this horror house")
             print(Fore.RED)
             print(Style.BRIGHT)
-            waiting = input("What is your choice 1, 2 or 3: \n").strip()
+            waiting = input("What is your choice 1, 2 or 3?\n").strip()
             print(Fore.RESET)
             if waiting not in {"1", "2", "3"}:
                 print("Invalid input")
@@ -649,6 +651,7 @@ def luscious():
 luscious()
 
 
+# Survival function specific to character story(Brad)
 def survival2():
     """
     will user survive, is your partner a killer
@@ -768,6 +771,7 @@ def brad():
 brad()
 
 
+# Survival function specific to character story(Tobias)
 def survival3():
     """
     will user survive, is your partner a killer
@@ -886,6 +890,7 @@ def tobias():
 tobias()
 
 
+# Survival function specific to character story(Camilla)
 def survival4():
     """
     will user survive, is your partner a killer

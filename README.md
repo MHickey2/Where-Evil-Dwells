@@ -31,7 +31,7 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
     1. [Colour Scheme](#colourscheme)
     2. [UX experience](#UX)
     3. [Graphics](#graphics)
-4.  [Flow Diagram for Game](#flowdiagram)        
+4.  [Flow Diagram for Game](#flowchart)        
 5.  [Features](#features)
     1. [Index Page](#intropage)    
 6.  [Future Implementation](#future)
@@ -148,18 +148,18 @@ resource that contains different categories of images, I choose images that set 
 ----
 
 
-## Flow Diagram for the Game  <a name="flowdiagram"></a>
+## Flow Chart for the Game  <a name="flowdiagram"></a>
 
 
-I created a flow diagram in Draw.io, which helped me to focus on how the game should flow. The first stage of the game is the intro where the user gets information on how to play the game, there is a little exploration of the settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and the the end result will be revealed to the user.
+I created a flow chart in Draw.io, which helped me to focus on how the game should flow. The first stage of the game is the intro where the user gets information on how to play the game, there is a little exploration of the settings and the hook would be the warning, which steers the player to make decisions that will set their course for future play. There are 4 main paths that the player can chose, where the user will have a customized experience and the the end result will be revealed to the user.
   
 
 <p align ="center">      
-     <img src="assets/images/readme/images/flowdiagram.jpg"  alt="Flow Diagram" />    
+     <img src="assets/images/readme/images/flowchart.jpg"  alt="Flow Chart" />    
 </p>
 <br/> 
 
-[Flow Diagram(Bigger Version)](/views/flow.html)
+[Flow Diagram(Bigger Version)](../Where-Evil-Dwells/views/flow.html)
  #### [Return to Table of Contents](#toc)
 ----
 ## Features  <a name="features"></a>
