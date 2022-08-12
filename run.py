@@ -6,10 +6,9 @@ to survive by choosing a safe route throughout the game and their fate will
 be determined by their game play
 """
 
-import os
-import sys
-import time    # deals with time delays
 import random  # deals with random element in game
+import sys
+import time  # deals with time delays
 
 import colorama  # imports deal with colour
 import pyfiglet
@@ -39,13 +38,6 @@ def add_narration(printed_text):
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.030)
-
-
-def clear():
-    """_This clears the screen_
-    """
-    command = 'clear'
-    os.system(command)
 
 
 def random_buddy():
@@ -81,7 +73,7 @@ def options_for_player():
         goodbye()
     else:
         print("Invalid input, but thanks for Playing!")
-        print("Use button above to restart the Game")
+        print("Refresh the page for new game")
         goodbye()
 
 
@@ -662,7 +654,7 @@ def survival2():
     if guest2.name == killer:
         print("There is an attempt on your life\n")
         if safetyitem != "Book on Movie Murders":
-            print("Brad was the killer along\n")
+            print("Brad was the killer all along\n")
             you_die()
         else:
             print("Brad tried to kill you by stabbing you... ")
@@ -782,7 +774,7 @@ def survival3():
     if guest3.name == killer:
         print("There is an attempt on your life\n")
         if safetyitem != "Bulletproof Vest":
-            print("Tobias was the killer along\n")
+            print("Tobias was the killer all along\n")
             you_die()
         else:
             print("Tobias tried to kill you by shooting you... ")

@@ -31,7 +31,7 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
     2. [Regular User](#regularuser)
     3. [Site Owner](#siteowner)
 3.  [Layout](#layout)
-    1. [Colour Scheme](#colourscheme)
+    1. [Theme](#Theme)
     2. [UX experience](#UX)
     3. [Graphics](#graphics)
 4.  [Flow Chart for Game](#flowchart)        
@@ -128,9 +128,9 @@ The Game is a murder mystery based in a Creepy House. The Player acts as the pro
 <br/>
 
 
-## Colour Scheme    <a name="colourscheme"></a>  
+## Theme    <a name="theme"></a>  
 
-The colour scheme encompasses the html index page and the terminal screen. I wanted to have a background image that resonates with the theme of the game. I simply applied a background image of a creepy house. In regards to the interface i added aasci art images to supplement the settings depicted in the text. The background colours were used to make certain elements stand out i.e. the letter. Colour was applied to prompts, to make them stand out from the rest of the text flow. Colour was also used when the player dies in the game(red).
+The site encompasses the html index page and the terminal screen. I wanted to have a background image that resonates with the theme of the game. I simply applied a background image of a creepy house. In regards to the interface i added aasci art images to supplement the settings depicted in the text. The background colours were used to make certain elements stand out i.e. the letter. Colour was applied to prompts, to make them stand out from the rest of the text flow. Colour was also used when the player dies in the game(red) as it is synonymous with danger.
 
 <br>
 
@@ -625,14 +625,18 @@ I tend to have issues using lighouse in general, but the results seem to be gene
 
  I was going to use a clear function, but the game does not lend itself too well to that, there is no set size between prompts and there are so many routes to choose, it could be problematic, although I would hope to improve the flow of the game in future iterations. If the player needs to finish the game, they are given several options throughout the game to leave, but if you were to start the game, the way I originally had used earlier in development(options for player), there were problems in allocating the random killer at the start of the game, so instead the user can leave at the end of the game and use the run programme button to begin again. I don't think this is a fault as such, but if you have the technology at hand, it seems wrong not to implement it fully.
 
+ There was some last minute issues in regard to the terminal, I think the page needs to be refreshed to ensure randomness is guaranteed (The run programme button does not reload the programme from the start fully), Would hope to come up with a valid long term solution moving forward. If random options are not chosen it should work ok.
+
 <br>
 
  #### [Return to Table of Contents](#toc)
 ----
 
+
  ## Deployment <a name="deployment"></a>
 
-
+ <br>
+ 
  ### How to make a local Clone <a name="clone"></a>
 1. Navigate to the main page of the repository.
 2. Click the green Code Button at top right of the repository.
@@ -676,6 +680,8 @@ provided
   
 <br> 
 
+More information is available at [https://docs.github.com/en](https://docs.github.com/en), in regards to GitHub and is a great reference point for all GitHub queries.
+
  
 #### [Return to Table of Contents](#toc)
 ----
@@ -690,6 +696,15 @@ provided
 
  Let's Make a Text Adventure Game In Python  [Tutorial](https://www.youtube.com/watch?v=HzDcKq2NDwM&t=1603s)
 
+On Stack Overflow I found information in relation to writing text on screen at different speeds, and I used it for various texts imported from narration.py (see below)
+
+
+ for character in x:<br>
+    sys.stdout.write(character)<br>
+    sys.stdout.flush()<br>
+    time.sleep()<br>
+
+    
 
  I also used the following online resources:
 
