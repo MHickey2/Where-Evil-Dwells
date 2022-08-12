@@ -88,7 +88,7 @@ def main():
     """_main function, the players intro screen for game_
     """
     print(Fore.RED)
-    print(Style.BRIGHT)    
+    print(Style.BRIGHT)
     print(Fore.RED + art.BANNER)
     while True:
         response = input("Want to play a Game? yes/no\n ").lower().strip()
@@ -96,12 +96,12 @@ def main():
         if response not in {"yes", "no"}:
             print("Invalid input")
             continue
-        if response == "yes":            
+        if response == "yes":
             print("welcome to the Game, let's hope you make it out alive!\n")
             time.sleep(B)
             start_game = True
             break
-        elif response == "no":           
+        elif response == "no":
             print("understandable, sorry to see you go")
             start_game = False
             goodbye()
@@ -410,6 +410,7 @@ while True:
     print(Fore.RED)
     print(Style.BRIGHT)
     review = input("See details on 'all' or 1, 2, 3, or 4?\n ").lower().strip()
+    print(Fore.RESET)
     if review not in {"all", "1", "2", "3", "4"}:
         print("Invalid input")
         continue
@@ -438,30 +439,37 @@ while True:
         show_information(guest4)
         break
 
-print(Fore.RED)
-print(Style.BRIGHT)
-buddy_c = input("Now you can choose your buddy? 1, 2, 3 or 4?\n ").strip()
-print(Fore.RESET)
-if buddy_c == "1":
-    BUDDY = "Luscious Campbell"
-    print("You are teamed up with Luscious, I hope you like social media")
-    print("and watch your back, there's a killer about")
-elif buddy_c == "2":
-    BUDDY = "Brad Jameson"
-    print("You are teamed up with Brad, keep him away from mirrors")
-    print("Keep your wits about you, there is a killer around")
-elif buddy_c == "3":
-    BUDDY = "Tobias Cooper"
-    print("You are with Tobias, don't take it personal, he's always rude")
-elif buddy_c == "4":
-    BUDDY = "Camilla Royce"
-    print("You are with Camilla, try to act richer")
-else:
-    print("Invalid choice, a Buddy will be assigned to you\n")
-    buddy_c = random_buddy()
-    time.sleep(B)
+while True:
+    print(Fore.RED)
+    print(Style.BRIGHT)
+    buddy_c = input("Choose a buddy? 1, 2, 3 or 'Random'?\n").lower().strip()
+    print(Fore.RESET)
+    if review not in {"all", "1", "2", "3", "4", "Random"}:
+        print("Invalid input")
+        continue
+    if buddy_c == "1":
+        BUDDY = "Luscious Campbell"
+        print("You are teamed up with Luscious, I hope you like social media")
+        print("and watch your back, there's a killer about")
+        break
+    elif buddy_c == "2":
+        BUDDY = "Brad Jameson"
+        print("You are teamed up with Brad, keep him away from mirrors")
+        print("Keep your wits about you, there is a killer around")
+        break
+    elif buddy_c == "3":
+        BUDDY = "Tobias Cooper"
+        print("You are with Tobias, don't take it personal, he's always rude")
+    elif buddy_c == "4":
+        BUDDY = "Camilla Royce"
+        print("You are with Camilla, try to act richer")
+        break
+    elif buddy_c == "random":
+        print("A Buddy will be assigned to you\n")
+        buddy_c = random_buddy()
+        break
 
-
+time.sleep(B)
 print("Before you leave with your Buddy there is one more thing...")
 print("For your own safety, you get to choose an item of protection...\n")
 print(item1.index + item1.name)
@@ -469,35 +477,44 @@ print(item2.index + item2.name)
 print(item3.index + item3.name)
 print(item4.index + item4.name)
 print(item5.index + item5.name)
-print(Fore.RED)
-print(Style.BRIGHT)
-safetyitemchoice = input("Choose protection, 1, 2, 3, 4, 5?\n ").strip()
-print(Fore.RESET)
-time.sleep(B)
-if safetyitemchoice == "1":
-    safetyitem = "Safety Helmet"
-    print("You have selected a Safety Helmet")
-    print("You never know when it will come in handy")
-elif safetyitemchoice == "2":
-    safetytem = "Bulletproof Vest"
-    print("You have selected a Bulletproof Vest")
-    print("The best offence is a good defense")
-elif safetyitemchoice == "3":
-    safetyitem = "Antidote"
-    print("You have selected some Antidote")
-    print("It will make sense at some point")
-elif safetyitemchoice == "4":
-    safetyitem = "Gun"
-    print("You have selected a Gun")
-    print("Have gun will travel, you can never be too sure")
-elif safetyitemchoice == "5":
-    safetyitem = "Book on Movie Murders"
-    print("You have selected a Book on movie Murders")
-    print("Read up well, it may just save your life")
-else:
-    print("You will be allocated a random choice of protection")
-    safetyitem = random_item()
+while True:
+    print(Fore.RED)
+    print(Style.BRIGHT)
+    safetyitemchoice = input("Choose 1 2 3 4 5 or Random?\n").lower().strip()
+    print(Fore.RESET)
+    if review not in {"all", "1", "2", "3", "4", "5", "random"}:
+        print("Invalid input")
+        continue
     time.sleep(B)
+    if safetyitemchoice == "1":
+        safetyitem = "Safety Helmet"
+        print("You have selected a Safety Helmet")
+        print("You never know when it will come in handy")
+        break
+    elif safetyitemchoice == "2":
+        safetytem = "Bulletproof Vest"
+        print("You have selected a Bulletproof Vest")
+        print("The best offence is a good defense")
+        break
+    elif safetyitemchoice == "3":
+        safetyitem = "Antidote"
+        print("You have selected some Antidote")
+        print("It will make sense at some point")
+        break
+    elif safetyitemchoice == "4":
+        safetyitem = "Gun"
+        print("You have selected a Gun")
+        print("Have gun will travel, you can never be too sure")
+        break
+    elif safetyitemchoice == "5":
+        safetyitem = "Book on Movie Murders"
+        print("You have selected a Book on movie Murders")
+        print("Read up well, it may just save your life")
+        break
+    elif safetyitemchoice == "random":
+        print("You will be allocated a random choice of protection")
+        safetyitem = random_item()
+        break
 
 
 def survival():
